@@ -1,5 +1,927 @@
-\section{blablabla}
-sdfasdf
+\section{Introdução}
 
-\subsubsection{asdfsadfgsd}
-sdfgsdfg
+	O documento de visão busca coletar, analisar e definir necessidades e recursos de nível superior do \textit{Sistema de Automação para Casa Sustentável}. Concentra-se nos recursos necessários, usuários-alvo e nas razões do projeto. Os detalhes de como o SACS satisfaz essas necessidades são descritos nos casos de uso e nas especificações suplementares.
+
+\subsection{Finalidade}
+
+	Este documento tem como objetivo apresentar, analisar e definir as necessidades e características do SACS. O SACS tem como objetivo controlar e monitorar todo o sistema do Projeto “Casa Sustentável”. O documento descreverá as características gerais do sistema, os envolvidos em seu desenvolvimento e o público alvo.
+
+
+\subsection{Escopo}
+
+	O SACS, permite o usuário monitorar gasto de energia elétrica e consumo de água, controlar o sistema de segurança, visualizar a imagem das câmeras de segurança e controlar todo o sistema automatizado, incluindo sistema de jardinagem, luzes internas e outros aparelhos internos. O sistema também deve permitir a visualização da produção de energia das placas de energia solar e dos motores eólicos, além de mostrar o nível de reservatório de água da chuva.
+
+\subsection{Visão Geral}
+
+	Faremos uso de nosso documento como uma forma de organizar informações necessárias para futuras atividades do projeto em desenvolvimento. Informações a cerca do contexto do projeto, funcionalidades, e características serão organizados e estarão disponíveis neste documento afim de poupar qual vir a atrasar o processo de desenvolvimento do projeto. Todo e qualquer tempo será poupado com o uso deste documento de visão.
+
+\section{Posicionamento}
+
+\subsection{Descrição do Problema}
+
+\begin{longtable}{|l|m{7cm}|}
+	\hline \textbf{O problema} & Valor elevado do consumo desnecessário de energia elétrica\\
+	\hline \textbf{Afeta} & Pessoas que moram em residências, sejam casas ou apartamentos, e fazem uso da energia elétrica\\
+	\hline \textbf{Cujo impacto é} & Alto custo da conta de energia elétrica\\
+	\hline \textbf{Uma boa solução seria} & Desenvolvimento de um sistema de automação capaz de controlar o consumo da energia elétrica de acordo com o requisitos.\\
+	\hline
+\end{longtable}
+
+\subsection{Sentença de Posição do Sistema}
+
+\begin{longtable}{|l|m{7cm}|}
+	\hline \textbf{Para} & Cidadãos brasileiros residentes na Casa Sustentável e inteligente \\
+	\hline \textbf{Que} & Se importam com o alto consumo desnecessário de energia elétrica e desejam maior conforto\\
+	\hline \textbf{O SACS} & É um software ou um conjuntos de softwares de transmissão e controle de dados que integra sensores e age de forma inteligente\\
+	\hline \textbf{Que} & Garante conforto para os residentes e economia de energia\\
+	\hline \textbf{Diferente de} & Crestron\footnote{http://www.crestron.com/}\\
+	\hline \textbf{Nosso Sistema} & Integra sensores de forma inteligente para controle do consumo de energia elétrica, armazenamento e reuso de água não potável\\
+	\hline
+\end{longtable}
+
+\section{Descrições dos Envolvidos e Usuários}
+
+\subsection{Resumo dos Envolvidos}
+
+\begin{longtable}{|m{5cm}|m{5cm}|m{5cm}|}
+	\hline \textbf{Nome} & \textbf{Descrição} & \textbf{Responsabilidades}\\
+	\hline Professor das disciplina de Projeto Integrador 1. & É responsável por ministrar aulas de projeto integrador 1, direcionando caminhos para o projeto. & Mantem o foco do projeto ministrando aulas sobre gerência de projetos, direcionando o caminho a ser seguido pelo projeto. \\
+	\hline Alunos de Projeto Integrador 1. & São os alunos que cursam a disciplina de Projeto Integrador 1. & Iram desenvolver o projeto, especificando quais tecnologias serão usadas, que se encaixam melhor no escopo do projeto, visando a sustentabilidade.\\
+	\hline Aluno Gerente de Projeto Integrador 1. & É o aluno que cursa a disciplina de projeto Integrador e assumiu a posição de gerente. & Irá garantir que todos do grupo estão desempenhando sua função e deverá integrar todas as partes e passar para o gerente do projeto “Casa Sustentável”.\\
+	\hline Desenvolvedores e Gerentes & Profissionais da área que implementarão e integrarão o projeto já pronto dos alunos de PI1. & Irão produzir o sistema visionado e projetado na matéria de PI1.\\
+	\hline Moradores da “Casa Sustentável” & Usuário das funcionalidades da “Casa Sustentável” & Possuir fundo financeiro necessário para investir no projeto da “casa sustentável”\\
+	\hline
+\end{longtable}
+
+\subsection{Resumo dos Usuários}
+
+\begin{longtable}{|m{5cm}|m{10cm}|}
+	\hline \textbf{Nome} & \textbf{Descrição}\\
+	\hline Moradores da “Casa Sustentável” & Pessoa Física que adquiriu o produto “Casa Sustentável”, especificado no projeto da disciplina de PI1.\\
+	\hline
+\end{longtable}
+
+\subsection{Perfis dos Envolvidos}
+
+\textit{Equipe projetista da disciplina de Pi1}
+
+\begin{longtable}{|m{5cm}|m{10cm}|}
+	\hline \textbf{Representantes} & Arnoldo T. M. Lima\\ & Flavio C. Paixao\\ & Itiane T. B. Almeida\\ & Lucas V. T. Brilhante\\ & Marcelo M. Oliveira\\ & Mateus M. F. Mendon\c{c}a\\ & Talyta V. Cabral\\ & Victor B. Batalha\\ & Gabriel S. Soares\\ & Vitor N. A. Ribeiro\\
+	\hline \textbf{Descrição} & Farão o documento do projeto com todas as especificações técnicas necessárias.\\
+	\hline \textbf{Tipo} & Estudantes da Universidade de Brasília, Campus do Gama da matéria de Projeto Integrador 1, que pesquisaram todas as especificações do projeto e desenvolveram usando todos os conhecimentos de projeto passado pelos professores.\\
+	\hline \textbf{Responsabilidades} & Trabalhar em conjunto para montar um documento que especifique todos os aspectos do projeto. Pesquisar conhecimentos técnicos a serem aplicados no projeto.\\
+	\hline \textbf{Critério de Sucesso} & Gerir de maneira adequada, trabalhar em conjunto, desenvolver em equipe adequando ao tema do projeto, custo e prazo definido pela matéria.\\
+	\hline \textbf{Envolvimento} & Alto.\\
+	\hline
+\end{longtable}
+
+\textit{Gerente de automação do projeto “Casa Sustentável”}
+
+\begin{longtable}{|m{5cm}|m{10cm}|}
+	\hline \textbf{Representantes} & Gabriel S. Soares\\
+	\hline \textbf{Descrição} & Aluno da matéria de PI1 que é gerente da área de automação.\\
+	\hline \textbf{Tipo} & Aluno habilitado e disponível, capaz de gerir a equipe de projeto de automação.\\
+	\hline \textbf{Responsabilidades} & Garantir que todos os membros estão desempenhando sua função e entregando o que foi decidido. Deve também organizar as entregas de forma a integrar os assuntos e garantir a qualidade do projeto.\\
+	\hline \textbf{Critério de Sucesso} & Gerir corretamente o tempo de forma a abranger a diferentes variáveis que podem atrasar a entrega.\\
+	\hline \textbf{Envolvimento} & Alto.\\
+	\hline
+\end{longtable}
+
+\textit{Principais necessidades dos Usuários ou dos Envolvidos}
+
+\begin{longtable}{|m{2.75cm}|m{2cm}|m{3cm}|m{4cm}|m{4cm}|}
+	\hline \textbf{Necessidade} & \textbf{Prioridade} & \textbf{Preocupações} & \textbf{Solução Atual} & \textbf{Solução Proposta}\\
+	\hline 
+Visualizar o gasto e a produção energética da casa.
+&
+Alta
+&
+Obter dados energéticos para visualização do balanço, já que, o objetivo do projeto “Casa sustentável” ter ser sustentável, isto é, inclui gerar sua própria energia.
+&
+Não há solução.
+&
+Receber dados vindo da smart grid e dos geradores de energia e mostrar para o usuário através de gráficos.
+\\
+	\hline 
+Controlar aparelhos domésticos com a automação implementada.
+&
+Alta
+&
+O usuário tem que ter a habilidade de controlar todos os componentes automatizados da casa.
+&
+Há vários softwares no mercado que fazem esse tipo de monitoramento no mercado, mas nenhum deles tem integração com todos os sistemas de monitoramento sustentável e de geração de energia que são necessários.
+&
+Desenvolver um sistema embarcado que consiga receber todos os dados de sensores e consiga controlar os aparelhos com automação.
+\\
+	\hline
+Acessibilidade
+&
+Alta
+&
+O software deve ter uma interface intuitiva e fácil de usar, já que o software engloba muitas funções de monitoramento e controle.
+&
+Busca de técnicas de programação e criação de interface simples.
+&
+Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protótipos com usuários reais.
+\\
+	\hline
+\end{longtable}
+
+\section{Ambiente do Usuário}
+
+	O sistema será implementado e testado em um servidor Linux conectado através de ZWAVE juntamente ao que será o SACS.
+
+	As restrições de uso incluem a compra do dispositivo com o software embutido e conexão com a internet na casa.
+
+\section{Visão Geral do Sistema}
+
+\subsection{Perspectiva do Sistema}
+
+	O sistema tem como objetivo automatizar residências com a finalidade de trabalhar com termostatos, fechaduras, sistema de segurança, equipamentos de áudio e video, sistema de irrigação, portas de garagem, sensores ambientais, câmeras, luzes, gerenciamento de energia, internet e redes relacionadas, controlador de piscinas e spa, integração com radio frequência, integrado com robôs de limpeza, segurança dos dados, integração com telefones, fax, emails e possuir interface de usuário.
+
+\subsection{Suposições e Dependências}
+
+	Para a utilização do sistema é suposto que a casa possua conexão com internet e vários sensores para controle do gasto de energia e sensor de fluxo de água.
+	
+	Caso haja necessidade de alterações no projeto, as alterações deverão ser feitas neste documento traduzindo de melhor maneira possível.
+
+\subsection{Licenciamento e Instalação}
+
+	Alguns recursos explorados no desenvolvimento do sistema poderá ser necessário a compra de licenças.
+
+
+\section{Requisitos Funcionais do Sistema}
+
+	Esta seção tem a função de informar de forma resumida todas as características e funcionalidades do sistema.
+	
+\begin{tabular}{|l|l|c|c|}
+\hline 
+\textbf{Requisito} & \textbf{Descrição} & \textbf{Prioridade} & \textbf{Dependência}\tabularnewline
+\hline 
+\hline 
+RF1 & Monitoramento energético & Alta & -\tabularnewline
+\hline 
+RF2 & Ambientação & Médio & RF9, RF3\tabularnewline
+\hline 
+RF3 & Gestão da informação & Alta & -\tabularnewline
+\hline 
+RF4 & Controle de cortinas & Médio & RF3\tabularnewline
+\hline 
+RF5 & Automatização de multimídia & Médio & RF3\tabularnewline
+\hline 
+RF6 & Automatização hídrica & Médio & RF3\tabularnewline
+\hline 
+RF7 & Automatização do Jardim & Baixa & RF3\tabularnewline
+\hline 
+RF8 & Segurança & Alta & -\tabularnewline
+\hline 
+RF9 & Detecção de presença & Médio & -\tabularnewline
+\hline 
+RF10 & Monitoramento de humidade & Baixa & -\tabularnewline
+\hline 
+\end{tabular}
+
+\section{Requisitos Não Funcionais do Sistema}
+
+	Resumo em alto nível de outras características do sistema, tipicamente não funcionais.
+
+\begin{tabular}{|l|l|}
+\hline 
+\textbf{Identificador} & \textbf{Recurso}\tabularnewline
+\hline 
+\hline 
+RNF1 & Taxa de transmissão de dados\tabularnewline
+\hline 
+RNF2 & Estabilidade do sistema\tabularnewline
+\hline 
+RNF3 & Integridade do sistema\tabularnewline
+\hline 
+RNF4 & Monitoramento dos dados\tabularnewline
+\hline 
+RNF5 & Precisão dos dados dos sensores\tabularnewline
+\hline 
+RNF6 & Usabilidade do sistema\tabularnewline
+\hline 
+RNF7 & Unidade central de processamento\tabularnewline
+\hline 
+RNF8 & Monitoramento em tempo real\tabularnewline
+\hline 
+\end{tabular}
+
+\section{Procedência e Prioridades}
+
+\begin{tabular}{|l|l|}
+\hline 
+\textbf{Prioridades} & \textbf{Descrição}\tabularnewline
+\hline 
+\hline 
+1 & Receber e mostrar dados e estatísticas de monitoramento. \tabularnewline
+\hline 
+2 & Permitir o controle dos aparelhos automatizados. \tabularnewline
+\hline 
+3 & Deve permitir o controle e visualização do sistema de segurança. \tabularnewline
+\hline 
+4 & Deve mostrar quando algum componente estiver defeituoso. \tabularnewline
+\hline 
+\end{tabular}
+
+\section{Pesquisa realizada sobre pacotes de automação}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+\textbf{Nome} & \textbf{Segurança} & \textbf{Iluminação} & \textbf{Irrigação} & \textbf{Multimídia} & \textbf{Climatização} & \textbf{Câmera}\tabularnewline
+\hline 
+\hline 
+Gdsautomacao & x & x & x & x & x & x\tabularnewline
+\hline 
+Cynthron & x & x & - & x & - & -\tabularnewline
+\hline 
+Smart home & x & x & - & x & x & x\tabularnewline
+\hline 
+Automatedliving & x & x & ? & x & x & ?\tabularnewline
+\hline 
+Homeseer & x & x & x & x & x & x\tabularnewline
+\hline 
+Control4 & x & x & - & - & x & x\tabularnewline
+\hline 
+Creston & x & x & x & x & x & x\tabularnewline
+\hline 
+Vera & x & x & x & - & x & x\tabularnewline
+\hline 
+Stables conneted & x & x & x & - & x & x\tabularnewline
+\hline 
+Iris & x & x & x & - & x & x\tabularnewline
+\hline 
+Savant & x & x & x & x & x & x\tabularnewline
+\hline 
+SmartThings & x & x & - & - & Third Party & Third Party\tabularnewline
+\hline 
+Nexia & x & x & - & - & x & x\tabularnewline
+\hline 
+Wallpad & - & x & x & x & & -\tabularnewline
+\hline 
+AutomaticHouse & x & x & x & x & x & -\tabularnewline
+\hline 
+\end{tabular}
+
+
+
+
+
+
+
+%Sistema de Automação para Casa Sustentável
+%
+%Versão 2.1.1
+% 
+%Histórico da Revisão
+%Data
+%Versão
+%Descrição
+%Autor
+%28/09/2015
+%1.0.0
+%Criação
+%Lucas V. T. Brilhante
+%28/09/2015
+%1.1.0
+%Adição da seção 1. Introdução
+%Lucas V. T. Brilhante
+%28/09/2015
+%1.2.0
+%Adição da seção 2. Posicionamento
+%Mateus M. F. Mendonça
+%28/09/2015
+%1.3.0
+%Adição da seção 3. Descrição dos Envolvidos e Usuários
+%Lucas V. T. Brilhante
+%28/09/2015
+%1.4.0
+%Adição da seção 4. Ambiente do Usuário
+%Mateus M. F. Mendonça
+%28/09/2015
+%1.5.0
+%Adição da seção 5. Visão Geral do Sistema
+%Mateus M. F. Mendonça
+%28/09/2015
+%1.6.0
+%Adição da seção 6. Requisitos Funcionais do Sistema
+%Vitor N. A. Ribeiro
+%28/09/2015
+%1.7.0
+%Adição da seção 7. Requisitos Não Funcionais do Sistema
+%Vitor N. A. Ribeiro
+%28/09/2015
+%1.8.0
+%Adição da seção 8. Procedências e prioridades.
+%Lucas V. T. Brilhante
+%29/09/2015
+%1.9.0
+%Adição da seção 9. Tabela comparativa
+%Guilherme S. Lionço
+%29/09/2015
+%2.0.0
+%Revisão e finalização do documento
+%Vitor N. A. Ribeiro, 
+%Marcelo M. Oliveira,,
+%Flávio da C. Paixão
+%29/09/2015
+%2.1.0
+%Adição da seção 10. Referências Bibliográficas
+%Vitor N. A. Ribeiro
+%04/10/2015
+%2.1.1
+%Revisão
+%Vitor N. A. Ribeiro
+%
+%
+%Índice Analítico
+%1.      Introdução                    3
+%1.1    Finalidade                   3
+%1.2  Escopo                3
+%1.3  Visão Geral                3
+%1.4  Acrônomos                3
+%2.      Posicionamento                 4
+%2.1.    Descrição do Problema            4
+%2.2.    Sentença de Posição do Sistema          4
+%3.      Descrições dos Envolvidos e Usuários              5
+%3.1.    Resumo dos Envolvidos              5
+%3.2.    Resumo dos Usuários              6
+%3.3  Perfis dos Envolvidos              6
+%4.      Ambiente do Usuário                 9
+%5.      Visão Geral do Sistema              9
+%6.1.    Perspectiva do Sistema             9
+%6.2.    Suposições e Dependências               9
+%6.3  Licenciamento e Instalação            9
+%6.      Requisitos Funcionais do Sistema            10
+%  6.1  Tabela de Requisitos              10
+%7.  Requisitos Não Funcionai do Sistema          11
+%  7.1  Tabela de Requisitos Não Funcionais          11
+%7.      Procedências e Prioridades                 12
+%9.  Pesquisa realizada sobre pacotes de automação        12
+%10.  Referências Bibliográficas              14
+%
+%Visão
+% 
+%Introdução
+%O documento de visão busca coletar, analisar e definir necessidades e recursos de nível superior do “Sistema de Automação para Casa Sustentável”. Concentra-se nos recursos necessários, usuários-alvo e nas razões do projeto. Os detalhes de como o SACS satisfaz essas necessidades são descritos nos casos de uso e nas especificações suplementares.
+%
+%1.1 – Finalidade
+%Este documento tem como objetivo apresentar, analisar e definir as necessidades e características do SACS. O SACS tem como objetivo controlar e monitorar todo o sistema do Projeto “Casa Sustentável”. O documento descreverá as características gerais do sistema, os envolvidos em seu desenvolvimento e o público alvo. 
+%1.2 - Escopo
+%O SACS, permite o usuário monitorar gasto de energia elétrica e consumo de água, controlar o sistema de segurança, visualizar a imagem das câmeras de segurança e controlar todo o sistema automatizado, incluindo sistema de jardinagem, luzes internas e outros aparelhos internos. O sistema também deve permitir a visualização da produção de energia das placas de energia solar e dos motores eólicos, além de mostrar o nível de reservatório de água da chuva.
+%1.3 - Visão geral
+%  Faremos uso de nosso documento como uma forma de organizar informações necessárias para futuras atividades do projeto em desenvolvimento. Informações a cerca do contexto do projeto, funcionalidades, e características serão organizados e estarão disponíveis neste documento afim de poupar qual vir a atrasar o processo de desenvolvimento do projeto. Todo e qualquer tempo será poupado com o uso deste documento de visão.
+%1.4 - Acrônimos
+%SACS - Sistema de Automação para Casa Sustentável
+%IHC - Interação humano computador
+%HVAC - Heating, ventilating, and air conditioning
+%MVC - Model-View-Controller
+%RF - Requisitos funcionais
+%RNF - Requisios não funcionais
+%GPS - Global Position System
+%Z-WAVE - É uma tecnologia desenvolvida especialmente para automação residencial por uma empresa chamada Zensys. É um protocolo de comunicação completamente sem fios que usa uma largura da banda estreita para enviar comandos de controlo e, potencialmente, dados secundários .
+%
+%
+%
+%2.      Posicionamento
+%Descrição do Problema
+% 
+%O problema
+%Valor elevado do consumo desnecessário de energia elétrica
+%Afeta
+%Pessoas que moram em residências, sejam casas ou apartamentos, e fazem uso da energia elétrica
+%Cujo impacto é
+%Alto custo da conta de energia elétrica
+%Uma boa solução seria
+%Desenvolvimento de um sistema de automação capaz de controlar o consumo da energia elétrica de acordo com o requisitos.
+% 
+%2.   Sentença de Posição do Sistema
+%Para
+%Cidadãos brasileiros residentes na Casa Sustentável e inteligente 
+%Que
+%Se importam com o alto consumo desnecessário de energia elétrica e desejam maior conforto
+%O SACS
+%É um software ou um conjuntos de softwares de transmissão e controle de dados que integra sensores e age de forma inteligente
+%Que
+%Garante conforto para os residentes e economia de energia
+%Diferente de
+%[Crestron](http://www.crestron.com/markets/home_theater_and_whole_house_home_automation/)
+%Nosso sistema
+%Integra sensores de forma inteligente para controle do consumo de energia elétrica, armazenamento e reuso de água não potável
+%
+%
+%
+%
+%
+%
+%
+%3.      Descrições dos Envolvidos e Usuários
+%3.1  Resumo dos Envolvidos
+%Nome
+%Descrição
+%Responsabilidades
+%Professor das disciplina de Projeto Integrador 1.
+%É responsável por ministrar aulas de projeto integrador 1, direcionando caminhos para o projeto.
+%
+%
+%Mantem o foco do projeto ministrando aulas sobre gerência de projetos, direcionando o caminho a ser seguido pelo projeto.
+%Alunos de Projeto Integrador 1.
+%São os alunos que cursam a disciplina de Projeto Integrador 1.
+%Iram desenvolver o projeto, especificando quais tecnologias serão usadas, que se encaixam melhor no escopo do projeto, visando a sustentabilidade.
+%Aluno Gerente de Projeto Integrador 1.
+%É o aluno que cursa a disciplina de projeto Integrador e assumiu a posição de gerente.
+%Irá garantir que todos do grupo estão desempenhando sua função e deverá integrar todas as partes e passar para o gerente do projeto “Casa Sustentável”.
+%Desenvolvedores e Gerentes
+%Profissionais da área que implementarão e integrarão o projeto já pronto dos alunos de PI1.
+%Irão produzir o sistema visionado e projetado na matéria de PI1.
+%Moradores da “Casa Sustentável”
+%Usuário das funcionalidades da “Casa Sustentável”
+%Possuir fundo financeiro necessário para investir no projeto da “casa sustentável”
+% 
+%3.2  Resumo dos Usuários
+%Nome
+%Descrição
+%Moradores da “Casa Sustentável”
+%Pessoa Física que adquiriu o produto “Casa Sustentável”, especificado no projeto da disciplina de PI1.
+%
+%
+%
+%3.3  Perfis dos Envolvidos
+%-----_     3.1 Equipe projetista da disciplina de PI1
+%Representantes
+%Arnoldo T. M. Lima
+%Flavio C. Paixao
+%Itiane T. B. Almeida
+%Lucas V. T. Brilhante
+%Marcelo M. Oliveira
+%Talyta V. Cabral
+%Victor B. Batalha
+%Gabriel S. Soares
+%Vitor N. A. Ribeiro
+%Descrição
+%Farão o documento do projeto com todas as especificações técnicas necessárias.
+%Tipo
+%Estudantes da Universidade de Brasília, Campus do Gama da matéria de Projeto Integrador 1, que pesquisaram todas as especificações do projeto e desenvolveram usando todos os conhecimentos de projeto passado pelos professores.
+%Responsabilidades
+%Trabalhar em conjunto para montar um documento que especifique todos os aspectos do projeto. Pesquisar conhecimentos técnicos a serem aplicados no projeto.
+%Critérios de Sucesso
+%Gerir de maneira adequada, trabalhar em conjunto, desenvolver em equipe adequando ao tema do projeto, custo e prazo definido pela matéria.
+%Envolvimento
+%Alto.
+%
+%3.2 Gerente de automação do projeto “Casa Sustentável”
+%Representantes
+%Gabriel S. Soares
+%Descrição
+%Aluno da matéria de PI1 que é gerente da área de automação.
+%Tipo
+%Aluno habilitado e disponível, capaz de gerir a equipe de projeto de automação.
+%Responsabilidades
+%Garantir que todos os membros estão desempenhando sua função e entregando o que foi decidido. Deve também organizar as entregas de forma a integrar os assuntos e garantir a qualidade do projeto.
+%Critérios de Sucesso
+%Gerir corretamente o tempo de forma a abranger a diferentes variáveis que podem atrasar a entrega.
+%Envolvimento
+%Alto.
+% 
+%
+%3.3 Principais Necessidades dos Usuários ou dos Envolvidos
+%Necessidade
+%Prioridade
+%Preocupações
+%Solução Atual
+%Solução Proposta
+%Visualizar o gasto e a produção energética da casa.
+%Alta
+%Obter dados energéticos para visualização do balanço, já que, o objetivo do projeto “Casa sustentável” ter ser sustentável, isto é, inclui gerar sua própria energia.
+%Não há solução.
+%Receber dados vindo da smart grid e dos geradores de energia e mostrar para o usuário através de gráficos.
+%Controlar aparelhos domésticos com a automação implementada.
+%Alta
+%O usuário tem que ter a habilidade de controlar todos os componentes automatizados da casa.
+%Há vários softwares no mercado que fazem esse tipo de monitoramento no mercado, mas nenhum deles tem integração com todos os sistemas de monitoramento sustentável e de geração de energia que são necessários.
+%Desenvolver um sistema embarcado que consiga receber todos os dados de sensores e consiga controlar os aparelhos com automação.
+%Acessibilidade 
+%Alta
+%O software deve ter uma interface intuitiva e fácil de usar, já que o software engloba muitas funções de monitoramento e controle.
+%Busca de técnicas de programação e criação de interface simples.
+%Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protótipos com usuários reais.
+% 
+%
+%
+%4.      Ambiente do Usuário
+%O sistema será implementado e testado em um servidor Linux conectado através de Z-Waves juntamente ao que será o SACS.
+%As restrições de uso incluem a compra do dispositivo com o software embutido e conexão com a internet na casa.
+%
+%5.      Visão Geral do Sistema
+%5.1  Perspectiva do Sistema
+%O sistema tem como objetivo automatizar residências com a finalidade de trabalhar com termostatos, fechaduras, sistema de segurança, equipamentos de áudio e video, sistema de irrigação, portas de garagem, sensores ambientais, câmeras, luzes, gerenciamento de energia, internet e redes relacionadas, controlador de piscinas e spa, integração com radio frequência, integrado com robôs de limpeza, segurança dos dados, integração com telefones, fax, emails e possuir interface de usuário.
+%5.2  Suposições e Dependências
+%Para a utilização do sistema é suposto que a casa possua conexão com internet e vários sensores para controle do gasto de energia e sensor de fluxo de água.
+%Caso haja necessidade de alterações no projeto, as alterações deverão ser feitas neste documento traduzindo de melhor maneira possível.
+%5.3  Licenciamento e Instalação
+%Alguns recursos explorados no desenvolvimento do sistema poderá ser necessário a compra de licenças.
+%
+%6.      Requisitos Funcionais do Sistema
+%Esta seção tem a função de informar de forma resumida todas as características e funcionalidades do sistema.
+%6.1 Tabela de Requisitos
+%Requisito
+%Descrição
+%Prioridade
+%Dependência
+%RF01
+%O sistema deve possuir uma rede inteligente que através de informações coletadas, retorne aos usuários dados dos gastos da casa.
+%Alta
+%
+%
+%RF02
+%O sistema deve possuir métodos e algoritmos de processamento de sinais
+%Médio
+%
+%
+%RF03
+%O sistema deve fazer a gestão da informação.
+%Médio
+%
+%
+%RF04
+%O sistema deve garantir automatização da iluminação, multimídia, cortinas, HVAC, banho, jardim e segurança.
+%Médio
+%RNF01, RNF05
+%RF05
+%O sistema deve ter capacidade de detectar presença.
+%
+%
+%
+%
+%RF06
+%O sistema deve ter capacidade de controlar posição de cortinas.
+%
+%
+%
+%
+%RF07
+%O sistema deve ter capacidade de controlar o fluxo de água.
+%
+%
+%
+%
+%RF08
+%O sistema deve ter capacidade de medir umidade do ambiente.
+%
+%
+%
+%
+%RF09
+%O sistema deve ter capacidade de medir umidade do solo.
+%
+%
+%
+%
+%RF10
+%O sistema deve ter capacidade de medir a temperatura da água.
+%
+%
+%
+%
+%RF11
+%O sistema deve utilizar sensores de movimentos.
+%
+%
+%
+%
+%
+%
+%
+%
+%7.      Requisitos Não Funcionais do Sistema
+%Resumo em alto nível de outras características do sistema, tipicamente não funcionais.
+%7.1 Tabela de Requisitos Não Funcionais
+%Identificador
+%Recurso
+%RNF01
+%O sistema deve ser passível de cálculo da taxa de transmissão de dados
+%RNF02
+%O sistema de segurança deve ter capacidade de se manter em funcionamento e estável durante situação críticas.
+%RNF03
+%Os dados do sistema deverá ter garantia de integridade, anonimato e consistência.
+%RNF04
+%Deve ser garantido o monitoramento dos dados a partir da internet.
+%RNF05
+%Os sensores devem ser passíveis de aferir sua precisão.
+%RNF06
+%O sistema de IHC deve ser de fácil usabilidade.
+%RNF07
+%O sistema de IHC deve ser intuitivo.
+%RNF08
+%O sistema de IHC deverá ser passível de uma manutenção não complexa.
+%RNF09
+%O sistema deve possuir uma unidade central de processamento.
+%RNF10
+%O sistema deve fazer o monitoramento em tempo real.
+%RNF11
+%O sistema deve atender as metas de usabilidade que permita a visualização e manipulação dos componentes da casa.
+%
+%8.   Procedência e Prioridades
+%
+%Prioridades
+%Descrição
+%1
+%Receber e mostrar dados e estatísticas de monitoramento.
+%2
+%Permitir o controle dos aparelhos automatizados.
+%3
+%Deve permitir o controle e visualização do sistema de segurança.
+%4
+%Deve mostrar quando algum componente estiver defeituoso.
+%
+%9.   Pesquisa realizada sobre pacotes de automação
+%
+%Nome
+%Segurança
+%iluminação
+%irrigação
+%multimídia
+%climatização
+%câmera
+%Gdsautomacao
+%x
+%x
+%x
+%x
+%x
+%x
+%Cynthron
+%x
+%x
+%-
+%x
+%-
+%-
+%Smart home
+%x
+%x
+%-
+%x
+%x
+%x
+%Automatedliving
+%x
+%x
+%?
+%x
+%x
+%?
+%Homeseer
+%x
+%x
+%x
+%x
+%x
+%x
+%Control4
+%x
+%x
+%-
+%-
+%x
+%x
+%Creston
+%x
+%x
+%x
+%x
+%x
+%x
+%Vera
+%x
+%x
+%x
+%-
+%x
+%x
+%Stables conneted
+%x
+%x
+%x
+%-
+%x
+%x
+%Iris
+%x
+%x
+%x
+%-
+%x
+%x
+%Savant
+%x
+%x
+%x
+%x
+%x
+%x
+%SmartThings
+%x
+%x
+%x
+%-
+%Third party
+%Third party
+%Nexia
+%x
+%x
+%-
+%-
+%x
+%x
+%Wallpad
+%-
+%x
+%-
+%x
+%
+%
+%-
+%AutomaticHouse
+%x
+%x
+%x
+%x
+%x
+%-
+%
+%
+%
+%Portão
+%Controle
+%Energia
+%Janelas
+%Biometria
+%Garagem
+%Sensores de Entrada
+%Outras features
+%Cenas
+%Rede de Dados
+%x
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%mobile, voz
+%-
+%
+%
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%mobile
+%-
+%-
+%-
+%-
+%-
+%sensor de vasamento de água
+%-
+%-
+%?
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%x
+%
+%
+%x
+%x
+%meteorológia
+%x
+%
+%
+%
+%
+%Mobile
+%-
+%-
+%-
+%-
+%x
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%x
+%x
+%x
+%Third party
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%Third party
+%x
+%Third party
+%x
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%x
+%x
+%x
+%x
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%Third party
+%x
+%x
+%x
+%-
+%-
+%-
+%-
+%Mobile
+%x
+%x
+%x
+%-
+%-
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%Third party
+%x
+%Third party
+%x
+%-
+%-
+%-
+%x
+%Mobile
+%x
+%-
+%-
+%-
+%x
+%-
+%-
+%-
+%-
+%Mobile
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%-
+%x
+%x
+%-
+%-
+%-
+%x
+%telefone
+%x
+%x
+%
+%
+%
+%
+%
+%10.      Referências Bibliográficas
+%  
+%Tabelas com os links referentes aos produtos relacionados. Disponível em: <https://docs.google.com/spreadsheets/d/1WPOmOh2WVWy80Mfl5BgaIS0yhlrtesQmxYhjWWiehKQ/edit#gid=0>. Acessado em: 29 de Setembro de 2015.
+%
