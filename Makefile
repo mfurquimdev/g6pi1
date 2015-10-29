@@ -24,19 +24,23 @@ EDITAVEIS_SOURCES = informacoes.tex errata.tex dedicatoria.tex \
 
 EDITAVEIS_FILES = $(addprefix $(EDITAVEIS_DIR)/, $(EDITAVEIS_SOURCES))
 
+APENDICES_DIR = $(addprefix $(EDITAVEIS_DIR)/, apendices)
+APENDICES_SOURCES = aquisicao_software.tex
+APENDICES_FILES = $(addprefix $(APENDICES_DIR)/, $(APENDICES_SOURCES))
+
 MAIN_FILE = tcc.tex
 DVI_FILE  = $(addsuffix .dvi, $(basename $(MAIN_FILE)))
 AUX_FILE  = $(addsuffix .aux, $(basename $(MAIN_FILE)))
 PS_FILE   = $(addsuffix .ps, $(basename $(MAIN_FILE)))
 PDF_FILE  = $(addsuffix .pdf, $(basename $(MAIN_FILE)))
 
-SOURCES = $(FIXOS_FILES) $(EDITAVEIS_FILES)
+SOURCES = $(FIXOS_FILES) $(EDITAVEIS_FILES) $(APENDICES_FILES)
 
 .PHONY: all clean dist-clean
 
-all: 
+all:
 	@make $(TARGET)
-     
+
 $(TARGET): $(MAIN_FILE) $(SOURCES) bibliografia.bib
 	$(LATEX) $(MAIN_FILE) $(SOURCES)
 #	$(BIBTEX) $(AUX_FILE)
@@ -50,7 +54,7 @@ clean:
 	rm -f *~ *.dvi *.ps *.backup *.aux *.log
 	rm -f *.lof *.lot *.bbl *.blg *.brf *.toc *.idx
 	rm -f tcc.pdf
-	
+
 dist: clean
 	tar vczf tcc-fga-latex-$(VERSION).tar.gz *
 
