@@ -1,3 +1,4 @@
+\chapter{Documento de visão}
 \section{Introdução}
 
 	O documento de visão busca coletar, analisar e definir necessidades e recursos de nível superior do \textit{Sistema de Automação para Casa Sustentável}. Concentra-se nos recursos necessários, usuários-alvo e nas razões do projeto. Os detalhes de como o SACS satisfaz essas necessidades são descritos nos casos de uso e nas especificações suplementares.
@@ -925,3 +926,663 @@ AutomaticHouse & x & x & x & x & x & -\tabularnewline
 %  
 %Tabelas com os links referentes aos produtos relacionados. Disponível em: <https://docs.google.com/spreadsheets/d/1WPOmOh2WVWy80Mfl5BgaIS0yhlrtesQmxYhjWWiehKQ/edit#gid=0>. Acessado em: 29 de Setembro de 2015.
 %
+
+
+\chapter{Especificação de Requisitos}
+
+
+Casa Sustentável
+
+Especificação de Requisitos de Software
+do Sistema de Automação para Casa Sustentável (SACS)
+ 
+ 
+Versão 1.1.3
+ 
+ 
+
+
+Histórico da Revisão
+Histórico da Revisão
+Data
+Versão
+Descrição
+Autor
+02/10/2015
+1.0.0
+Criação
+Vitor N. A. Ribeiro
+02/10/2015
+1.1.0
+Adição da seção 1. Introdução
+Vitor N. A. Ribeiro
+02/10/2015
+1.1.1
+Adição da seção 3.1. Requisitos Funcionais
+Marcelo M. Oliveira,
+Ricardo L. ,
+Vitor N. A. Ribeiro
+03/10/2015
+1.1.2
+Adição da seção 3.9. Interfaces
+Lucas V. T. Brilhante
+04/10/2015
+1.1.3
+Adição da seção 3.2. Requisitos Não Funcionais
+Flávio da C. Paixão
+05/10/2015
+1.1.4
+Dividindo e incrementando seção 3.1.4
+Mateus M. F. Mendonça
+06/10/2015
+1,1,5
+Especificação de requisitos
+Lucas V. T. Brilhante
+Flávio da C. Paixão
+Mateus M. F. Mendonça
+Vitor N. A. Ribeiro
+06/10/2015
+1,1,6
+Formatação
+Lucas V. T. Brilhante
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Índice Analítico
+1. Introdução         
+1.1 Finalidade     
+1.2 Escopo     
+1.3 Definições, Acrônimos e Abreviações     
+1.4 Referências     
+1.5 Visão Geral     
+2. Descrição Geral    
+3. Requisitos Específicos
+3.1 Requisitos Funcionais
+3.1.1 <Requisito Funcional Um>        
+3.2 Requisitos Não Funcionais
+3.2.1 <Requisito Não Funcional Um>  
+3.8 Componentes Comprados     
+3.9 Interfaces     
+3.9.1 Interfaces de Usuário           
+3.9.2 Interfaces de Hardware           
+3.9.3 Interfaces de Software           
+3.9.4 Interfaces de Comunicação           
+3.10 Requisitos de Licenciamento     
+3.11 Observações Legais, de Direitos Autorais etc     
+3.12 Padrões Aplicáveis     
+4. Informações de Suporte    
+
+
+
+
+
+
+
+
+
+Especificação de Requisitos de Software
+1.                  Introdução
+
+1.1     Finalidade
+    
+Este documento de Especificação de Requisitos de Software concentra-se na coleta e na organização de todos os requisitos que envolvem o SACS. Descrevendo todos os requisitos de software para cada característica e funcionalidade de uma determinada ação do sistema.
+
+1.2     Escopo
+    
+    O SACS, permite o usuário monitorar gastos de energia elétrica e consumo de água, controlar o sistema de segurança, visualizar a imagem das câmeras de segurança e controlar todo o sistema automatizado, incluindo sistema de jardinagem, luzes internas e outros aparelhos internos. O sistema também deve permitir a visualização da produção de energia das placas de energia solar e dos motores eólicos, além de mostrar o nível de reservatório de água da chuva.
+
+1.3     Definições, Acrônimos e Abreviações
+    
+    SACS - Sistema de Automação para Casa Sustentável
+
+1.4     Referências
+    
+
+1.5     Visão Geral
+    Este documento servirá como base para a implantação do sistema SACS durante todo o desenvolvimento do projeto da Casa Sustentável. Informações acerca das funcionalidades e características do SACS serão organizados e estarão disponível neste documento afim de garantir que todas as necessidades sejam implementadas.
+    Esse documento está dividido em: Descriçao Geral, Lista de Requisitos e Requisitos Específicos.
+
+
+2.                  Descrição Geral
+
+    O sistema SACS lidará com termostatos, fechaduras, sistema de segurança, equipamentos de áudio e video, sistema de irrigação, portas de garagem, sensores ambientais, câmeras, luzes, gerenciamento de energia, internet e redes relacionadas, controlador de piscinas e spa, integração com radio frequência, integração com robôs de limpeza, segurança dos dados, integração com telefones, fax e emails, possuirá interface de usuário, integração a consoles de jogos entre outros utilitários.
+
+    Para a perfeita utilização do SACS é essencial que o sistema esteja em constante conectividade com a internet. Será necessário instalar sensores nas entradas das tomadas de energia para o controle dos gastos. A instalação de um núcleo de dados onde seja refrigerada e 
+isolada se possível. 
+
+3.  Requisitos Específicos
+
+3.1     Requisitos Funcionais
+
+3.1.01    Monitoramento energético.
+
+3.1.02    Ambientação.
+
+3.1.03    Gestão da informação.
+
+3.1.04 Controle da Disposissão das Cortinas
+
+3.1.05    Automatização de multimídia.
+
+3.1.06    Automatização Hidrico.
+
+3.1.07    Automatização do jardim.
+
+3.1.08    Segurança
+
+3.1.09 Detectar presença
+3.1.10    O sistema deve ter capacidade de medir umidade.
+
+    
+
+
+3.2              Requisitos Não Funcionais
+    
+3.2.01    Taxa de transmição de dados
+3.2.02    Estabilidade do sistema
+3.2.03    Integridade dos dados
+3.2.04    Monitoramento atráves da internet.
+3.2.05    Precisão dos dados dos sensores.
+3.2.06    Usabilidade do sistema.
+3.2.07    Unidade central de processamento.
+3.2.08    Monitoramento em tempo real.
+
+3.8     Componentes Comprados
+    
+O sistema possuirá dispositivos de hardware e software, que iram auxiliar nas funcionalidades de automatização da SACS, e que serão adquiridos pagando as devidas taxas referentes ao licenciamento e operabilidade destes dispositivos.
+
+
+
+3.9     Interfaces
+
+
+Número de ordem
+Nome
+Ator
+Caso de uso
+Descrição
+1         
+Tela de monitoramento
+ Usuário
+Monitorar dados da smart grid.
+Visualizar dados da smart grid a partir da tela de monitoramento. 
+2         
+Tela de monitoramento de sensores
+Usuário
+Monitorar dados de sensores
+Visualizar dados dos sensores na tela de monitoramento.
+3         
+tela de controle
+Usuário
+Controle multimídia
+Acionar aparelhos multimídia conectados.
+4         
+ Tela de segurança
+Usuário 
+Controle de segurança 
+Visualizar status do equipamento de segurança e ligar e desligar sistemas. 
+5         
+Tela de segurança 
+Usuário 
+Visualizar imagem de cameras 
+Obter imagens na tela do celular a partir das cameras de segurança. 
+6         
+Tela de jardinagem 
+Usuário 
+Controlar e visualizar status de jardinagem 
+Ativar/desativar irrigadores e controles de jardim. 
+
+
+
+
+
+
+
+
+
+
+5 Requisitos Funcionais
+
+5.1 Monitoramento energético
+5.1.1 Descrição
+O sistema deve medir o consumo energético em tempo real e gerar relatórios para o usuário.
+
+5.1.2 Entradas
+Gastos de energia gerado por cada ponto de acesso de energia (tomada) da casa.
+
+5.1.3 Saídas
+Deve ser gerado relatórios diários, semanais e mensais, de gastos energéticos,
+de acordo com a requisição do usuário.
+
+5.1.4 Processamento
+Todo o consumo de energia gerado pela casa deve ser armazenado, de forma a ser acessível local e remotamente.
+Todo o consumo de energia gerado pela casa deve ser verificado, antes de
+armazenado.
+
+5.1.5 Restrições
+N/A
+
+5.1.6 Manipulação de erros
+Todos os dados do consumo energético deve ser verificado, e caso haja inconsistência ou erros nos dados, deve ser registrado no log do
+
+
+
+5.2 Ambientação
+5.2.1 Descrição
+As mudanças de temperatura e luzes devem influenciar na abertura das persianas, na força das luminárias e no HVAC para que o ambiente seja mantida constante e agradável.
+
+5.2.2 Entradas
+Sinais de sensores de luz e temperatura.
+
+5.2.3 Saídas
+Deve ser gerado um controle a fim de optimizar luz e temperatura fornecida pela casa.
+
+5.2.4 Processamento
+A luz e a temperatura da casa deve ser verificada e as modificações necessárias devem ser requisitadas a fim de manter o ambiente.
+
+5.2.5 Restrições
+N/A
+
+5.2.6 Manipulação de erros
+Caso os dados não estejam acurados ou divergentes do esperados o sistema deve avisar o erro e não manipular mais nos objetos de automação de luz e temperatura.
+
+5.4 Controle da Disposissão das Cortinas
+5.4.1 Descrição
+ O sistema a partir de um controle remoto ou ambiente pré configurado, deverá mudar a disposição das cortinas.
+
+5.4.2 Entradas
+    Comandos enviados de um controle remoto.
+
+5.4.3 Saídas
+    Manipulação da disposição das cortinas de acordo com o comando.
+
+5.4.4 Processamento
+    A partir de dados pré-mapeados é feito o controle da disposição das cortinas referente ao que foi configurado.
+
+5.4.5 Restrições
+N/A
+
+5.4.6 Manipulação de erro
+    O sistema pode se deparar com a perda de um comando enviado a partir de um controle sendo necessário re-enviar o comando.
+
+
+5.5 Controle multimídia
+5.5.1 Descrição
+ O sistema deve garantir automatização de multimídia.
+
+5.5.2 Entradas
+    Comandos enviados de um controle remoto.
+
+5.5.3 Saídas
+    Manipulação de audio, TV, projetor, dentre outros sistema multimídia presentes na casa.
+
+5.5.4 Processamento
+    A partir de dados pré-mapeados é feito o controle de dispositivos de multimídia referente ao que foi configurado.
+
+5.5.5 Restrições
+N/A
+
+5.5.6 Manipulação de erro
+    O sistema pode se deparar com a perda de um comando enviado a partir de um controle sendo necessário re-enviar o comando.
+
+
+
+5.6 Monitoramento hídrico
+5.6.1 Descrição
+O sistema deve medir o consumo hídrico em tempo real e gerar relatórios para o usuário.
+
+5.6.2 Entradas
+Dados de consumo hídrico em tempo real.
+
+5.6.3 Saídas
+Relatórios diários, semanais e mensais, de gastos hídricos, de acordo com a requisição do usuário.
+
+5.6.4 Processamento
+Todo o consumo hídrico gerado pela casa deve ser verificado, antes de armazenado.
+Os dados do consumo hídrico devem ser processados para gerar um relatório contendo o consumo e o custo estimado da conta de água.
+
+5.6.5 Restrições
+N/A
+
+5.6.6 Manipulação de erros
+Todo o consumo hídrico gerado pela casa deve ser armazenado, após verificado, de forma segura em um hardware local.
+
+
+
+
+5.7 Controle de Jardim
+5.7.1 Descrição
+O sistema deve garantir automatização do jardim.
+
+5.7.2 Entradas
+Irrigação do jardim,de acordo com a necessidade de cada planta.
+
+5.7.3 Saídas
+Ser otimizado de modo a economizar água sem desperdicios.
+
+5.7.4 Processamento
+Ser colocado um tempo para irrigação de cada planta,vendo a necessidade de cada uma.
+
+5.7.5 Restrições
+N/A
+
+5.7.6 Manipulação de erros
+Caso haja algum vazamento ou desperdicio de água o sistema deve avisar para não haver perdas de água desnecessarias.
+
+
+
+
+
+
+5.8 Controle da segurança de dados
+5.8.1 Descrição
+Os dados do sistema deverá garantir integridade, anonimato e consistência.
+
+5.8.2 Entradas
+    Todos os dados do fluxo do sistema de forma
+
+5.8.3 Saídas
+    Dados criptografados e com seu respectivo hash.
+
+5.8.4 Processamento
+    A partir dos dados de entrada, o sistema passa eles por dois algoritmos, um que criptografa e outros que tira sua hash (serve como indentidade).
+
+5.8.5 Restrições
+N/A
+
+5.8.6 Manipulação de erro
+    Todo dado após criptografado ao chegar ao destino é calculado novamente o hash e comparado com o anterior, antes de navegar pela rede e caso confirmado é de criptografado.
+
+
+5.9 Detectar Presença
+5.9.1 Descrição
+ O sistema a partir de sensores de presença deverá identificar qualquer movimento fora e dentro da casa.
+
+5.9.2 Entradas
+    Alertas de detectação de movimento no perimetro.
+
+5.9.3 Saídas
+    Informação da localização de onde foi detectado movimento e projeção da camera de video mais próximo deste ponto.
+
+5.9.4 Processamento
+    Após a detecção de movimento, o sensor enviar para o sistema informações de onde foi detectado e libera a imagem da câmera mais próximo do local identificado.
+
+5.9.5 Restrições
+N/A
+
+5.9.6 Manipulação de erro
+O sistema deverá lidar com a capacidade de ignorar movimentos de animais, ventos, folhas entre outros objetos.
+
+
+5.10 Monitoramento do solo
+5.10.1 Descrição
+O sistema deve medir a umidade do solo em tempo real, gerar relatórios para o usuário e 
+
+5.10.2 Entradas
+Dados da umidade do solo em tempo real.
+
+5.10.3 Saídas
+Relatórios diários, semanais e mensais, da umidade do solo, de acordo com a requisição do usuário.
+
+5.10.4 Processamento
+Os dados da umidade do solo devem ser armazenados de forma segura em um hardware local, e processados para gerar um relatório contendo a variação ao longo do dia.
+O usuario deve ser alertado caso a umidade atinja um nível crítico.
+
+5.10.5 Restrições
+N/A
+
+5.10.6 Manipulação de erros
+Todos os dados da medição da umidade do solo deve ser verificado, antes de armazenado.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+6. REQUISITOS NAO FUNCIONAIS
+6.1 Taxa de transmição de dados
+6.1.1 Performance 
+O sistema deve ser passível de cálculo da taxa de transmissão de dados de alta velocidade.
+6.1.2 Confiabilidade
+    O sistema deve manter uma taxa de transmição de dados altas sem falha.
+6.1.3 Disponibilidade
+    O sistema deve manter uma taxa de transmição de dados alta durante todo o periodo de funcionamento.
+
+6.1.4 Segurança
+    A transmissão de dados deve ser inacessível a dispositivos não autorizados ou cadastrados.
+6.1.5 Manutenibilidade
+    Em caso de falha, o sistema deve ser capaz de se recuperar em um tempo minimo a fim de nao deixar os aparelhos desamparados da trasmissão de dados.
+
+6.1.6 Portabilidade
+    A transmissão de dados de alta velocidade deve abranger todos os dispositivos desejados da casa, além de ser capaz de se expandir para que a transmissão alcance novos dispositivos.
+
+
+
+
+
+
+ O sistema de segurança deve ter capacidade de se manter em funcionamento e estável durante situação críticas.
+    
+    Informações: Segurança
+
+    Regra: O sistema deve possuir dispositivos que possam manter estável o funcionamento energetico da casa.
+
+
+6.2 Estabilidade sistemática
+6.2.1 Performance 
+O sistema deve se manter estável durante situações críticas
+6.2.2 Confiabilidade
+    O sistema deve se manter estável afim de manter o funcionamento energético da casa.
+6.2.3 Disponibilidade
+    O funcionamento sistema deve ser manter estável 24hrs (horas) por dia.
+6.2.4 Segurança
+    O sistema não deve ser vulnerável a falhas internas e externas que prejudiquem seu funcionamento por tempo integral.
+6.2.5 Manutenibilidade
+    O sistema deve possuir uma manutenção pouco complexa e que não limite a eficiência e a eficâcia da mesma caso apresente alguma falha no seu funcionamento.
+6.2.6 Portabilidade
+    O sistema deve estar acessível a todos os dispositivos que regulem e mantenham o funcionamento estável do mesmo.
+
+
+6.3 Integridade do sistema
+6.3.1 Performance 
+   Os dados do sistema deverá ter garantia de integridade, anonimato e consistência. 
+6.3.2 Confiabilidade
+    O sistema deve ser capaz de garantir a segurança de dados da casa garantindo que nenhum dado será apagado ou acessado.
+6.3.3 Disponibilidade
+    O sistema deve manter a integridade dos dados durante todo o tempo de funcionamento.
+6.1.4 Segurança
+    Os dados do sistema devem ser inacessíveis a dispositivos ou usuários não autorizados, preferencialmente atravez de criptografia dos dados e requerimento de login e senha do usuário.
+6.3.5 Manutenibilidade
+    Em caso de falha, o sistema deve ser capaz de se recuperar em um tempo minimo a fim de nao deixar os aparelhos desamparados da trasmissão de dados.
+
+6.3.6 Portabilidade
+A integridade dos dados deve se manter intácta para qualquer aparelho.
+
+
+6.4 Monitoramento atráves da internet
+6.4.1 Performance 
+Deve ser garantido o monitoramento dos dados a partir da internet
+6.4.2 Confiabilidade
+    O sistema deve manter uma transmição continua dos dados de segurança sempre que solicitado.  
+6.4.3 Disponibilidade
+    O sistema deve ter disponivel os dados sempre que solicitado.
+
+6.4.4 Segurança
+    A transmissão de dados deve ser inacessível a dispositivos não autorizados.
+6.4.5 Manutenibilidade
+    Em caso de falha, o sistema deve ser capaz de se recuperar em um tempo minimo a fim de não afetar os dados requeridos pelo usuário.
+
+6.4.6 Portabilidade
+    O sistema deve ser acessivel de qualquer aparelho cadastrado.
+
+
+3.2.05    Os sensores devem ser passíveis de aferir sua precisão.
+    
+    Informações: Verificação dos sensores
+
+    Regra: O sistema deve possuir uma funcionalidade que possa checar a precisão dos sensores presentes na casa.
+
+
+
+6.5 Alta precisão nos dados dos sensores.
+6.5.1 Performance 
+   Os dados vindos dos sensores devem ser de alta precisão e velocidade, pois a partir dele, ações aconteceram no sistema. 
+6.5.2 Confiabilidade
+    O sistema de sensores devem ter alta confiabilidade nos seus dados, pois a partir deles ações seram tomadas externamente.
+6.5.3 Disponibilidade
+    O monitoramento de dados depende diretamente da disponibilidade do sistema, sendo assim, o sensor deve ter um alto nivel de disponibilidade para fornecer esses dados sem comprometer o sistema.
+6.5.4 Segurança
+    Os dados enviados pelos sensores devem ser mantidos dentro da rede segura e criptografada do sistema, impedindo monitoramento externo de terceiros.
+6.5.5 Manutenibilidade
+    Em caso de falha, o sistema deve ser de fácil manutenção, podendo se resolver a maioria das falhas com procedimentos simples, evitando necessidade de um técnico com frequência.
+
+6.5.6 Portabilidade
+    Os dados da casa devem ser acessiveis de qualquer aparelho conveniado com o sistema de qualquer lugar, atravez da internet.
+
+
+
+3.2.06    O sistema deve ser de fácil usabilidade.
+    
+    Informações: Metas de usabilidade
+
+    Regra: O sistema deve estar de acordo com as metas de usabilidade afim de torna-lo mais acessivel para os moradores da casa.
+6.6 Usabilidade do Sistema
+6.6.1 Performance 
+    O sistema deve ser de facil usabilidade para ser de fácil manuseio.
+    
+6.6.2 Confiabilidade
+O sistema deve manter sua interface disponivel sempre que o usiuário solicitar.
+
+6.6.3 Disponibilidade
+    O sistema deve ficar disponivel sempre que o usuário decidir manipular algo que exiga o uso do sistema.
+6.6.4 Segurança
+    
+6.6.5 Manutenibilidade
+    Em caso de falhas o sistema deve ser capaz de passar um feedback rapidamente para a empresa,para que seja feito a manutenção o mais rapido possivel para que o usuário não seja prejudicado.
+    
+6.6.6 Portabilidade
+    
+
+
+
+
+
+6.7 Central de processamento
+6.7.1 Performace
+    O sistema deve possuir uma CPU (unidade central de processamento) capaz de satisfazer todos os processos executáveis e significativos de entrada e saida desse sistema.
+6.7.2 Confiabilidade
+    A CPU deve ser capaz de realizar as instruções do sistema afim de executa-las de uma maneira completa, consistente e correta. 
+6.7.3 Disponibilidade
+    O funcionamento do sistema demanda da disponibilidade integral de sua CPU dado que ela é um componente importante para o funcionamento desse sistema.
+6.7.4 Segurança
+    A CPU deve manter-se estável caso seja imposta todo o fluxo de dados do sistema, afim de evitar falhas que comprometam o funcionamento do mesmo.
+6.7.5 Manutenibilidade
+    A manutenção da CPU deve ser feita com facilidade e segurança afim de minimizar a complexidade da mesma, caso esteja operando com dificuldades no processamento, e com uma alta temperatura.
+
+
+3.2.09    O sistema deve possuir uma unidade central de processamento.
+    
+    Informações: Central de processamento.
+
+    Regra: O sistema deve ser capaz de ser operado localmente atravês de uma central de processamento.
+
+6.8 Monitoramento em tempo real
+6.8.1 Performace
+O sistema deve ser fornecer dados de monitoramento da casa em tempo real de processamento.    
+6.8.2 Confiabilidade
+    O sistema deve ser capaz de satisfazer o monitoramento em tempo real com o mínimo de interrupções possiveis, afim de maximizar a segurança da SACS.
+6.8.3 Disponibilidade
+    O sistema de processamento do monitoramento em tempo real deve estar disponivel em tempo integral por se tratar de uma funcionalidade significativa para a segurança da casa.
+6.8.4 Segurança
+    O sistema deve ser impassível a falhas de monitoramento, sendo estas externas e internas, que comprometam a segurança da casa.
+6.8.5 Manutenibilidade
+    O sistema deve possuir uma manutenção com o mínimo de complexidade para não comprometer a sua segurança, caso esteja apresentando um nível fora do normal de interrupções ou esteja apresentando falhas no seu funcionamento.
+6.8.6 Portabilidade
+    O sistema de monitoramento em tempo real deve estar disponível para ser visualizado por aplicações portadas para todos os dispositivos de visualização que o morador da casa tenha acesso.
+
+
+
+3.8     Componentes Comprados
+    
+O sistema possuirá dispositivos de hardware e software, que iram auxiliar nas funcionalidades de automatização da SACS, e que serão adquiridos pagando as devidas taxas referentes ao licenciamento e operabilidade destes dispositivos.
+
+
+
+\chapter{Aquisição de Software MPS.BR}
+
+
+
+Objetivo da Aquisição
+Justificativa
+    Para o amplo conhecimento das possiveis soluções é necessário uma pesquisa de todas as soluções já feitas e analizar o custo do desenvolvimento de uma nova solução. Após esta pesquisa é necessário uma comparação.
+A principio foram feitos os requisitos da solução (Especificação de Requisitos) e um documento de visão, que detalhava o pacote, que para generalização foi chamado de SACS (Sistema de automação para casa sustentável). A partir dessa analise de requisitos varias soluções deveriam ser apresentadas, mantendo em mente que o desenvolvimento a partir do zero do conjunto de software e hardware seria uma opção. Após a exaustiva busca pela internet por soluções prontas, uma tabela (Imagem\_01) foi feita comparando quais dos pacotes encontrados atendiam os requisitos especificados. Destes foi escolhido um que atendia todos os requisitos necessários do problema.
+É necessário justificar porque este pacote escolhido teria um melhor custo-benefício do que um desenvolvido do zero. Observando os requisitos, seria necessário um conjunto de softwares, muitos deles sendo críticos (como sistema de segurança, REFERENCIA), levando assim a um desenvolvimento que seria muito longo e caro, o que tornaria o projeto inviável, além de não ser justificado pelo fato que as soluções separadas para uma casa sustentável são areas do conhecimento brandamente exploradas anteriormente por outros indivíduos e instituições. Portanto é possível chegar a conclusão que desenvolver a solução seria o uso de tempo e recursos que o projeto não prevê, além de estar ignorando o fato que já existem soluções amplamente testadas e aprovadas pela comunidade.
+
+
+Objetivo
+(REFERÊNCIA DOC. DE VISÃO)
+
+Requisitos
+        (REFERÊNCIA DOC. ESPECIFICAÇÃO DE REQUISITOS)
+
+
+
+
+
+Termos Contratuais
+Tipo de Contrato a ser Empregado
+O contrato é estabelecido atráves da compra do pacote,onde o software está sendo disponibilizado, tendo seus termos de assinatura.
+(Tipo de contrato a ser utilizado) 
+Exemplo: Contrato de preço fixo, contrato de custos reembolsáveis ou contrato de preço unitário por ponto por função. 
+
+Direitos de Distribuição, Uso e Propriedade do Software
+            O software será 
+(Estabelecimento dos direitos de distribuição, uso e propriedade do software, como, por exemplo, o número de cópias a serem distribuídas e a propriedade do código fonte, entre outros). 
+Exemplo: O software desenvolvido estará sob uma licença de uso restrito ao contratante, protegidos por direitos autorais e de propriedade. A cópia, redistribuição, engenharia reversa e modificação do software proprietário são proibidas. Os programas de software serão de uso proprietário da organização cliente, inclusive seus códigos-fonte e documentação. A organização fornecedora não tem direito, disponibilidade ou qualquer outro tipo de participação em nenhum destes programas ou em qualquer cópia, modificação ou parte agregada de qualquer um destes programas. 
+
+Lista de Software a ser Entregue
+
+        (Lista dos S\&SC que devem ser entregues pelo fornecedor no final do contrato. Entre eles, devem ser considerados os serviços de suporte esperados do fornecedor). 
+Exemplo: Os produtos a serem entregues ao final do contrato são: (i) o software instalado em seu ambiente de operação; (ii) os manuais do usuário, de instalação e do sistema; e (iii) os códigos-fonte  
+
+
+
+
+
+
+Critérios de Aceitação do Software
+Dentre os críterios de aceitação do HomeSeer  estão como causa  seu poder e seu apoio a uma variedade de protocolos de automação o software automatiza computadores dispositivos e sensores da casa, que podem incluir luzes, aparelhos, aparelhos de som, sensores de movimento, satisfazendo assim completamente os requisitos exigidos para a automação da casa. 
+(Descrição de aspectos que devem ser satisfeitos para que o S\&SC sejam aceitos. Teoricamente todos os requisitos teriam que ser avaliados, o que nem sempre é prático. Estes são critérios que serão avaliados para apoiar o processo de aceitação. A garantia pode assegurar que os demais requisitos terão que ser atendidos durante o seu prazo de vigência). 
+
+Seleção do Pacote
+
+
+Imagem\_01
