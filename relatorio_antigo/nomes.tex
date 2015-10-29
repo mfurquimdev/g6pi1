@@ -1,0 +1,60 @@
+%%------------------------------------------------------------------------------
+%%----------------Variaveis para o LaTeX no Relatório---------------------------
+\newcommand{\universidade}{Universidade de Bras\'ilia - Campus Gama}
+\newcommand{\hell}{Casa Sustent\'avel}		%nome do arquivo
+% \renewcommand{\autor}{\ziul}							%criador do pdf - só observado nos detalhes do pdf
+\newcommand{\assunto}{}			%Nome do experimento
+\newcommand{\ver}{Grupo 6}						%numeração do experimento
+\newcommand{\professor}{Professor}
+\newcommand{\curso}{ENGENHARIA DE SOFTWARE}
+\newcommand{\turma}{D}
+
+%%------------------------------------------------------------------------------
+%%------------------------Detalhes para serem revistos--------------------------
+\newcommand{\keyw}{Palavras,  Chaves, \assunto}	%Keywords
+\newcommand{\entrega}{\today}		%data de entrega do relatório
+
+
+
+%----------------------Foto e bibliografia do(s) autor(es)----------------------
+%%------------------------------------------------------------------------------
+%					  Deve de ser COLADO ao final do texto
+%%------------------------------------------------------------------------------
+%	\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{./fts/luiz}}]{\luiz}\label{luiz}
+%	É, sou eu. Aparecendo aqui só de brinks. Meio que trollando um relatório.
+%	\end{IEEEbiography}
+%
+%	\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{ffuu}}]{Helbert Junior}\label{panda}
+%	Pow, eu tinha que aparecer também né?
+%	\end{IEEEbiography}
+%%------------------------------------------------------------------------------
+
+%%------------------------------------------------------------------------------
+%%-----------------------------Organização--------------------------------------
+\makeatletter
+\@ifclassloaded{scrartcl}% Slide
+{
+%	\newcommand{\names}{\luiz}
+%	\newcommand{\namecapa}{\ziul \\ \ziul}
+	%\newcommand{\allmatriculas}{\luizmatricula,\canelamatricula}
+}
+{
+%	\newcommand{\names}{\luiz}
+%	\newcommand{\allmatriculas}{\luizmatricula}
+
+}
+\makeatother
+
+
+\newcommand{\cor}{vermelho}
+\newcommand{\comprimeto}{20m}
+\title{\ver}
+\author{\names}
+\date{\entrega}
+
+
+
+%%------------------------------------------------------------------------------
+% Cabeçalho das páginas, se tiver no modelo
+\markboth{Universidade de Bras\'ilia - Campus Gama - FGA, \entrega}
+{Shell \MakeLowercase{\textit{et al.}}: \ver}
