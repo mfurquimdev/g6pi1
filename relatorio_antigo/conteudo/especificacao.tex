@@ -1,0 +1,439 @@
+\subsection{Introdução}
+\subsubsection{Finalidade}
+	Este documento de Especificação de Requisitos de Software concentra-se na coleta e na organização de todos os requisitos que envolvem o \gls{SACS}. Descrevendo todos os requisitos de software para cada característica e funcionalidade de uma determinada ação do sistema.
+
+\subsubsection{Escopo}
+
+	O \gls{SACS}, permite o usuário monitorar gastos de energia elétrica e consumo de água, controlar o sistema de segurança, visualizar a imagem das câmeras de segurança e controlar todo o sistema automatizado, incluindo sistema de jardinagem, luzes internas e outros aparelhos internos. O sistema também deve permitir a visualização da produção de energia das placas de energia solar e dos motores eólicos, além de mostrar o nível de reservatório de água da chuva.
+
+\subsubsection{Visão Geral}
+
+	Este documento servirá como base para a implantação do sistema SACS durante todo o desenvolvimento do projeto da Casa Sustentável. Informações acerca das funcionalidades e características do SACS serão organizados e estarão disponível neste documento afim de garantir que todas as necessidades sejam implementadas.
+	
+	Esse documento está dividido em: Descriçao Geral, Lista de Requisitos e Requisitos Específicos.
+
+\subsection{Descrição Geral}
+
+	O sistema \gls{SACS} lidará com termostatos, fechaduras, sistema de segurança, equipamentos de áudio e video, sistema de irrigação, portas de garagem, sensores ambientais, câmeras, luzes, gerenciamento de energia, internet e redes relacionadas, controlador de piscinas e spa, integração com radio frequência, integração com robôs de limpeza, segurança dos dados, integração com telefones, fax e emails, possuirá interface de usuário, integração a consoles de jogos entre outros utilitários.
+
+	Para a perfeita utilização do \gls{SACS} é essencial que o sistema esteja em constante conectividade com a internet. Será necessário instalar sensores nas entradas das tomadas de energia para o controle dos gastos. A instalação de um núcleo de dados onde seja refrigerada e isolada se possível. 
+
+\subsection{Lista de Requisitos}
+\begin{enumerate}[I]
+	\item \textbf{Requisitos Funcionais}
+	\begin{enumerate}[RF 1 -]
+		\item Monitoramento energético
+		\item Ambientação
+		\item Gestão da informação
+		\item Controle da disposição das cortinas
+		\item Automatização de multimídia
+		\item Automatização hídrica
+		\item Automatização do jardim
+		\item Segurança
+		\item Decteção de presença
+		\item Monitoramento da humidade
+	\end{enumerate}
+
+	\item \textbf{Requisitos Não Funcionais}
+	\begin{enumerate}[RNF 1 -]
+		\item Taxa de transmissão de dados
+		\item Estabilidade do sistema
+		\item Integridade dos dados
+		\item Monitoramento através da internet
+		\item Precisão dos dados dos sensores
+		\item Usabilidade do sistema
+		\item Unidade central de processamento
+		\item Monitoramento em tempo real
+	\end{enumerate}
+\end{enumerate}
+
+\subsection{Requisitos Funcionais}
+\subsubsection{Monitoramento energético}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	O sistema deve medir o consumo energético em tempo real e gerar relatórios para o usuário.
+
+	\item \textbf{Entradas}
+Gastos de energia gerado por cada ponto de acesso de energia (tomada) da casa.
+
+	\item \textbf{Saídas}
+	Deve ser gerado relatórios diários, semanais e mensais, de gastos energéticos, de acordo com a requisição do usuário.
+
+	\item \textbf{Processamento}
+	Todo o consumo de energia gerado pela casa deve ser armazenado, de forma a ser acessível local e remotamente.
+
+	Todo o consumo de energia gerado pela casa deve ser verificado, antes de
+armazenado.
+
+	\item \textbf{Manipulação de erros}
+	Todos os dados do consumo energético deve ser verificado, e caso haja inconsistência ou erros nos dados, deve ser registrado no log do
+
+\end{itemize}
+
+\subsubsection{Ambientação}
+\begin{itemize}
+	\item \textbf{Descrição}
+	As mudanças de temperatura e luzes devem influenciar na abertura das persianas, na força das luminárias e no HVAC para que o ambiente seja mantida constante e agradável.
+
+	\item \textbf{Entradas}
+	Sinais de sensores de luz e temperatura.
+
+	\item \textbf{Saídas}
+	Deve ser gerado um controle a fim de optimizar luz e temperatura fornecida pela casa.
+
+	\item \textbf{Processamento}
+	A luz e a temperatura da casa deve ser verificada e as modificações necessárias devem ser requisitadas a fim de manter o ambiente.
+
+	\item \textbf{Manipulação de erros}
+	Caso os dados não estejam acurados ou divergentes do esperados o sistema deve avisar o erro e não manipular mais nos objetos de automação de luz e temperatura.
+
+\end{itemize}
+
+\subsubsection{Controle da disposissão das cortinas}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	O sistema a partir de um controle remoto ou ambiente pré configurado, deverá mudar a disposição das cortinas.
+
+	\item \textbf{Entradas}
+    Comandos enviados de um controle remoto.
+
+	\item \textbf{Saídas}
+    Manipulação da disposição das cortinas de acordo com o comando.
+
+	\item \textbf{Processamento}
+    A partir de dados pré-mapeados é feito o controle da disposição das cortinas referente ao que foi configurado.
+
+	\item \textbf{Manipulação de erros}
+	O sistema pode se deparar com a perda de um comando enviado a partir de um controle sendo necessário re-enviar o comando.
+
+\end{itemize}
+
+\subsubsection{Controle Multimídia}
+\begin{itemize}
+	\item \textbf{Descrição}
+	O sistema deve garantir automatização de multimídia.
+
+	\item \textbf{Entradas}
+    Comandos enviados de um controle remoto.
+
+	\item \textbf{Saídas}
+	    Manipulação de audio, TV, projetor, dentre outros sistema multimídia presentes na casa.
+
+	\item \textbf{Processamento}
+	A partir de dados pré-mapeados é feito o controle de dispositivos de multimídia referente ao que foi configurado.
+
+	\item \textbf{Manipulação de erros}
+	O sistema pode se deparar com a perda de um comando enviado a partir de um controle sendo necessário re-enviar o comando.
+
+\end{itemize}
+
+\subsubsection{Monitoramento hídrico}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	O sistema deve medir o consumo hídrico em tempo real e gerar relatórios para o usuário.
+
+	\item \textbf{Entradas}
+	Dados de consumo hídrico em tempo real.
+
+	\item \textbf{Saídas}
+	Relatórios diários, semanais e mensais, de gastos hídricos, de acordo com a requisição do usuário.
+
+	\item \textbf{Processamento}
+	Todo o consumo hídrico gerado pela casa deve ser verificado, antes de armazenado.
+	
+	Os dados do consumo hídrico devem ser processados para gerar um relatório contendo o consumo e o custo estimado da conta de água.
+
+	\item \textbf{Manipulação de erros}
+	Todo o consumo hídrico gerado pela casa deve ser armazenado, após verificado, de forma segura em um hardware local.
+
+\end{itemize}
+
+\subsubsection{Controle de Jardim}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	O sistema deve garantir automatização do jardim.
+
+	\item \textbf{Entradas}
+	Irrigação do jardim,de acordo com a necessidade de cada planta.
+
+	\item \textbf{Saídas}
+	Ser otimizado de modo a economizar água sem desperdicios.
+
+	\item \textbf{Processamento}
+	Ser colocado um tempo para irrigação de cada planta,vendo a necessidade de cada uma.
+
+	\item \textbf{Manipulação de erros}
+	Caso haja algum vazamento ou desperdicio de água o sistema deve avisar para não haver perdas de água desnecessarias.
+
+\end{itemize}
+
+\subsubsection{Controle de segurança de dados}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	Os dados do sistema deverá garantir integridade, anonimato e consistência.
+
+	\item \textbf{Entradas}
+    Todos os dados do fluxo do sistema de forma.
+
+	\item \textbf{Saídas}
+	Dados criptografados e com seu respectivo hash.
+
+	\item \textbf{Processamento}
+	A partir dos dados de entrada, o sistema passa eles por dois algoritmos, um que criptografa e outros que tira sua hash (serve como indentidade).
+
+	\item \textbf{Manipulação de erros}
+	Todo dado após criptografado ao chegar ao destino é calculado novamente o hash e comparado com o anterior, antes de navegar pela rede e caso confirmado é de criptografado.
+
+\end{itemize}
+
+\subsubsection{Detectar presença}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	O sistema a partir de sensores de presença deverá identificar qualquer movimento fora e dentro da casa.
+
+	\item \textbf{Entradas}
+	Alertas de detectação de movimento no perimetro.
+
+	\item \textbf{Saídas}
+	Informação da localização de onde foi detectado movimento e projeção da camera de video mais próximo deste ponto.
+
+	\item \textbf{Processamento}
+	Após a detecção de movimento, o sensor enviar para o sistema informações de onde foi detectado e libera a imagem da câmera mais próximo do local identificado.
+
+	\item \textbf{Manipulação de erros}
+	O sistema deverá lidar com a capacidade de ignorar movimentos de animais, ventos, folhas entre outros objetos.
+
+\end{itemize}
+
+\subsubsection{Monitoramento do solo}
+\begin{itemize}
+
+	\item \textbf{Descrição}
+	O sistema deve medir a umidade do solo em tempo real, gerar relatórios para o usuário e 
+
+	\item \textbf{Entradas}
+	Dados da umidade do solo em tempo real.
+
+	\item \textbf{Saídas}
+	Relatórios diários, semanais e mensais, da umidade do solo, de acordo com a requisição do usuário.
+
+	\item \textbf{Processamento}
+	Os dados da umidade do solo devem ser armazenados de forma segura em um hardware local, e processados para gerar um relatório contendo a variação ao longo do dia.
+
+	O usuario deve ser alertado caso a umidade atinja um nível crítico.
+
+	\item \textbf{Manipulação de erros}
+	Todos os dados da medição da umidade do solo deve ser verificado, antes de armazenado.
+
+\end{itemize}
+
+\subsection{Requisitos Não Funcionais}
+
+\subsubsection{Taxa de transmissão de dados}
+
+\begin{itemize}
+
+	\item \textbf{Performance}
+	O sistema deve ser passível de cálculo da taxa de transmissão de dados de alta velocidade. 
+
+	\item \textbf{Confiabilidade}
+	O sistema deve manter uma taxa de transmição de dados altas sem falha.
+
+	\item \textbf{Disponibilidade}
+	O sistema deve manter uma taxa de transmição de dados alta durante todo o periodo de funcionamento.
+
+	\item \textbf{Segurança}
+	A transmissão de dados deve ser inacessível a dispositivos não autorizados ou cadastrados.
+
+	\item \textbf{Manutenibilidade}
+	Em caso de falha, o sistema deve ser capaz de se recuperar em um tempo minimo a fim de nao deixar os aparelhos desamparados da trasmissão de dados.
+
+	\item \textbf{Portabilidade}
+	A transmissão de dados de alta velocidade deve abranger todos os dispositivos desejados da casa, além de ser capaz de se expandir para que a transmissão alcance novos dispositivos.
+
+\end{itemize}
+
+\subsubsection{Estabilidade sistemática}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	O sistema deve se manter estável durante situações críticas
+
+	\item \textbf{Confiabilidade}
+	O sistema deve se manter estável afim de manter o funcionamento energético da casa.
+
+	\item \textbf{Disponibilidade}
+	O funcionamento sistema deve ser manter estável 24hrs (horas) por dia.
+
+	\item \textbf{Segurança}
+	O sistema não deve ser vulnerável a falhas internas e externas que prejudiquem seu funcionamento por tempo integral.
+
+	\item \textbf{Manutenibilidade}
+	O sistema deve possuir uma manutenção pouco complexa e que não limite a eficiência e a eficâcia da mesma caso apresente alguma falha no seu funcionamento
+
+	\item \textbf{Portabilidade}
+	O sistema deve estar acessível a todos os dispositivos que regulem e mantenham o funcionamento estável do mesmo
+	
+\end{itemize}
+
+\subsubsection{Integridade do sistema}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	Os dados do sistema deverá ter garantia de integridade, anonimato e consistência. 
+
+	\item \textbf{Confiabilidade}
+	O sistema deve ser capaz de garantir a segurança de dados da casa garantindo que nenhum dado será apagado ou acessado.
+
+
+	\item \textbf{Disponibilidade}
+	O sistema deve manter a integridade dos dados durante todo o tempo de funcionamento.
+
+
+	\item \textbf{Segurança}
+	Os dados do sistema devem ser inacessíveis a dispositivos ou usuários não autorizados, preferencialmente atravez de criptografia dos dados e requerimento de login e senha do usuário.
+
+	\item \textbf{Manutenibilidade}
+	Em caso de falha, o sistema deve ser capaz de se recuperar em um tempo minimo a fim de nao deixar os aparelhos desamparados da trasmissão de dados.
+	
+	\item \textbf{Portabilidade}
+	A integridade dos dados deve se manter intácta para qualquer aparelho.
+
+\end{itemize}
+
+\subsubsection{Monitoramento através da internet}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	Deve ser garantido o monitoramento dos dados a partir da internet
+ 
+
+	\item \textbf{Confiabilidade}
+	O sistema deve manter uma transmição continua dos dados de segurança sempre que solicitado.  
+
+	\item \textbf{Disponibilidade}
+	O sistema deve ter disponivel os dados sempre que solicitado.
+
+
+
+	\item \textbf{Segurança}
+	A transmissão de dados deve ser inacessível a dispositivos não autorizados.
+
+
+	\item \textbf{Manutenibilidade}
+	Em caso de falha, o sistema deve ser capaz de se recuperar em um tempo minimo a fim de não afetar os dados requeridos pelo usuário.
+
+
+	\item \textbf{Portabilidade}
+	O sistema deve ser acessivel de qualquer aparelho cadastrado.
+
+\end{itemize}
+
+\subsubsection{Alta precisão nos dados dos sensores}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	Os dados vindos dos sensores devem ser de alta precisão e velocidade, pois a partir dele, ações aconteceram no sistema. 
+
+
+	\item \textbf{Confiabilidade}
+	O sistema de sensores devem ter alta confiabilidade nos seus dados, pois a partir deles ações seram tomadas externamente.
+
+
+	\item \textbf{Disponibilidade}
+	O monitoramento de dados depende diretamente da disponibilidade do sistema, sendo assim, o sensor deve ter um alto nivel de disponibilidade para fornecer esses dados sem comprometer o sistema.
+
+
+	\item \textbf{Segurança}
+	Os dados enviados pelos sensores devem ser mantidos dentro da rede segura e criptografada do sistema, impedindo monitoramento externo de terceiros.
+
+	\item \textbf{Manutenibilidade}
+	Em caso de falha, o sistema deve ser de fácil manutenção, podendo se resolver a maioria das falhas com procedimentos simples, evitando necessidade de um técnico com frequência.
+
+
+	\item \textbf{Portabilidade}
+	Os dados da casa devem ser acessiveis de qualquer aparelho conveniado com o sistema de qualquer lugar, atravez da internet.
+
+
+
+\end{itemize}
+
+\subsubsection{Usabilidade do sistema}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	O sistema deve ser de facil usabilidade para ser de fácil manuseio.
+
+
+	\item \textbf{Confiabilidade}
+	O sistema deve manter sua interface disponivel sempre que o usiuário solicitar.
+
+	\item \textbf{Disponibilidade}
+	O sistema deve ficar disponivel sempre que o usuário decidir manipular algo que exiga o uso do sistema.
+
+
+	\item \textbf{Manutenibilidade}
+	Em caso de falhas o sistema deve ser capaz de passar um feedback rapidamente para a empresa,para que seja feito a manutenção o mais rapido possivel para que o usuário não seja prejudicado.
+
+\end{itemize}
+
+\subsubsection{Central de processamento}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	O sistema deve possuir uma CPU (unidade central de processamento) capaz de satisfazer todos os processos executáveis e significativos de entrada e saida desse sistema.
+
+	\item \textbf{Confiabilidade}
+	A CPU deve ser capaz de realizar as instruções do sistema afim de executa-las de uma maneira completa, consistente e correta. 
+
+	\item \textbf{Disponibilidade}
+	O funcionamento do sistema demanda da disponibilidade integral de sua CPU dado que ela é um componente importante para o funcionamento desse sistema.
+
+
+	\item \textbf{Segurança}
+	A CPU deve manter-se estável caso seja imposta todo o fluxo de dados do sistema, afim de evitar falhas que comprometam o funcionamento do mesmo.
+
+
+	\item \textbf{Manutenibilidade}
+	A manutenção da CPU deve ser feita com facilidade e segurança afim de minimizar a complexidade da mesma, caso esteja operando com dificuldades no processamento, e com uma alta temperatura.
+
+\end{itemize}
+
+\subsubsection{Monitoramento em tempo real}
+\begin{itemize}
+
+	\item \textbf{Performance}
+	O sistema deve ser fornecer dados de monitoramento da casa em tempo real de processamento
+
+	\item \textbf{Confiabilidade}
+	O sistema deve ser capaz de satisfazer o monitoramento em tempo real com o mínimo de interrupções possiveis, afim de maximizar a segurança da SACS.
+
+
+	\item \textbf{Disponibilidade}
+	O sistema de processamento do monitoramento em tempo real deve estar disponivel em tempo integral por se tratar de uma funcionalidade significativa para a segurança da casa.
+
+
+	\item \textbf{Segurança}
+	O sistema deve ser impassível a falhas de monitoramento, sendo estas externas e internas, que comprometam a segurança da casa.
+
+
+	\item \textbf{Manutenibilidade}
+	O sistema deve possuir uma manutenção com o mínimo de complexidade para não comprometer a sua segurança, caso esteja apresentando um nível fora do normal de interrupções ou esteja apresentando falhas no seu funcionamento.
+
+
+	\item \textbf{Portabilidade}
+	O sistema de monitoramento em tempo real deve estar disponível para ser visualizado por aplicações portadas para todos os dispositivos de visualização que o morador da casa tenha acesso.
+
+
+\end{itemize}
+
+\subsection{Componentes Comprados}
+	
+	O sistema possuirá dispositivos de hardware e software, que iram auxiliar nas funcionalidades de automatização da SACS, e que serão adquiridos pagando as devidas taxas referentes ao licenciamento e operabilidade destes dispositivos.
+
