@@ -1,4 +1,4 @@
-\chapter{Automação}
+\chapter{Automação PC1}
 \section{Automação residencial}
 Atualmente, qualquer sistema de automação residencial entrega ao usuário uma quantidade imensa de acessórios no ramo de iluminação, multimídia, temperatura econforto e segurança. Seguindo essa vertente e visando deixar o produto atraente, a casa precisa ter, no mínimo, a mesma quantidade de acessórios automatizados que as outras já existentes no mercado. A lista gerada então será:
 
@@ -198,3 +198,165 @@ $\bullet$ \textbf{Câmera}
 \section{Como coletar e armazenar os dados sobre o consumo?}
 	
 	Sensores são embutidos com chips que detectam informações sobre a opera- ção e desempenho da rede, tais como tensão e corrente. Então, analisam essas informações para determinar o que é significativo - por exemplo, está com tensão muito alta ou muito baixa. Quando se detecta informações significativas ocorre a comunicação dos dados para um sistema de software armazenando no mesmo. Esse sistema irá analisar os dados e determinar o que está errado e o que deve ser feito para melhorar o desempenho da rede.
+
+\chapter{Automação PC2}
+\section{Definição de modelos}
+
+	Previamente foram definidos modelos comuns do mercado, sensores que necessitariam ser filtrados, convertidos e procesados. Isso acarretaria o uso de microcontroladores e uma demanda grande de fios. Um dos maiores problemas nesse quesito foi a dificuldade em expandir o conjunto, já que um sistema de automação carece da possibilidade de anexar novos sensores e atuadores. Há também a preocupação em criar uma interface prática e amigável para o software de operação do produto, o que traria ainda mais tempo de pesquisa e desenvolvimento do projeto.  
+
+	Com o problema da interface e da capacidade de expandir o sistema de forma fácil e rápida, veio à tona a possibilidade de implementar um sistema já existente e que nos permita escolher os tipo de sensores adequados ao funcionamento da casa de acordo com a nossa perspectiva, foi escolhido o HomeSeer. Dessa forma, todos os sensores foram substituídos por sensores compatíveis e esse processo simplificou infinitamente a implementação, eximindo a necessidade de filtros e conversores. 
+
+\section{Funcionamento do sistema}
+
+	O equipamento principal é um PC com configuração mediana, com uso dedicado ao sistema. A ele podem ser ligados diretamente monitores e equipamentos periféricos, porém, os sensores são ativados à distância, através de uma rede wireless utilizando o protocolo Z-Wave. É definida uma rede e os sensores podem ser conectados a ela de forma simples e rápida: Basta informar á máquina principal que algum dispositivo será pareado. Em seguida, aperta-se um botáo no dispositivo que se deseja conectar à rede e, então, eles já estarão interagindo.  A partir daí o dono da casa já pode escolher as ações tanto de leitura quanto de atuação, precisando apenas ir nas condifurações da rede, que tem uma interface bastante prática.
+
+\subsection{Lista dos sensores necessários}
+\begin{enumerate}
+	\item Sensor de movimento, iluminação e temperatura
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/sensor_movimento.eps}
+		\caption{Modelo utilizado no projeto}
+	  \end{center}
+	\end{figure}
+
+	Antes da pensar em utilizar os sensores com o sistema pronto, seriam necessários 2 sensores diferente pra medir temperatura e movimento em cada cômodo. Com este equipamento é possível ter acesso a esses dois dados apenas plugando o aparelho numa tomada $120V/60Hz$.
+
+	O fabricante recomenda tomar alguns cuidados na instalação do sensor. Por exemplo, para se ter uma eficiência maior em detectar moimento, o sensor precisa ser instalado perpendicularmente ao eixo em que é determinado o fluxo. Conforme a figura abaixo.
+
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/sensores_posicao.eps}
+		\caption{Posição dos sensores de movimento}
+	  \end{center}
+	\end{figure}
+	
+	Isso permite que grande parte dos feixes sejam cortados e evita que algo passe despercebido. Porém, é necessário também que não haja luz solar e nem ventilação incidindo diretamente no sensor, isso pode provocar alarmes indesejados.
+	
+	\begin{itemize}
+		\item Valor: U$\$ 69,95$.
+		\item Nome: HSM200. 
+		\item Quantidade: 3
+	\end{itemize}
+
+	\item Sensor de umidade no ambiente 
+
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/sensor_umidade.eps}
+		\caption{Sensor de umidade do ar utilizado no projeto}
+	  \end{center}
+	\end{figure}
+
+	Este sensor é capaz de disparar funções quando atinge níveis críticos de umidade ou temperatura. Será usado em ambientes comuns para ativar umidificadores em climas secos (Umidade < 30\%). 
+
+	\begin{itemize}
+		\item Capacidade de medição de umidade: 20\% - 90\% UR.
+		\item Nome: ST814-2.
+		\item Preço: U$\$ 48,80$.
+		\item Quantidade: 4
+	\end{itemize}
+
+
+	\item Ducha eletrônica
+	
+	Mesmo não sendo conectada à rede inteligente, a ducha inteligente é um grande adianto no que diz respeito a uso de sensores e comunicação homem-sistema.
+	
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/ducha_inteligente.eps}
+		\caption{Ducha inteligente com o painel de controle ao lado}
+	  \end{center}
+	\end{figure}
+		
+	A grande vantagem em escolher essa ducha é a capacidade que ela tem de executar as mesmas funções estabelecidas no projeto de um forma bem mais simples. Além de não ser necessário o uso de sensores, ela tem sua própria central de comando e, por ser pressurizada, reduz o consumo de água sem perder a o conforto do banho.
+
+	\begin{itemize}
+		\item Nome: Smartshower.
+		\item Custo: - - - - 
+		\item Quantidade: 1
+	\end{itemize}
+	
+	\item Detector de fumaça
+	
+	O detector de fumaça será utilizado apensa na sala de controle, onde ficará a central do sistema. É uma medida de mater o sistema constante, a fim de evitar danos aos equipamentos em caso de incêndio ou superaquecimento.
+	
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/detector_fumaca.eps}
+		\caption{Medidor instantâneo do consumo total}
+	  \end{center}
+	\end{figure}
+
+	\begin{itemize}
+		\item Nome: ZCOMBO-G
+		\item Custo: U$\$ 43,87$
+		\item Quantidade: 1
+	\end{itemize}
+	
+	Alguns do equipamentos passaram a não precisar mais de sensores. São eles: As cortinas, os regadores e o detector de gás de cozinha. Agora o comando de ativação dos atuadores não vem mais dos sensores, mas sim do usuário ou da máquina. 
+	
+	\item Smart Grid
+	
+	A parte do smart grid nesse Sistema conta com um medidor de consume em tempo real, e o dado é fornecido para a central. Ou seja, é possível tomar medidas de controle caso a casa esteja gastando muito.
+	
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/medidor_instantaneo.eps}
+		\caption{Medidor instantâneo do consumo total}
+	  \end{center}
+	\end{figure}
+
+	\begin{itemize}
+		\item Nome: DSB28-ZWUS
+		\item Custo: U$\$ 94,46$
+		\item Quantidade: 1
+	\end{itemize}
+	
+	\item Câmeras
+	
+	Com as câmeras houve um pequeno problema: A banda de operação do Z-Wave não suporta compartilhamento de áudio e nem de vídeo. A saída mais prática é passar as informações pela internet. O próprio sistema oferece suporte à esse tipo de comunicação.
+	
+	\begin{figure}[h]
+	  \begin{center}
+		\includegraphics{figuras/camera.eps}
+		\caption{Câmeras de vigilância externa}
+	  \end{center}
+	\end{figure}
+	
+	A câmera escolhida tem capacidade de filma em invravemerlho com um alcance de até 30 metros, média resolução (640x480) e ainda conta com suporte à visualização remota tanto em PC’s quanto em smartphones. O sistema oferece um programa em que a câmera só é ativada quando á movimento detectado. Ele pode ser baixado no prórpio site.
+
+	\begin{itemize}
+		\item Nome: FI8905W
+		\item Custo: U$\$ 84,00$
+		\item Quantidade: 8
+	\end{itemize}	
+
+\end{enumerate}
+
+	A posição dos sensores será estabelecida de acordo com a necessidade da casa e obedecendo às características exigidas pelo manual. Dessa forma, deve-se lembrar que os sensores de movimento não podem ser instalados em áreas externas, as câmeras tem ângulo de alcance de $30{^o}$ e uma distância máximo de $30m$, isso deve ser levado em conta na hora de fazer a cobertura de monitoramento da casa. Como os equipamentos tem alcance de $30m$ não será necessário o uso de repetidores, já que o lote tem justamente esse tamanho. O mapa de sensores ficou da seguinte maneira:
+
+\begin{figure}[h]
+  \begin{center}
+	\includegraphics[keepaspectratio,scale=0.55,angle=90]{figuras/posicao.eps}
+	\caption{Posição dos sensores na casa}
+  \end{center}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

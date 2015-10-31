@@ -4,6 +4,7 @@ BIBTEX = bibtex
 LATEX = latex
 DVIPS = dvips
 PS2PDF = ps2pdf
+DVIPDF = dvipdfm
 
 VERSION = 0.1.0
 
@@ -49,12 +50,13 @@ $(TARGET): $(MAIN_FILE) $(SOURCES) bibliografia.bib
 #$(LATEX) $(MAIN_FILE) $(SOURCES)
 	$(DVIPS) $(DVI_FILE)
 	$(PS2PDF) $(PS_FILE)
+#	$(DVIPDF) $(DVI_FILE)
 	@cp $(PDF_FILE) $(TARGET)
 
 clean:
 	rm -f *~ *.dvi *.ps *.backup *.aux *.log
 	rm -f *.lof *.lot *.bbl *.blg *.brf *.toc *.idx
-	rm -f relatorio.pdf
+	rm -f *.pdf
 
 dist: clean
 	tar vczf relatorio-fga-latex-$(VERSION).tar.gz *
