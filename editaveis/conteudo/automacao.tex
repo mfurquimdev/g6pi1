@@ -212,24 +212,23 @@ $\bullet$ \textbf{Câmera}
 
 \subsection{Lista dos sensores necessários}
 \begin{enumerate}
-	\item Sensor de movimento, iluminação e temperatura
 	\begin{figure}[h]
+	\item Sensor de movimento, iluminação e temperatura
 	  \begin{center}
-		\includegraphics{figuras/sensor_movimento.eps}
+		\includegraphics[keepaspectratio,angle=90]{figuras/sensor_movimento.eps}
 		\caption{Modelo utilizado no projeto}
 	  \end{center}
-	\end{figure}
 
 	Antes da pensar em utilizar os sensores com o sistema pronto, seriam necessários 2 sensores diferente pra medir temperatura e movimento em cada cômodo. Com este equipamento é possível ter acesso a esses dois dados apenas plugando o aparelho numa tomada $120V/60Hz$.
 
 	O fabricante recomenda tomar alguns cuidados na instalação do sensor. Por exemplo, para se ter uma eficiência maior em detectar moimento, o sensor precisa ser instalado perpendicularmente ao eixo em que é determinado o fluxo. Conforme a figura abaixo.
+	\end{figure}
 
 	\begin{figure}[h]
 	  \begin{center}
-		\includegraphics{figuras/sensores_posicao.eps}
+		\includegraphics[keepaspectratio]{figuras/sensores_posicao.eps}
 		\caption{Posição dos sensores de movimento}
 	  \end{center}
-	\end{figure}
 	
 	Isso permite que grande parte dos feixes sejam cortados e evita que algo passe despercebido. Porém, é necessário também que não haja luz solar e nem ventilação incidindo diretamente no sensor, isso pode provocar alarmes indesejados.
 	
@@ -238,15 +237,15 @@ $\bullet$ \textbf{Câmera}
 		\item Nome: HSM200. 
 		\item Quantidade: 3
 	\end{itemize}
-
-	\item Sensor de umidade no ambiente 
+	\end{figure}
 
 	\begin{figure}[h]
+	\item Sensor de umidade no ambiente 
+
 	  \begin{center}
-		\includegraphics{figuras/sensor_umidade.eps}
+		\includegraphics[keepaspectratio,scale=0.60]{figuras/sensor_umidade.eps}
 		\caption{Sensor de umidade do ar utilizado no projeto}
 	  \end{center}
-	\end{figure}
 
 	Este sensor é capaz de disparar funções quando atinge níveis críticos de umidade ou temperatura. Será usado em ambientes comuns para ativar umidificadores em climas secos (Umidade < 30\%). 
 
@@ -257,17 +256,17 @@ $\bullet$ \textbf{Câmera}
 		\item Quantidade: 4
 	\end{itemize}
 
+	\end{figure}
 
+	\begin{figure}[h]
 	\item Ducha eletrônica
 	
 	Mesmo não sendo conectada à rede inteligente, a ducha inteligente é um grande adianto no que diz respeito a uso de sensores e comunicação homem-sistema.
 	
-	\begin{figure}[h]
 	  \begin{center}
-		\includegraphics{figuras/ducha_inteligente.eps}
+		\includegraphics[keepaspectratio,scale=0.60]{figuras/ducha_inteligente.eps}
 		\caption{Ducha inteligente com o painel de controle ao lado}
 	  \end{center}
-	\end{figure}
 		
 	A grande vantagem em escolher essa ducha é a capacidade que ela tem de executar as mesmas funções estabelecidas no projeto de um forma bem mais simples. Além de não ser necessário o uso de sensores, ela tem sua própria central de comando e, por ser pressurizada, reduz o consumo de água sem perder a o conforto do banho.
 
@@ -276,17 +275,17 @@ $\bullet$ \textbf{Câmera}
 		\item Custo: - - - - 
 		\item Quantidade: 1
 	\end{itemize}
+	\end{figure}
 	
+	\begin{figure}[h]
 	\item Detector de fumaça
 	
 	O detector de fumaça será utilizado apensa na sala de controle, onde ficará a central do sistema. É uma medida de mater o sistema constante, a fim de evitar danos aos equipamentos em caso de incêndio ou superaquecimento.
 	
-	\begin{figure}[h]
 	  \begin{center}
-		\includegraphics{figuras/detector_fumaca.eps}
-		\caption{Medidor instantâneo do consumo total}
+		\includegraphics[keepaspectratio,scale=0.60]{figuras/detector_fumaca.eps}
+		\caption{Detector de fumaça utilizado na sala de controle}
 	  \end{center}
-	\end{figure}
 
 	\begin{itemize}
 		\item Nome: ZCOMBO-G
@@ -295,34 +294,34 @@ $\bullet$ \textbf{Câmera}
 	\end{itemize}
 	
 	Alguns do equipamentos passaram a não precisar mais de sensores. São eles: As cortinas, os regadores e o detector de gás de cozinha. Agora o comando de ativação dos atuadores não vem mais dos sensores, mas sim do usuário ou da máquina. 
+	\end{figure}
 	
+	\begin{figure}[h]
 	\item Smart Grid
 	
 	A parte do smart grid nesse Sistema conta com um medidor de consume em tempo real, e o dado é fornecido para a central. Ou seja, é possível tomar medidas de controle caso a casa esteja gastando muito.
 	
-	\begin{figure}[h]
 	  \begin{center}
-		\includegraphics{figuras/medidor_instantaneo.eps}
+		\includegraphics[keepaspectratio,scale=0.60]{figuras/medidor_instantaneo.eps}
 		\caption{Medidor instantâneo do consumo total}
 	  \end{center}
-	\end{figure}
 
 	\begin{itemize}
 		\item Nome: DSB28-ZWUS
 		\item Custo: U$\$ 94,46$
 		\item Quantidade: 1
 	\end{itemize}
+	\end{figure}
 	
+	\begin{figure}[h]
 	\item Câmeras
 	
 	Com as câmeras houve um pequeno problema: A banda de operação do Z-Wave não suporta compartilhamento de áudio e nem de vídeo. A saída mais prática é passar as informações pela internet. O próprio sistema oferece suporte à esse tipo de comunicação.
 	
-	\begin{figure}[h]
 	  \begin{center}
-		\includegraphics{figuras/camera.eps}
+		\includegraphics[keepaspectratio,scale=0.5]{figuras/camera.eps}
 		\caption{Câmeras de vigilância externa}
 	  \end{center}
-	\end{figure}
 	
 	A câmera escolhida tem capacidade de filma em invravemerlho com um alcance de até 30 metros, média resolução (640x480) e ainda conta com suporte à visualização remota tanto em PC’s quanto em smartphones. O sistema oferece um programa em que a câmera só é ativada quando á movimento detectado. Ele pode ser baixado no prórpio site.
 
@@ -331,12 +330,13 @@ $\bullet$ \textbf{Câmera}
 		\item Custo: U$\$ 84,00$
 		\item Quantidade: 8
 	\end{itemize}	
+	\end{figure}
 
 \end{enumerate}
 
+\begin{figure}[h]
 	A posição dos sensores será estabelecida de acordo com a necessidade da casa e obedecendo às características exigidas pelo manual. Dessa forma, deve-se lembrar que os sensores de movimento não podem ser instalados em áreas externas, as câmeras tem ângulo de alcance de $30{^o}$ e uma distância máximo de $30m$, isso deve ser levado em conta na hora de fazer a cobertura de monitoramento da casa. Como os equipamentos tem alcance de $30m$ não será necessário o uso de repetidores, já que o lote tem justamente esse tamanho. O mapa de sensores ficou da seguinte maneira:
 
-\begin{figure}[h]
   \begin{center}
 	\includegraphics[keepaspectratio,scale=0.55,angle=90]{figuras/posicao.eps}
 	\caption{Posição dos sensores na casa}
