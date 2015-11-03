@@ -1,7 +1,7 @@
 \chapter{Automação}
 \section{Escopo}
 
-	Atualmente, qualquer sistema de automação residencial entrega ao usuário uma quantidade imensa de acessórios no ramo de iluminação, multimídia, temperatura econforto e segurança[1]. Seguindo essa vertente e visando deixar o produto atraente, a casa precisa ter, no mínimo, a mesma quantidade de acessórios automatizados que as outras já existentesno mercado. A lista gerada então será:
+	Atualmente, qualquer sistema de automação residencial entrega ao usuário uma quantidade imensa de acessórios no ramo de iluminação, multimídia, temperatura econforto e segurança\cite{2009Montgomery}. Seguindo essa vertente e visando deixar o produto atraente, a casa precisa ter, no mínimo, a mesma quantidade de acessórios automatizados que as outras já existentesno mercado. A lista gerada então será:
 
 \begin{itemize}
 	\item Multimídia (Áudio, Vídeo) – Home theater;
@@ -18,7 +18,7 @@
 
 \subsection{Processamento em tempo real}
 
-	O processamento em tempo real deve obrigatoriamente ter ações suficientemente rápidas para que se coordenem com as necessidades dos clientes[2]. Dessa forma, cada componente tem um tempo de resposta específico e as máquinas devem realizar a tarefa de acordo com as restrições de tempo eu seu ambiente[3]. Sempre que houver possibilidade é indicado programar os componentes em linguagens de baixo nível para aumentar a velocidade do algorítmo.[4]
+	O processamento em tempo real deve obrigatoriamente ter ações suficientemente rápidas para que se coordenem com as necessidades dos clientes\cite{2014SiqueiraFraga}. Dessa forma, cada componente tem um tempo de resposta específico e as máquinas devem realizar a tarefa de acordo com as restrições de tempo eu seu ambiente\cite{brookshear2013ciencia}. Sempre que houver possibilidade é indicado programar os componentes em linguagens de baixo nível para aumentar a velocidade do algorítmo\cite{2014SiqueiraFraga2}.
 
 	Para se trabalhar com processos em tempo real, divide-se o processamento em três camadas: Uma de alta performance(um PC, por exemplo), que tem custos elevados e é utilizada para processamento de imagens, geralmente. Uma de média performance, com características voltadas a filtros e estatísticas (consumo, uso diário, previsões de consumo. Foi escolhido um processador ARM nesse projeto) e uma de baixa performance, apenas para atuar em motores, controladores e coisas do tipo (Até então o microcontrolador definido é o ATMega).
 
@@ -36,7 +36,7 @@
 
 \subsubsection{Iluminação}
 
-	Sensor de movimento – De teto, 360°. O sensor de teto tem um custo um pouco mais elevado, porém, o sensor embutido no soquete tem que ficar exposto e não permite usar lampadas com entradas sem soquete. Assim, é mais prático e mais eficaz usar o sensor de teto por ele ser discreto e ter a saída aplicável em qualquer componente.[5]. Sensor analógico, necessita conversão.
+	Sensor de movimento – De teto, 360°. O sensor de teto tem um custo um pouco mais elevado, porém, o sensor embutido no soquete tem que ficar exposto e não permite usar lampadas com entradas sem soquete. Assim, é mais prático e mais eficaz usar o sensor de teto por ele ser discreto e ter a saída aplicável em qualquer componente\cite{2014Thiago}. Sensor analógico, necessita conversão.
 
 \subsubsection{Cortinas}
 
@@ -48,7 +48,7 @@
 
 \subsubsection{Banho}
 
-	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será  medida com o CI LM35 [6], que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
+	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será  medida com o CI LM35\cite{SNIS159E}, que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
 
 \subsubsection{Regador}
 
@@ -81,7 +81,7 @@
 
 \begin{enumerate}
 	\begin{figure}[H]
-	\item Sensor de movimento, iluminação e temperatura
+	\item Sensor de movimento, iluminação e temperatura\cite{HSM200}
 	  \begin{center}
 		\includegraphics[keepaspectratio,scale=0.5,angle=90]{figuras/sensor_movimento.eps}
 		\caption{Modelo utilizado no projeto}
@@ -99,7 +99,7 @@
 	  \end{center}
 	\end{figure}
 
-	Isso permite que grande parte dos feixes sejam cortados e evita que algo passe despercebido. Porém, é necessário também que não haja luz solar e nem ventilação incidindo diretamente no sensor, isso pode provocar alarmes indesejados.
+	Isso permite que grande parte dos feixes sejam cortados e evita que algo passe despercebido\cite{IRPet-500}. Porém, é necessário também que não haja luz solar e nem ventilação incidindo diretamente no sensor, isso pode provocar alarmes indesejados.
 
 	\begin{itemize}
 		\item Valor: U$\$ 69,95$.
@@ -107,7 +107,7 @@
 		\item Quantidade: 3
 	\end{itemize}
 
-	\item Sensor de umidade no ambiente
+	\item Sensor de umidade no ambiente\cite{ST8142}
 
 	\begin{figure}[H]
 	  \begin{center}
@@ -126,7 +126,7 @@
 	\end{itemize}
 
 
-	\item Ducha eletrônica
+	\item Ducha eletrônica\cite{ShoweriHouse}
 
 	Mesmo não sendo conectada à rede inteligente, a ducha inteligente é um grande adianto no que diz respeito a uso de sensores e comunicação homem-sistema.
 
@@ -145,7 +145,7 @@
 		\item Quantidade: 2
 	\end{itemize}
 
-	\item Detector de fumaça
+	\item Detector de fumaça\cite{HomeSeerZCOMBOG}
 
 	O detector de fumaça será utilizado apensa na sala de controle, onde ficará a central do sistema. É uma medida de mater o sistema constante, a fim de evitar danos aos equipamentos em caso de incêndio ou superaquecimento.
 
@@ -164,7 +164,7 @@
 
 	Alguns do equipamentos passaram a não precisar mais de sensores. São eles: As cortinas, os regadores e o detector de gás de cozinha. Agora o comando de ativação dos atuadores não vem mais dos sensores, mas sim do usuário ou da máquina.
 
-	\item Smart Grid
+	\item Smart Grid\cite{HomeSeerDSB28ZWUS}
 
 	A parte do smart grid nesse Sistema conta com um medidor de consume em tempo real, e o dado é fornecido para a central. Ou seja, é possível tomar medidas de controle caso a casa esteja gastando muito.
 
@@ -181,7 +181,7 @@
 	\end{itemize}
 	\end{figure}
 
-	\item Câmeras
+	\item Câmeras\cite{HomeSeerFI8905W}
 
 	Com as câmeras houve um pequeno problema: A banda de operação do Z-Wave não suporta compartilhamento de áudio e nem de vídeo. A saída mais prática é passar as informações pela internet. O próprio sistema oferece suporte à esse tipo de comunicação.
 
@@ -240,7 +240,7 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 	A instalação de sensores ao longo de todo o sistema de distribuição de energia elétrica é outro passo para que a rede se torne realmente inteligente. A auto recuperação, uma das responsáveis pela diminuição das faltas de energia, é beneficiada com o sensoriamento da rede. Os sensores são responsáveis por enviar as informações para a central de controle que ao receber dados toma-se uma decisão. A automatização será uma realidade e o religamento de áreas afetadas poderá ser feito mais rapidamente, eliminando o desconforto dos usuários e aumentando a receita.
 
-	Sensores são embutidos com chips que detectam informações sobre a operação e desempenho da rede, tais como tensão e corrente. Então, analisam essas informações para determinar o que é significativo - por exemplo, está com tensão muito alta ou muito baixa. Quando se detecta informações significativas ocorre a comunicação dos dados para um sistema de software armazenando no mesmo. \footnote{https://alexandresalema.wordpress.com/2015/09/16/smart-grid-as-chamadas-redes-inteligentes/, acessado dia 30/10}
+	Sensores são embutidos com chips que detectam informações sobre a operação e desempenho da rede, tais como tensão e corrente. Então, analisam essas informações para determinar o que é significativo - por exemplo, está com tensão muito alta ou muito baixa. Quando se detecta informações significativas ocorre a comunicação dos dados para um sistema de software armazenando no mesmo\cite{2015Salema}.
 
 \subsection{Computação}
 
@@ -256,7 +256,7 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 	Na casa sustentável serão utilizadas fontes de energia limpa. As fontes de energia limpa, como eólica e solar, são também intermitentes. Por isso, sua integração à rede se torna complexa. Nesse ponto, as tecnologias que podem ser agregadas à rede são de fundamental importância para a introdução desse tipo de geração. E estamos falando da microgeração, que poderão atender a casa. Essa integração deverá ser completa, possibilitado a participação de todos os agentes do setor.
 
-	Geralmente, tem-se usado a tecnologia ZibBee. Todo equipamento com esse tipo de conexão poderá se comunicar com o medidor, transmitindo e recebendo informações e comandos. Se o consumidor permitir, a concessionária terá a capacidade de controlar a carga dentro de cada residência, como, por exemplo, regular a temperatura de aparelhos através dos termostatos inteligentes, ou, até mesmo, ligar e desligar cargas. Dessa forma, as concessionárias poderão limitar a demanda e evitar sobrecargas nas redes. Outra forma de limitar os picos de demanda é a tarifação diferenciada por postos horários. Como o medidor pode registrar o consumo em diferentes períodos ao longo do dia, poderão ser aplicadas maiores tarifas em horários de maior concentração de demanda, evitando que muitos consumidores usem a energia ao mesmo tempo, aliviando o sistema.\footnote{http://www.mme.gov.br/documents/10584/1256641/Relatxrio\_GT\_Smart\_Grid\_Portaria\_440-2010.pdf/3661c46c-5f86-4274-b8d7-72d72e7e1157, acessado dia 30/10}
+	Geralmente, tem-se usado a tecnologia ZibBee. Todo equipamento com esse tipo de conexão poderá se comunicar com o medidor, transmitindo e recebendo informações e comandos. Se o consumidor permitir, a concessionária terá a capacidade de controlar a carga dentro de cada residência, como, por exemplo, regular a temperatura de aparelhos através dos termostatos inteligentes, ou, até mesmo, ligar e desligar cargas. Dessa forma, as concessionárias poderão limitar a demanda e evitar sobrecargas nas redes. Outra forma de limitar os picos de demanda é a tarifação diferenciada por postos horários. Como o medidor pode registrar o consumo em diferentes períodos ao longo do dia, poderão ser aplicadas maiores tarifas em horários de maior concentração de demanda, evitando que muitos consumidores usem a energia ao mesmo tempo, aliviando o sistema\cite{2015Zimmermann}.
 
 	Existem três tipos diferentes de dispositivos ZigBee: ZigBee coordenador (ZC): O dispositivo mais completo, o coordenador faz a raiz da árvore da rede e pode superar a outras redes. Há exatamente um coordenador ZigBee em cada rede, ele é capaz de armazenar informações sobre a rede, inclusive atuando como o Centro de Fidedignidade e repositório de chaves de segurança. ZigBee Router (ZR): Assim como executar uma função do aplicativo, um roteador pode funcionar como um roteador intermediário, transmissão de dados de outros dispositivos. ZigBee dispositivo final (ZED): Contém a funcionalidade apenas o suficiente para falar com o nó pai (ou coordenador ou um roteador), ele não pode transmitir dados de outros dispositivos. Esta relação permite que o nó a ser adormecido uma quantidade significativa do tempo dando assim a vida da bateria longa. Um ZED requer a menor quantidade de memória, e, portanto, pode ser menos caro de fabricar do que um ZR ou ZC.
 
@@ -271,7 +271,7 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
   \end{center}
 \end{figure}
 
-	Na casa sustentável iremos utilizar A HAN abrange a residência e não deverá apresentar grandes entraves na questão da comunicação de dados. Podem ser usadas as tecnologias Wireless, como ZibBee, ou mesmo a PLC. É necessário definir soluções que garantam a integridade de dados transmitidos de forma a evitar possíveis fraudes, ou ataques aos sistemas de informação, como por exemplo, medição eletrônica. Também é necessário definir autenticidade de entidades que transmitem e das que recebem dados. Há necessidade de proteções contra violação de informação em medidores eletrônicos, por exemplo, ao atualizar firmware de dispositivos.\footnote{http://www.atmel.com/pt/br/applications/smart\_energy/default.aspx, https://web.bndes.gov.br/bib/jspui/bitstream/1408/2927/1/RB\%2040\%20Redes\%20el\%C3\%A9tricas\%20inteligentes\_P.pdf}
+	Na casa sustentável iremos utilizar A HAN abrange a residência e não deverá apresentar grandes entraves na questão da comunicação de dados. Podem ser usadas as tecnologias Wireless, como ZibBee, ou mesmo a PLC. É necessário definir soluções que garantam a integridade de dados transmitidos de forma a evitar possíveis fraudes, ou ataques aos sistemas de informação, como por exemplo, medição eletrônica. Também é necessário definir autenticidade de entidades que transmitem e das que recebem dados. Há necessidade de proteções contra violação de informação em medidores eletrônicos, por exemplo, ao atualizar firmware de dispositivos\cite{2013Atmel}\cite{2013RiveraEspositoTeixeira}.
 
 	Um sistema de comunicação é a componente chave para a infraestrutura Smart Grid, e o PLC é uma das principais tecnologias de comunicação disponíveis para este fim. A tecnologia PLC é uma técnica que utiliza a rede elétrica para transmitir, a altas taxas de transmissão, sinais de dados entre dispositivos. Em uma rede PLC, medidores inteligentes podem estar ligados a um concentrador de dados por meio da rede elétrica e transferir as informações para uma central de dados. A infraestrutura da rede elétrica existente diminui os custos de instalação relativos a um sistema de comunicações, sendo bastante adequada em áreas urbanas para diversas aplicações.
 
@@ -282,8 +282,8 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
   \end{center}
 \end{figure}
 
-	Neste contexto, é proposto o desenvolvimento de um circuito PLC para operar na faixa de banda estreita. Neste trabalho, foi selecionada a frequência de operação de 100 kHz, com uma largura de banda de 50 kHz (embora o projeto do circuito também permita a operação em outros valores próximos). Um circuito para transmissão de dados PLC pode ser dividido em transmissor (composto de Modulador, Ampli-ficador e Circuitos de Acoplamento) e receptor (Circuitos de Acoplamento, Amplificador e Demodulador).\footnote{http://www.researchgate.net/profile/Waslon\_Lopes/publication/281623198\_Consideraes\_para\_Implementao\_de\_Power\_Line\_Communications\_para\_Aplicaes\_de\_Smart\_Grid/links/55f031c308aef559dc45bac3.pdf}
-
+	Neste contexto, é proposto o desenvolvimento de um circuito PLC para operar na faixa de banda estreita. Neste trabalho, foi selecionada a frequência de operação de 100 kHz, com uma largura de banda de 50 kHz (embora o projeto do circuito também permita a operação em outros valores próximos). Um circuito para transmissão de dados PLC pode ser dividido em transmissor (composto de Modulador, Ampli-ficador e Circuitos de Acoplamento) e receptor (Circuitos de Acoplamento, Amplificador e Demodulador)\cite{2015AndradeEtAl}.
+	
 	\begin{enumerate}
 
 		\item \textbf{Modulador}
@@ -335,23 +335,4 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 	Com isso na casa instalaremos um sensor e utilizaremos também o PLC funcionando em conjunto com o software livre ZigBee PRO, para auxiliar nessa comunicação entre a geração e o consumidor final. Com isso observou-se e partir de dados presentes em outros projetos e no mercado que os medidores representam cerca de 70\% a 80\% do custo e o restante de 20\% a 30\% a adaptação de instalação de um sistema de comunicação na Smart Grid.
 
-	E com isso obtemos o custo para a instalação do PLC, com a compra de BPSK (Binary Phase Shift Keying) no valor de R\$$ 71,73$, CI AD633 por R\$$ 311,72$ com 20 peças/lote, Amplificadores operacionais por R\$$ 10,86$ com 100 itens/lote e circuito PLL no valor de R\$$ 30,67$, e com esses equipamentos torna-se capaz a instalação do PLC e o sistema de comunicação da Smart Grid. No ZigBee será comprado Módulo Digi XBee ZB - Antena Wire - Low Power no valor de R\$$ 84,00$ para complementar esse sistema de comunicação.\footnote{http://pt.aliexpress.com/ e http://xbeestore.lojavirtualfc.com.br/listaprodutos.asp?IDLoja=16187\&IDProduto=2490985\&q=modulo-digi-xbee-zb-~-~-antena-wire-~-~-low-power}
-
-
-
-%	Referências:
-%[1]MONTGOMERY, Lisa. A tendência da tecnologia na visão dos maiores experts. Disponível em <http://revistahometheater.uol.com.br/site/tec_artigos_02.php?id_lista_txt=5542>. Acesso em 23 de setembro de 2015;
-%[2] Siqueira, F.  e Fraga J.  Modelo de Programação de Aplicações Tempo-Real em Sistemas Abertos. Disponível em<http://www.inf.ufsc.br/~frank/papers/wasap.pdf>. Acesso em 20 de setembro de 2015;
-%[3] Glenn, Brookshear J. Ciência da Computação - Uma Visão Abrangente, 11ed. Disponível em: <https://books.google.com.br/books?id=Vfw4AgAAQBAJ&pg=PA81&lpg=PA81&dq=processamento+em+tempo+real+e+processamento+interativo&source=bl&ots=iyf1pl0q1g&sig=ptl6i2ao9IcgMSMiVtI3Avkmlqw&hl=pt-BR&sa=X&ved=0CBwQ6AEwAGoVChMIqfaq4YGHyAIVyYqQCh0vcgRK#v=onepage&q=processamento%20em%20tempo%20real%20e%20processamento%20interativo&f=false>. Acesso em 20 de setembro de 2015
-%[4] Siqueira, F.  e Fraga J. Programação de Aplicações Tempo-Real em Sistemas Abertos: O Modelo Reflexivo Tempo-Real Distribuído. Laboratório de Controle e Microinformática – LCMI.
-%Disponível em: <http://www.inf.ufsc.br/~frank/papers/wasap2.pdf>. Acesso em 22 de setembro de 2015.
-%[5]CAGNA, Thiago. Como funcionam e quanto custam os sensores de movimento e de luz.< http://ecohospedagem.com/como-funcionam-e-quanto-custam-os-sensores-de-movimento-e-de-luz />. Acesso em 23 de setembro de 2015;
-%[6]Texas Instruments. Datasheet LM35. Disponível em <http://www.ti.com/lit/ds/symlink/lm35.pdf>. Acesso em 23 de setembro de 2015
-
-%[7]Manual do usuário. Disponível em: <http://store.homeseer.com/store/HomeSeer-HSM200-Z-Wave-Multi-Sensor-P1882.aspx>. Acesso em: 14 de outubro de 2015.
-%[8] JFL Alarmes. Características do sensor infravermelho IRPET-500. Disponível em: <http://jflalarmes.tecnologia.ws/uploads/jfl-download-passivos-irpet-500.pdf>. Acesso em: 15 de outubro de 2015.
-%[9]Manual do usuário. Disponível em: <http://store.homeseer.com/store/Everspring-ST814-2-Z-Wave-Temperature-Humidity-Sensor-P1087.aspx>. Acesso em: 14 de outubro de 2015.
-%[10]Características do chuveiro inteligente. Disponível em: <http://www.ihouse.com.br/caracteristicas-do-smartshower.php>. Acesso em: 15 de outubro de 2015.
-%[11]Manual do usuário. Disponível em: <http://store.homeseer.com/store/First-Alert-ZCOMBO-G-Z-Wave-Smoke-and-Carbon-Monoxide-Detector-P1990.aspx>.  Acesso em: 14 de outubro de 2015.
-%[12]Manual do usuário. Disponível em: <http://store.homeseer.com/store/Aeon-Labs-Aeotec-DSB28-ZWUS-Z-Wave-Home-Energy-Meter-2nd-Edition-P1643.aspx>. Acesso em: 14 de outubro de 2015.
-%[13]Guia de instalação. Disponível em: <http://store.homeseer.com/store/Foscam-FI8905W-Outdoor-Wireless-IP-Camera-4mm-lens-60-LED-P1100.aspx> . Acesso em: 14 de outubro de 2015.
+	E com isso obtemos o custo para a instalação do PLC, com a compra de BPSK (Binary Phase Shift Keying) no valor de R\$$ 71,73$, CI AD633 por R\$$ 311,72$ com 20 peças/lote, Amplificadores operacionais por R\$$ 10,86$ com 100 itens/lote e circuito PLL no valor de R\$$ 30,67$, e com esses equipamentos torna-se capaz a instalação do PLC e o sistema de comunicação da Smart Grid. No ZigBee será comprado Módulo Digi XBee ZB - Antena Wire - Low Power no valor de R\$$ 84,00$ para complementar esse sistema de comunicação\cite{XBeeStore}.
