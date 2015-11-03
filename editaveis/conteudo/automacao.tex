@@ -1,6 +1,7 @@
-\chapter{Automação PC1}
-\section{Automação residencial}
-Atualmente, qualquer sistema de automação residencial entrega ao usuário uma quantidade imensa de acessórios no ramo de iluminação, multimídia, temperatura econforto e segurança. Seguindo essa vertente e visando deixar o produto atraente, a casa precisa ter, no mínimo, a mesma quantidade de acessórios automatizados que as outras já existentes no mercado. A lista gerada então será:
+\chapter{Automação}
+\section{Escopo}
+
+	Atualmente, qualquer sistema de automação residencial entrega ao usuário uma quantidade imensa de acessórios no ramo de iluminação, multimídia, temperatura econforto e segurança[1]. Seguindo essa vertente e visando deixar o produto atraente, a casa precisa ter, no mínimo, a mesma quantidade de acessórios automatizados que as outras já existentesno mercado. A lista gerada então será:
 
 \begin{itemize}
 	\item Multimídia (Áudio, Vídeo) – Home theater;
@@ -8,209 +9,75 @@ Atualmente, qualquer sistema de automação residencial entrega ao usuário uma 
 	\item Cortinas – Home-theater, escritório e quartos;
 	\item \textit{HVAC}\footnote{HVAC do inglês \textit{Heating, Ventilation, Air Conditioning}} Climatização - Casa toda, exceto cozinha;
 	\item Banheiro (Chuveiro e banheira);
-	\item Irrigação.
+	\item Regador do jardim.
 \end{itemize}
 
+	Para que o sistema possa atuar, é necessário que ele colete informações a respeito do ambiente. Essas informações podem vir por meio de sensores ou por meio de comandos do usuário (controles, computadores...). Coisas como multimídia, chuveiro e regador serão escolhidas a gosto do usuário, então o sistema só agirá instantaneamente a mando do usuário. Porém, coisas como umidade no ambiente, presença ou fumaça são pré-programados e esperam que os respectivos sensores atinjam determinados níveis para que o sistema aja.
 
-\section{O que será medido?}
+	Na interação com os equipamentos de multimídia será utilizado um Home Controller, que é um dispositivo conectado à TV, Home theater, Game, DVD e outros dispositivos da casa que permite a comunicação entre eles através de um único controle, além de ser capaz de executar funções pré-progamadas, chamadas de Cenas, onde o usuário pode, por exemplo, definir que quando apertar o botão “cinema” o cômodo ficará escuro e o DVD será ativado juntamente com a TV e o home theater para assistir a um filme.
 
-	Para cada tópico da seção anterior serão especificadas grandezas físicas a serem medidas.
+\subsection{Processamento em tempo real}
 
-$\bullet$ \textbf{Multimídia}
+	O processamento em tempo real deve obrigatoriamente ter ações suficientemente rápidas para que se coordenem com as necessidades dos clientes[2]. Dessa forma, cada componente tem um tempo de resposta específico e as máquinas devem realizar a tarefa de acordo com as restrições de tempo eu seu ambiente[3]. Sempre que houver possibilidade é indicado programar os componentes em linguagens de baixo nível para aumentar a velocidade do algorítmo.[4]
 
-	Não serão necessárias medições pelo fato de as cenas serem montadas de acordo com os gostos do usuário e não pela característica física do ambiente.
+	Para se trabalhar com processos em tempo real, divide-se o processamento em três camadas: Uma de alta performance(um PC, por exemplo), que tem custos elevados e é utilizada para processamento de imagens, geralmente. Uma de média performance, com características voltadas a filtros e estatísticas (consumo, uso diário, previsões de consumo. Foi escolhido um processador ARM nesse projeto) e uma de baixa performance, apenas para atuar em motores, controladores e coisas do tipo (Até então o microcontrolador definido é o ATMega).
 
-$\bullet$ \textbf{Iluminação}
+\subsection{Interface homem-máquina}
 
-	Em alguns ambientes não é necessário ter luz o tempo todo, mas é essencial que se tenha luz quando surge alguém. Então, imprescindivelmente, o sistema precisa reconhecer se há pessoas em determinado local.
+	A avaliação da interface tem como objetivos gerais validar a eficácia e a eficiência, entre outros aspectos das metas de usabilidade, conforme as tarefas que são realizadas pelos usuários e os recursos empregados. Tais como tempo, quantidade de erros desnecessários, busca de ajuda, etc. São levados em consideração os seguintes aspectos: Eficácia, eficiência, Segurança, Utilidade, Capacidade de aprendizagem e Capacidade de memorização.
 
-$\bullet$ \textbf{Cortinas}
-
-	Para o sistema lidar com situações de iluminação e ventilação, ele precisa saber se a cortina está aberta ou fechada. Então é necessário medir o ângulo de inclinação das paletas no caso de persianas e o tamanho do rolo, no caso das cortinas tradicionais.
-
-$\bullet$ \textbf{Climatização}
-
-	Os aparelhos condicionadores de ar já emitem a temperatura constante. Basta apenas que as especificações do fabricante sejam cumpridas. Porém, a umidade do ar deve ser acompanhada.
-
-$\bullet$ \textbf{Banheiro}
-	
-	Já se encontram no mercado equipamentos que medem o fluxo e a tempe- ratura da água que sai do chuveiro. Isso permite que cada morador estabeleça modos de banho pessoais. Como nosso produto deve suprir ou se equiparar com
-os atuais, é necessário que o chuveiro tenha essa característica.
-
-$\bullet$ \textbf{Irrigação}
-
-	Para que o proprietário não tenha que ficar preocupado com a irrigação, os regadores poderão ser configurados para operarem em horário específico – O que não exige sensor, ou em condições específicas, como a quantidade de água ao redor da raiz de uma determinada planta. Para isso, claro, é necessário medir a umidade do solo.
-
-
-\section{Processamento em tempo real}
-
-\section{Descrição}
-
-	Utilizaremos o Real-Time como o tipo de processamento, esse é o modo de operação onde sistemas trabalham com restrições de tempo. Podem ser usadas soluções de hardware ou software para incorporar tomadas de decisão em relação às respostas do processamento. A maioria dos processos em tempo real monitoram as informações para que haja a comparação do estado atual com o estado desejado e assim sejam tomadas decisões em função dos dados coletados. 
-
-	Em aplicações de processos interativos se faz necessário que as ações do computador sejam suficientemente rápidas para estar em sincronia com as necessidades do usuário. Assim a máquina é forçada a realizar o processamento antes de um tempo limite, este processo então ficou conhecido como processamento em tempo real.
-
-\section{Requisitos}
-
-	Para que um processamento em tempo real seja bem sucedido há necessidade de que alguns requisitos sejam cumpridos, tais como:
-
-\begin{itemize}
-	\item As ações dos processadores devem ser suficiente rápidas para coordenação com as necessidades do cliente.
-	\item As máquinas devem responder antes de um tempo limite.
-\end{itemize}
-
-	Porém também devemos levar em consideração que alguns fatores influenciam diretamente nesses requisitos, como:
-
-\begin{itemize}
-	\item A tabela de tempos de cada componente.
-	\item Cada componente possui um tempo próprio impossibilitando a criação de um relógio, tempo, global.
-\end{itemize}
-
-\section{Processos em tempo real}
-
-\begin{itemize}
-	\item Sistema monitoramento ( monitoramento de áudio e vídeo visando a segurança).
-	\item Sensores de presença (detecção em tempo real de radiação eletromagnética - infravermelho).
-	\item Sensores de fumaça (detector iônico de fumaça proveniente do possível incêndio).
-	\item Monitoramento e gerenciamento em tempo real da produção e consumo de energia da casa. 
-\end{itemize}
-
-\section{Camadas de processamento}
-	
-	Uma alternativa de barateamento do custo de produção e que fornece um resultado, muitas vezes, melhor que a utilização de um computador, é dividir o trabalho de processamento em tempo real em camadas de processamento.
-
-\begin{enumerate}
-	\item PC com auxilio de uma GPU se necessário (Alta performance de processamento para cálculos complexos ou métodos matemático com altos esforços computacionais, porém possuem alto custo do aquisição e manutenção).
-	\item Micro controlador ARM (Pode ser programado em FPGAs utilizando VHDL. Isso possibilitaria processamento em paralelo, simulando vários processadores ARM); Essa aplicação tem um caráter mais voltado para Filtros e estatísticas (consumo, uso diário de energia, previsão de consumo, trabalhos estatísticos, etc).
-	\item Micro controlador Arduino (Com utilizações mais simples como antena RF e controlador de motores. Ex: Antena RF e controlador de motor para cortina ou janela).
-\end{enumerate}
-
-\section{Descrição dos Microcontroladores}
-
-$\bullet$ \textbf{FPGA}
-
-	FPGAs são dispositivos lógicos programáveis (PLD) no qual possui uma ar- quitetura reconfigurável, ou seja, permite a modificação de sua estrutura (topo- logia), utilizando a linguagem VHDL. As células de armazenamento dos LUTs de um FPGA são voláteis, o que implica na perda do conteúdo armazenado, no caso de falta de suprimento de energia elétrica. Geralmente utiliza-se uma pequena memória Flash ou EEPROM (Eletrically Erasable Programmed Read Only Memory) cuja função é carregar automaticamente as células de armaze- namento, toda vez que o FPGA for energizado. Seu desempenho é de até 500 MHz.
-
-	Dentre as vantagens de se utilizar FPGAs estão o baixo custo de projeto em FPGAs, a facilidade e rapidez no desenvolvimento.
-
-	Dentre as desvantagens de usar FPGAs encontra-se uma maior área compota por silício, o que implica em um maior consumo de potência, um maior custo de produção em massa, e seu desempenho (frequência de operação) restrita à tecnologia disponível pelo fabricante.
-
-$\bullet$ \textbf{Arduino}
-
-	Arduino tem sua placa de microcontrolador baseada no ATmega328P e pos- sui suas versões em Atmel AVR de 8 bits ou Atmel ARM de 32 bits. Dispõe de 14 pinos digitais de entrada/saída (dentre os quais 6 podem ser usados como saídas PWM), 6 entradas analógicas, um cristal de quartzo 16 MHz e conexão USB.
-
-	Projetado para ser de fácil uso, podendo ser entendido e utilizado por artis- tas, designers, hobbystas e qualquer um que tenha interesse em criar objetos e ambientes interativos.
-
-	Suas vantagens são a plataforma de prototipagem eletrônica open-source, preço acessível e hardware e softwares flexíveis e fáceis de usar.
-
-	Sua desvantagem é a alta tensão de funcionamento (5V).
-
-\section{Interface Humano Máquina}
-
-	A avaliação da interface tem como objetivos gerais validar a eficácia e a eficiência, entre outros aspectos das metas de usabilidade, conforme as tarefas que são realizadas pelos usuários e os recursos empregados. Tais como tempo, quantidade de erros desnecessários, busca de ajuda, etc. Outros aspectos:
-
-\begin{itemize}
-	\item \textbf{Eficácia}\\
-	Isto significa que o produto deve fazer bem o que ele foi criado para fazer;
-
-	\item \textbf{Eficiência}\\
-O produto deve cumprir seu objetivo de forma rápida, fácil e bem feita;
-
-	\item \textbf{Segurança}\\
-No nível físico ou pessoal até o nível de sistema;
-
-	\item \textbf{Utilidade}\\
-O produto tem que ser útil;
-
-	\item \textbf{Capacidade de aprendizagem}\\
-O produto precisa ser de fácil de fácil utilização pelo usuário;
-
-	\item \textbf{Capacidade de memorização}\\
-Após utilizar o produto pela primeira vez, o usuário deve ser capaz de utilizá-lo no futuro com facilidade.
-\end{itemize}
-
-\section{Segurança}
+\subsection{Segurança}
 
 	Como a casa exibe equipamentos caros e tem um custo bastante elevado, é muito importante que os moradores contem com um sistema de segurança avançado, que iniba possíveis riscos contra os seus bens e sua saúde.
 
-	Sistemas de segurança domésticos funcionam com uma estação base ou um painel de controle de sistema, que é o cérebro do sistema, onde toda informação é recebida e processada. Este sistema é normalmente colocado na parede e é controlado via smartphone. Um teclado para armar e desarmar o sistema também faz parte do pacote da base de controle, ou adicionado a uma parte conveniente da casa.
+	Sistemas de segurança domesticos funcionam com uma estação base ou um painel de controle de sistema, que é o cerebro do sistema, onde toda informação é recebida e processada.  Este sistema é normalmente colocado na parede e é controlado via smartphone. Um teclado para armar e desarmar o sistema também faz parte do pacote da base de controle, ou adicionado a uma parte conviniente da casa.
 
-\textbf{Características do produto:}
+\subsection{Sensores}
 
-	Fácil instalação, wireless, expansível ,alimentação por bateria e tomada, sensores de entradas, sensores de fumaça (opcional: inundação e monóxido de carbono), capacidade de armar, desarmar e controlar a distância, botão/dedo do pânico, feedback do sistema e notificações.
+\subsubsection{Iluminação}
+	
+	Sensor de movimento – De teto, 360°. O sensor de teto tem um custo um pouco mais elevado, porém, o sensor embutido no soquete tem que ficar exposto e não permite usar lampadas com entradas sem soquete. Assim, é mais prático e mais eficaz usar o sensor de teto por ele ser discreto e ter a saída aplicável em qualquer componente.[5]. Sensor analógico, necessita conversão.
 
-
-\section{Sensores utilizados para a automação}
-
-$\bullet$ \textbf{Iluminação}
-
-	Sensor de movimento – De teto, 360°. O sensor de teto tem um custo um pouco mais elevado, porém, o sensor embutido no soquete tem que ficar exposto e não permite usar lâmpadas com entradas sem soquete. Assim, é mais prático e mais eficaz usar o sensor de teto por ele ser discreto e ter a saída aplicável em qualquer componente. Sensor analógico, necessita conversão.
-
-$\bullet$ \textbf{Cortinas}
+\subsubsection{Cortinas}
 
 	Na persiana, o mais prático seria utilizar um motor de passo para definir a posição e o angulo de inclinação, porém, para diminuir o uso de portas do microcontrolador, será utilizado um sensor encoder. Já na cortina, será utilizado apenas um sensor de fim de curso. Os dois sensores das janelas serão digitais e não precisarão de conversão.
 
-$\bullet$ \textbf{Clima}
+\subsubsection{Clima}
 
-	É necessário utilizar um sensor de umidade do ambiente para ativar os umi- dificadores.
+	É necessário utilizar um sensor de umidade do ambiente para ativar os umidificadores.
 	
-$\bullet$ \textbf{Banho}
+\subsubsection{Banho}
 
-	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãoneces- sitará uma precisão tão alta, ela será medida com o CI LM35, que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
-
-$\bullet$ \textbf{Irrigação}
+	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será  medida com o CI LM35 [6], que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
+	
+\subsubsection{Regador}
 
 	Para o sistema do regador serão utilizados vários sensores de umidade de solo. Analógico, necessita conversão.
 	
-$\bullet$ \textbf{Sensores de entrada}
-
-	O sensor será do tipo infra-vermelho, ou seja, passivos de movimento que operam na faixa ótica da radiação térmica e respondem ao calor irradiado entre o elemento sensor e o objeto em movimento. O princípio de detecção de movi- mento por calor é baseado na teoria da emissão de radiação eletromagnética de qualquer objeto cuja temperatura seja superior a zero absoluto.
-
-$\bullet$ \textbf{Sensor de Fumaça}
-
-	Deverá detectar fumaça proveniente de princípio de incêndio, mandando este sinal para a central de segurança, que deverá alertar o morador e o corpo de bombeiros. Será distribuído um sensor para cada cômodo. O sensor será um detector Iônico é mais comum em casas e edifícios, porque, além de mais barato, é também mais sensível à fumaça do que o detector fotoelétrico.
-
-$\bullet$ \textbf{Câmera}
-
+\subsubsection{Sensores de entrada}
+	
+	O sensor será do tipo infra-vermelho, ou seja, passivos de movimento que operam na faixa ótica da radiação térmica e respondem ao calor irradiado entre o elemento sensor e o objeto em movimento. O princípio de detecção de movimento por calor é baseado na teoria da emissão de radiação eletromagnética de qualquer objeto cuja temperatura seja superior a zero absoluto.
+	
+\subsubsection{Sensor de fumaça}
+	
+	 Deverá detectar fumaça proveniente de principio de incendio, mandando este sinal para a central de segurança, que deverá alertar o morador e o corpo de bombeiros. Será distribuído um sensor para cada comodo. O sensor será um detector Iônico é mais comum em casas e edifícios, porque, além de mais barato, é também mais sensível à fumaça do que o detector fotoelétrico.
+	 
+\subsubsection{Câmera}
+	
 	Para monitoramento remoto.
 
-\section{Smart Grid}
-\section{Conceito}
-
-	O conceito de Smart Grid (SG) – ou Redes Elétricas Inteligentes (REI) apresenta uma mudança no paradigma do setor elétrico, levando em conta a necessidade de tornar o sistema de entrega de energia mais interativo por razões que diferem em cada país ou região.
-
-\section{Motivos}
-
-	Os motivos do surgimento de tal conceito são as necessidades de incorporar diferentes fontes de energia na rede – em especial fontes geradoras descentraliza- das, renováveis e intermitentes consumidores além da importância de melhorar a eficiência e o próprio dimensionamento da rede.
-
-\section{Objetivos}
-
-	As REIs objetivam otimizar produção, distribuição e consumo de energia, viabilizando a entrada de novos fornecedores e consumidores na rede, com me- lhorias significativas em monitoramento, gestão, automação e qualidade da ener- gia ofertada, por meio de uma rede elétrica caracterizada pelo uso intensivo das tecnologias de informação e comunicação (TIC).
-
-\section{Quais os parâmetros de projeto do Smart Grid?}
-
-	A implantação das Smart Grid pode ser compreendida em três parâmetros. As intervenções são feitas com o objetivo de agregar inteligência ao sistema de fornecimento de energia elétrica – geração, transmissão e distribuição –, promo- vendo robustez, segurança e agilidade na rede. Busca-se extrair os benefícios da substituição dos medidores eletromecânicos por eletrônicos inteligentes, que passam a oferecer inúmeras funcionalidades, dependendo do tipo do medidor escolhido. Inteligência nos centros consumidores, caracterizada por residências com eletrodomésticos inteligentes interconectados ao medidor, permitindo me- lhor gestão do consumo energético, comunicação bidirecional de energia, por meio da geração distribuída com fonte solar, eólica ou biomassa, e armazena- mento de energia com o uso dos carros elétricos.
-
-\section{Wireless ou conexão com fio?}
-
-	A conexão wireless nesse caso é mais vantajosa devido ao fato das tecnologias de redes sem fio interligam o sistema e o usuário evitando trabalhos e gastos com cabeamento e tornando o sistema mais flexível. São várias as tecnologias e topologias que podem ser adotadas e este trabalho apresenta as mais utilizadas e também onde podem ser aplicadas. (Redes de celulares, radiofrequência – WiMax, ZigBee, Bluetooth, entre outros –, satélites).
-
-\section{Como coletar e armazenar os dados sobre o consumo?}
-	
-	Sensores são embutidos com chips que detectam informações sobre a opera- ção e desempenho da rede, tais como tensão e corrente. Então, analisam essas informações para determinar o que é significativo - por exemplo, está com tensão muito alta ou muito baixa. Quando se detecta informações significativas ocorre a comunicação dos dados para um sistema de software armazenando no mesmo. Esse sistema irá analisar os dados e determinar o que está errado e o que deve ser feito para melhorar o desempenho da rede.
-
-\chapter{Automação PC2}
-\section{Definição de modelos}
+\section{Equipamentos selecionados}
+\subsection{Definição de modelos}
 
 	Previamente foram definidos modelos comuns do mercado, sensores que necessitariam ser filtrados, convertidos e procesados. Isso acarretaria o uso de microcontroladores e uma demanda grande de fios. Um dos maiores problemas nesse quesito foi a dificuldade em expandir o conjunto, já que um sistema de automação carece da possibilidade de anexar novos sensores e atuadores. Há também a preocupação em criar uma interface prática e amigável para o software de operação do produto, o que traria ainda mais tempo de pesquisa e desenvolvimento do projeto.  
 
 	Com o problema da interface e da capacidade de expandir o sistema de forma fácil e rápida, veio à tona a possibilidade de implementar um sistema já existente e que nos permita escolher os tipo de sensores adequados ao funcionamento da casa de acordo com a nossa perspectiva, foi escolhido o HomeSeer. Dessa forma, todos os sensores foram substituídos por sensores compatíveis e esse processo simplificou infinitamente a implementação, eximindo a necessidade de filtros e conversores. 
 
-\section{Funcionamento do sistema}
+\subsection{Funcionamento do sistema}
 
 	O equipamento principal é um PC com configuração mediana, com uso dedicado ao sistema. A ele podem ser ligados diretamente monitores e equipamentos periféricos, porém, os sensores são ativados à distância, através de uma rede wireless utilizando o protocolo Z-Wave. É definida uma rede e os sensores podem ser conectados a ela de forma simples e rápida: Basta informar á máquina principal que algum dispositivo será pareado. Em seguida, aperta-se um botáo no dispositivo que se deseja conectar à rede e, então, eles já estarão interagindo.  A partir daí o dono da casa já pode escolher as ações tanto de leitura quanto de atuação, precisando apenas ir nas condifurações da rede, que tem uma interface bastante prática.
 
-\subsection{Lista dos sensores necessários}
+\subsubsection{Lista dos sensores necessários}
 
 \begin{enumerate}
 	\begin{figure}[H]
@@ -275,7 +142,7 @@ $\bullet$ \textbf{Câmera}
 	\begin{itemize}
 		\item Nome: Smartshower.
 		\item Custo: - - - - 
-		\item Quantidade: 1
+		\item Quantidade: 2
 	\end{itemize}
 	
 	\item Detector de fumaça
@@ -335,7 +202,7 @@ $\bullet$ \textbf{Câmera}
 
 \end{enumerate}
 
-\subsection{Posição dos Sensores}
+\subsubsection{Posição dos Sensores}
 	A posição dos sensores será estabelecida de acordo com a necessidade da casa e obedecendo às características exigidas pelo manual. Dessa forma, deve-se lembrar que os sensores de movimento não podem ser instalados em áreas externas, as câmeras tem ângulo de alcance de $30{^o}$ e uma distância máximo de $30m$, isso deve ser levado em conta na hora de fazer a cobertura de monitoramento da casa. Como os equipamentos tem alcance de $30m$ não será necessário o uso de repetidores, já que o lote tem justamente esse tamanho. O mapa de sensores ficou da seguinte maneira:
 
 \begin{figure}[H]
@@ -345,13 +212,13 @@ $\bullet$ \textbf{Câmera}
   \end{center}
 \end{figure}
 
-\section{Smart Grid}
+\chapter{Smart Grid}
 
-\subsection{Instalação e Coleta}
+\section{Instalação e Coleta}
 
 O conceito de redes inteligentes está ligado ao uso de elementos digitais e de comunicações nas redes que transportam a energia. Esses elementos possibilitam o envio de diversos dados e informação para os centros de controle, onde eles são tratados, auxiliando na operação e controle do sistema como um todo. Para isso deve-se colocar em pratica algumas transformações, como a modernização da infraestrutura, instalação de softwares e capacidade de processamento desses dados. Com isso para a instalação das Redes Inteligentes, algumas etapas devem estar associadas como a medição eletrônica, a comunicação, o sensoriamento e a computação tais sistemas estão correlacionados a um medidor inteligente e a um sistema de comunicação.
 
-\subsubsection{Medição Eletrônica}
+\subsection{Medição Eletrônica}
 
 	O controle de perdas, planejamento e operação da rede estão diretamente ligados a essa tecnologia sendo assim tal medição está envolvida desde a geração até o uso final. Com a introdução desse tipo medidor, o consumidor terá mais condições de gerenciar seu uso de energia. Vários aplicativos já estão em desenvolvimento para proporcionar o acesso aos dados de medição, auxiliando na tomada de decisão. Dados como consumo em tempo real, equipamentos que mais consomem energia, valor a pagar até o momento, projeção de fatura no final do ciclo são alguns exemplos de interação entre usuário e medidor. Outros serviços ainda podem ser agregados, como por exemplo, o controle de cargas pelo usuário. Antes mesmo de chegar à sua casa, o consumidor poderá programar qualquer equipamento conectado à rede elétrica.
 
@@ -363,25 +230,25 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
   \end{center}
 \end{figure}
 
-\subsubsection{Comunicação}
+\subsection{Comunicação}
 
 	Uma das funcionalidades mais importantes dos medidores inteligentes é a capacidade de se comunicar com outros equipamentos instalados na rede ou mesmo dentro das unidades consumidoras. Para que o conceito de redes inteligentes seja totalmente viabilizado, é necessário que essa comunicação seja feita em duas direções – da central para o usuário e vice-versa. Funções como a suspensão e religação de fornecimento remotas, envio de informação sobre consumo em tempo real dependem dessa comunicação bidirecional.
 
 	Quando os diversos sistemas e seus componentes possuem a habilidade de operarem em conjunto, alcançamos o conceito de interoperabilidade (capacidade de diversos sistemas trabalharem em conjunto). Permitindo a integração, o funcionamento cooperado e a comunicação bidirecional entre os vários elementos interconectados do sistema elétrico. Para que seja efetiva, deverá ser estruturada uma padronização de interfaces, protocolos e outros elementos de interconexão, utilizando softwares e assim eles possam trocar informações entre si. 
 
-\subsubsection{Sensoriamento}
+\subsection{Sensoriamento}
 
 	A instalação de sensores ao longo de todo o sistema de distribuição de energia elétrica é outro passo para que a rede se torne realmente inteligente. A auto recuperação, uma das responsáveis pela diminuição das faltas de energia, é beneficiada com o sensoriamento da rede. Os sensores são responsáveis por enviar as informações para a central de controle que ao receber dados toma-se uma decisão. A automatização será uma realidade e o religamento de áreas afetadas poderá ser feito mais rapidamente, eliminando o desconforto dos usuários e aumentando a receita.
 
 	Sensores são embutidos com chips que detectam informações sobre a operação e desempenho da rede, tais como tensão e corrente. Então, analisam essas informações para determinar o que é significativo - por exemplo, está com tensão muito alta ou muito baixa. Quando se detecta informações significativas ocorre a comunicação dos dados para um sistema de software armazenando no mesmo. \footnote{https://alexandresalema.wordpress.com/2015/09/16/smart-grid-as-chamadas-redes-inteligentes/, acessado dia 30/10}
 
-\subsubsection{Computação}
+\subsection{Computação}
 
 	O processamento dos dados recebidos por todos os equipamentos da rede irá aumentar substancialmente, por isso, torna-se necessário que os centros de controle que sejam capazes de transformá-los em informações úteis para os usuários. Muitos dados disponíveis podem tornar confusa a leitura e a decisão pode ser equivocada e piorar as condições da rede sendo necessário um filtro desses dados.
 
 	É esperado grande volume de dados causado por grande número de fontes de tráfego ou por alta intensidade na demanda de dados. Em sistemas SCADA tipicamente há um fluxo intenso de limitadas fontes de tráfego fornecendo dados para uma unidade concentradora, ao qual incluem dispositivos eletrônicos inteligentes.
 
-\subsubsection{Medidor Inteligente}
+\subsection{Medidor Inteligente}
 
 	O medidor inteligente irá interligar a casa ao restante da rede. O primeiro ponto de recepção desses dados será o concentrador. Ele pode receber informações de um grande número de medidores e, então, enviá-las para pontos de retransmissão como torres, e destas, para subestações ou outros pontos, para depois serem transmitidos para os centros de controle da distribuição. Dentro das residências também teremos novidades. Ao se criar uma rede doméstica centrada no medidor, vários serviços poderão ser oferecidos e haverá um novo relacionamento entre cliente e concessionária, bem como uma nova relação entre o consumidor e seu uso da energia.
 
@@ -393,7 +260,7 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 	
 	Existem três tipos diferentes de dispositivos ZigBee: ZigBee coordenador (ZC): O dispositivo mais completo, o coordenador faz a raiz da árvore da rede e pode superar a outras redes. Há exatamente um coordenador ZigBee em cada rede, ele é capaz de armazenar informações sobre a rede, inclusive atuando como o Centro de Fidedignidade e repositório de chaves de segurança. ZigBee Router (ZR): Assim como executar uma função do aplicativo, um roteador pode funcionar como um roteador intermediário, transmissão de dados de outros dispositivos. ZigBee dispositivo final (ZED): Contém a funcionalidade apenas o suficiente para falar com o nó pai (ou coordenador ou um roteador), ele não pode transmitir dados de outros dispositivos. Esta relação permite que o nó a ser adormecido uma quantidade significativa do tempo dando assim a vida da bateria longa. Um ZED requer a menor quantidade de memória, e, portanto, pode ser menos caro de fabricar do que um ZR ou ZC.
 	
-\subsubsection{Sistemas de Comunicação}
+\subsection{Sistemas de Comunicação}
 
 	Inúmeras tecnologias estão disponíveis no mercado para a transmissão de dados entre a unidade consumidora e os centros de operação das concessionárias. A escolha deverá se basear na necessidade de confiabilidade, segurança e disponibilidade de cada serviço oferecido. Podemos observar quatro camadas na área de telecomunicações: HAN –Home Area Network –, LAN – Local Area Network –, RAN – Regional Area Network – e WAN – Wide Area Network.
 	
@@ -439,9 +306,9 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 	\end{enumerate}
 
-\subsection{Custos}	
+\section{Custos}	
 
-\subsubsection{Medidor Inteligente e Sistema de Comunicação}
+\subsection{Medidor Inteligente e Sistema de Comunicação}
 
 	Para o projeto iremos considerar dois tipos de Medidores, dados ao qual foram obtidos num estudo do Ministério de Minas e Energia:
 
@@ -469,3 +336,25 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 	Com isso na casa instalaremos um sensor e utilizaremos também o PLC funcionando em conjunto com o software livre ZigBee PRO, para auxiliar nessa comunicação entre a geração e o consumidor final. Com isso observou-se e partir de dados presentes em outros projetos e no mercado que os medidores representam cerca de 70\% a 80\% do custo e o restante de 20\% a 30\% a adaptação de instalação de um sistema de comunicação na Smart Grid.
 
 	E com isso obtemos o custo para a instalação do PLC, com a compra de BPSK (Binary Phase Shift Keying) no valor de R\$$ 71,73$, CI AD633 por R\$$ 311,72$ com 20 peças/lote, Amplificadores operacionais por R\$$ 10,86$ com 100 itens/lote e circuito PLL no valor de R\$$ 30,67$, e com esses equipamentos torna-se capaz a instalação do PLC e o sistema de comunicação da Smart Grid. No ZigBee será comprado Módulo Digi XBee ZB - Antena Wire - Low Power no valor de R\$$ 84,00$ para complementar esse sistema de comunicação.\footnote{http://pt.aliexpress.com/ e http://xbeestore.lojavirtualfc.com.br/listaprodutos.asp?IDLoja=16187\&IDProduto=2490985\&q=modulo-digi-xbee-zb-~-~-antena-wire-~-~-low-power}
+	
+	
+	
+%	Referências:
+%[1]MONTGOMERY, Lisa. A tendência da tecnologia na visão dos maiores experts. Disponível em <http://revistahometheater.uol.com.br/site/tec_artigos_02.php?id_lista_txt=5542>. Acesso em 23 de setembro de 2015;
+%[2] Siqueira, F.  e Fraga J.  Modelo de Programação de Aplicações Tempo-Real em Sistemas Abertos. Disponível em<http://www.inf.ufsc.br/~frank/papers/wasap.pdf>. Acesso em 20 de setembro de 2015;
+%[3] Glenn, Brookshear J. Ciência da Computação - Uma Visão Abrangente, 11ed. Disponível em: <https://books.google.com.br/books?id=Vfw4AgAAQBAJ&pg=PA81&lpg=PA81&dq=processamento+em+tempo+real+e+processamento+interativo&source=bl&ots=iyf1pl0q1g&sig=ptl6i2ao9IcgMSMiVtI3Avkmlqw&hl=pt-BR&sa=X&ved=0CBwQ6AEwAGoVChMIqfaq4YGHyAIVyYqQCh0vcgRK#v=onepage&q=processamento%20em%20tempo%20real%20e%20processamento%20interativo&f=false>. Acesso em 20 de setembro de 2015
+%[4] Siqueira, F.  e Fraga J. Programação de Aplicações Tempo-Real em Sistemas Abertos: O Modelo Reflexivo Tempo-Real Distribuído. Laboratório de Controle e Microinformática – LCMI. 
+%Disponível em: <http://www.inf.ufsc.br/~frank/papers/wasap2.pdf>. Acesso em 22 de setembro de 2015.
+%[5]CAGNA, Thiago. Como funcionam e quanto custam os sensores de movimento e de luz.< http://ecohospedagem.com/como-funcionam-e-quanto-custam-os-sensores-de-movimento-e-de-luz />. Acesso em 23 de setembro de 2015;
+%[6]Texas Instruments. Datasheet LM35. Disponível em <http://www.ti.com/lit/ds/symlink/lm35.pdf>. Acesso em 23 de setembro de 2015
+
+%[7]Manual do usuário. Disponível em: <http://store.homeseer.com/store/HomeSeer-HSM200-Z-Wave-Multi-Sensor-P1882.aspx>. Acesso em: 14 de outubro de 2015.
+%[8] JFL Alarmes. Características do sensor infravermelho IRPET-500. Disponível em: <http://jflalarmes.tecnologia.ws/uploads/jfl-download-passivos-irpet-500.pdf>. Acesso em: 15 de outubro de 2015.
+%[9]Manual do usuário. Disponível em: <http://store.homeseer.com/store/Everspring-ST814-2-Z-Wave-Temperature-Humidity-Sensor-P1087.aspx>. Acesso em: 14 de outubro de 2015.
+%[10]Características do chuveiro inteligente. Disponível em: <http://www.ihouse.com.br/caracteristicas-do-smartshower.php>. Acesso em: 15 de outubro de 2015.
+%[11]Manual do usuário. Disponível em: <http://store.homeseer.com/store/First-Alert-ZCOMBO-G-Z-Wave-Smoke-and-Carbon-Monoxide-Detector-P1990.aspx>.  Acesso em: 14 de outubro de 2015.
+%[12]Manual do usuário. Disponível em: <http://store.homeseer.com/store/Aeon-Labs-Aeotec-DSB28-ZWUS-Z-Wave-Home-Energy-Meter-2nd-Edition-P1643.aspx>. Acesso em: 14 de outubro de 2015.
+%[13]Guia de instalação. Disponível em: <http://store.homeseer.com/store/Foscam-FI8905W-Outdoor-Wireless-IP-Camera-4mm-lens-60-LED-P1100.aspx> . Acesso em: 14 de outubro de 2015.
+
+
+
