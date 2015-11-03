@@ -35,7 +35,7 @@
 \subsection{Sensores}
 
 \subsubsection{Iluminação}
-	
+
 	Sensor de movimento – De teto, 360°. O sensor de teto tem um custo um pouco mais elevado, porém, o sensor embutido no soquete tem que ficar exposto e não permite usar lampadas com entradas sem soquete. Assim, é mais prático e mais eficaz usar o sensor de teto por ele ser discreto e ter a saída aplicável em qualquer componente.[5]. Sensor analógico, necessita conversão.
 
 \subsubsection{Cortinas}
@@ -45,33 +45,33 @@
 \subsubsection{Clima}
 
 	É necessário utilizar um sensor de umidade do ambiente para ativar os umidificadores.
-	
+
 \subsubsection{Banho}
 
 	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será  medida com o CI LM35 [6], que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
-	
+
 \subsubsection{Regador}
 
 	Para o sistema do regador serão utilizados vários sensores de umidade de solo. Analógico, necessita conversão.
-	
+
 \subsubsection{Sensores de entrada}
-	
+
 	O sensor será do tipo infra-vermelho, ou seja, passivos de movimento que operam na faixa ótica da radiação térmica e respondem ao calor irradiado entre o elemento sensor e o objeto em movimento. O princípio de detecção de movimento por calor é baseado na teoria da emissão de radiação eletromagnética de qualquer objeto cuja temperatura seja superior a zero absoluto.
-	
+
 \subsubsection{Sensor de fumaça}
-	
+
 	 Deverá detectar fumaça proveniente de principio de incendio, mandando este sinal para a central de segurança, que deverá alertar o morador e o corpo de bombeiros. Será distribuído um sensor para cada comodo. O sensor será um detector Iônico é mais comum em casas e edifícios, porque, além de mais barato, é também mais sensível à fumaça do que o detector fotoelétrico.
-	 
+
 \subsubsection{Câmera}
-	
+
 	Para monitoramento remoto.
 
 \section{Equipamentos selecionados}
 \subsection{Definição de modelos}
 
-	Previamente foram definidos modelos comuns do mercado, sensores que necessitariam ser filtrados, convertidos e procesados. Isso acarretaria o uso de microcontroladores e uma demanda grande de fios. Um dos maiores problemas nesse quesito foi a dificuldade em expandir o conjunto, já que um sistema de automação carece da possibilidade de anexar novos sensores e atuadores. Há também a preocupação em criar uma interface prática e amigável para o software de operação do produto, o que traria ainda mais tempo de pesquisa e desenvolvimento do projeto.  
+	Previamente foram definidos modelos comuns do mercado, sensores que necessitariam ser filtrados, convertidos e procesados. Isso acarretaria o uso de microcontroladores e uma demanda grande de fios. Um dos maiores problemas nesse quesito foi a dificuldade em expandir o conjunto, já que um sistema de automação carece da possibilidade de anexar novos sensores e atuadores. Há também a preocupação em criar uma interface prática e amigável para o software de operação do produto, o que traria ainda mais tempo de pesquisa e desenvolvimento do projeto.
 
-	Com o problema da interface e da capacidade de expandir o sistema de forma fácil e rápida, veio à tona a possibilidade de implementar um sistema já existente e que nos permita escolher os tipo de sensores adequados ao funcionamento da casa de acordo com a nossa perspectiva, foi escolhido o HomeSeer. Dessa forma, todos os sensores foram substituídos por sensores compatíveis e esse processo simplificou infinitamente a implementação, eximindo a necessidade de filtros e conversores. 
+	Com o problema da interface e da capacidade de expandir o sistema de forma fácil e rápida, veio à tona a possibilidade de implementar um sistema já existente e que nos permita escolher os tipo de sensores adequados ao funcionamento da casa de acordo com a nossa perspectiva, foi escolhido o HomeSeer. Dessa forma, todos os sensores foram substituídos por sensores compatíveis e esse processo simplificou infinitamente a implementação, eximindo a necessidade de filtros e conversores.
 
 \subsection{Funcionamento do sistema}
 
@@ -98,16 +98,16 @@
 		\caption{Posição dos sensores de movimento}
 	  \end{center}
 	\end{figure}
-	
+
 	Isso permite que grande parte dos feixes sejam cortados e evita que algo passe despercebido. Porém, é necessário também que não haja luz solar e nem ventilação incidindo diretamente no sensor, isso pode provocar alarmes indesejados.
-	
+
 	\begin{itemize}
 		\item Valor: U$\$ 69,95$.
-		\item Nome: HSM200. 
+		\item Nome: HSM200.
 		\item Quantidade: 3
 	\end{itemize}
 
-	\item Sensor de umidade no ambiente 
+	\item Sensor de umidade no ambiente
 
 	\begin{figure}[H]
 	  \begin{center}
@@ -116,7 +116,7 @@
 	  \end{center}
 	\end{figure}
 
-	Este sensor é capaz de disparar funções quando atinge níveis críticos de umidade ou temperatura. Será usado em ambientes comuns para ativar umidificadores em climas secos (Umidade < 30\%). 
+	Este sensor é capaz de disparar funções quando atinge níveis críticos de umidade ou temperatura. Será usado em ambientes comuns para ativar umidificadores em climas secos (Umidade < 30\%).
 
 	\begin{itemize}
 		\item Capacidade de medição de umidade: 20\% - 90\% UR.
@@ -127,28 +127,28 @@
 
 
 	\item Ducha eletrônica
-	
+
 	Mesmo não sendo conectada à rede inteligente, a ducha inteligente é um grande adianto no que diz respeito a uso de sensores e comunicação homem-sistema.
-	
+
 	\begin{figure}[H]
 	  \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/ducha_inteligente.eps}
 		\caption{Ducha inteligente com o painel de controle ao lado}
 	  \end{center}
 	\end{figure}
-		
+
 	A grande vantagem em escolher essa ducha é a capacidade que ela tem de executar as mesmas funções estabelecidas no projeto de um forma bem mais simples. Além de não ser necessário o uso de sensores, ela tem sua própria central de comando e, por ser pressurizada, reduz o consumo de água sem perder a o conforto do banho.
 
 	\begin{itemize}
 		\item Nome: Smartshower.
-		\item Custo: - - - - 
+		\item Custo: - - - -
 		\item Quantidade: 2
 	\end{itemize}
-	
+
 	\item Detector de fumaça
-	
+
 	O detector de fumaça será utilizado apensa na sala de controle, onde ficará a central do sistema. É uma medida de mater o sistema constante, a fim de evitar danos aos equipamentos em caso de incêndio ou superaquecimento.
-	
+
 	\begin{figure}[H]
 	  \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/detector_fumaca.eps}
@@ -161,13 +161,13 @@
 		\item Custo: U$\$ 43,87$
 		\item Quantidade: 1
 	\end{itemize}
-	
-	Alguns do equipamentos passaram a não precisar mais de sensores. São eles: As cortinas, os regadores e o detector de gás de cozinha. Agora o comando de ativação dos atuadores não vem mais dos sensores, mas sim do usuário ou da máquina. 
-	
+
+	Alguns do equipamentos passaram a não precisar mais de sensores. São eles: As cortinas, os regadores e o detector de gás de cozinha. Agora o comando de ativação dos atuadores não vem mais dos sensores, mas sim do usuário ou da máquina.
+
 	\item Smart Grid
-	
+
 	A parte do smart grid nesse Sistema conta com um medidor de consume em tempo real, e o dado é fornecido para a central. Ou seja, é possível tomar medidas de controle caso a casa esteja gastando muito.
-	
+
 	\begin{figure}[H]
 	  \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/medidor_instantaneo.eps}
@@ -180,25 +180,25 @@
 		\item Quantidade: 1
 	\end{itemize}
 	\end{figure}
-	
+
 	\item Câmeras
-	
+
 	Com as câmeras houve um pequeno problema: A banda de operação do Z-Wave não suporta compartilhamento de áudio e nem de vídeo. A saída mais prática é passar as informações pela internet. O próprio sistema oferece suporte à esse tipo de comunicação.
-	
+
 	\begin{figure}[H]
 	  \begin{center}
 		\includegraphics[keepaspectratio,scale=0.5]{figuras/camera.eps}
 		\caption{Câmeras de vigilância externa}
 	  \end{center}
 	\end{figure}
-	
+
 	A câmera escolhida tem capacidade de filma em invravemerlho com um alcance de até 30 metros, média resolução (640x480) e ainda conta com suporte à visualização remota tanto em PC’s quanto em smartphones. O sistema oferece um programa em que a câmera só é ativada quando á movimento detectado. Ele pode ser baixado no prórpio site.
 
 	\begin{itemize}
 		\item Nome: FI8905W
 		\item Custo: U$\$ 84,00$
 		\item Quantidade: 8
-	\end{itemize}	
+	\end{itemize}
 
 \end{enumerate}
 
@@ -234,7 +234,7 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 	Uma das funcionalidades mais importantes dos medidores inteligentes é a capacidade de se comunicar com outros equipamentos instalados na rede ou mesmo dentro das unidades consumidoras. Para que o conceito de redes inteligentes seja totalmente viabilizado, é necessário que essa comunicação seja feita em duas direções – da central para o usuário e vice-versa. Funções como a suspensão e religação de fornecimento remotas, envio de informação sobre consumo em tempo real dependem dessa comunicação bidirecional.
 
-	Quando os diversos sistemas e seus componentes possuem a habilidade de operarem em conjunto, alcançamos o conceito de interoperabilidade (capacidade de diversos sistemas trabalharem em conjunto). Permitindo a integração, o funcionamento cooperado e a comunicação bidirecional entre os vários elementos interconectados do sistema elétrico. Para que seja efetiva, deverá ser estruturada uma padronização de interfaces, protocolos e outros elementos de interconexão, utilizando softwares e assim eles possam trocar informações entre si. 
+	Quando os diversos sistemas e seus componentes possuem a habilidade de operarem em conjunto, alcançamos o conceito de interoperabilidade (capacidade de diversos sistemas trabalharem em conjunto). Permitindo a integração, o funcionamento cooperado e a comunicação bidirecional entre os vários elementos interconectados do sistema elétrico. Para que seja efetiva, deverá ser estruturada uma padronização de interfaces, protocolos e outros elementos de interconexão, utilizando softwares e assim eles possam trocar informações entre si.
 
 \subsection{Sensoriamento}
 
@@ -257,13 +257,13 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 	Na casa sustentável serão utilizadas fontes de energia limpa. As fontes de energia limpa, como eólica e solar, são também intermitentes. Por isso, sua integração à rede se torna complexa. Nesse ponto, as tecnologias que podem ser agregadas à rede são de fundamental importância para a introdução desse tipo de geração. E estamos falando da microgeração, que poderão atender a casa. Essa integração deverá ser completa, possibilitado a participação de todos os agentes do setor.
 
 	Geralmente, tem-se usado a tecnologia ZibBee. Todo equipamento com esse tipo de conexão poderá se comunicar com o medidor, transmitindo e recebendo informações e comandos. Se o consumidor permitir, a concessionária terá a capacidade de controlar a carga dentro de cada residência, como, por exemplo, regular a temperatura de aparelhos através dos termostatos inteligentes, ou, até mesmo, ligar e desligar cargas. Dessa forma, as concessionárias poderão limitar a demanda e evitar sobrecargas nas redes. Outra forma de limitar os picos de demanda é a tarifação diferenciada por postos horários. Como o medidor pode registrar o consumo em diferentes períodos ao longo do dia, poderão ser aplicadas maiores tarifas em horários de maior concentração de demanda, evitando que muitos consumidores usem a energia ao mesmo tempo, aliviando o sistema.\footnote{http://www.mme.gov.br/documents/10584/1256641/Relatxrio\_GT\_Smart\_Grid\_Portaria\_440-2010.pdf/3661c46c-5f86-4274-b8d7-72d72e7e1157, acessado dia 30/10}
-	
+
 	Existem três tipos diferentes de dispositivos ZigBee: ZigBee coordenador (ZC): O dispositivo mais completo, o coordenador faz a raiz da árvore da rede e pode superar a outras redes. Há exatamente um coordenador ZigBee em cada rede, ele é capaz de armazenar informações sobre a rede, inclusive atuando como o Centro de Fidedignidade e repositório de chaves de segurança. ZigBee Router (ZR): Assim como executar uma função do aplicativo, um roteador pode funcionar como um roteador intermediário, transmissão de dados de outros dispositivos. ZigBee dispositivo final (ZED): Contém a funcionalidade apenas o suficiente para falar com o nó pai (ou coordenador ou um roteador), ele não pode transmitir dados de outros dispositivos. Esta relação permite que o nó a ser adormecido uma quantidade significativa do tempo dando assim a vida da bateria longa. Um ZED requer a menor quantidade de memória, e, portanto, pode ser menos caro de fabricar do que um ZR ou ZC.
-	
+
 \subsection{Sistemas de Comunicação}
 
 	Inúmeras tecnologias estão disponíveis no mercado para a transmissão de dados entre a unidade consumidora e os centros de operação das concessionárias. A escolha deverá se basear na necessidade de confiabilidade, segurança e disponibilidade de cada serviço oferecido. Podemos observar quatro camadas na área de telecomunicações: HAN –Home Area Network –, LAN – Local Area Network –, RAN – Regional Area Network – e WAN – Wide Area Network.
-	
+
 \begin{figure}[H]
   \begin{center}
 	\includegraphics[keepaspectratio]{figuras/zigbee.eps}
@@ -283,21 +283,21 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 \end{figure}
 
 	Neste contexto, é proposto o desenvolvimento de um circuito PLC para operar na faixa de banda estreita. Neste trabalho, foi selecionada a frequência de operação de 100 kHz, com uma largura de banda de 50 kHz (embora o projeto do circuito também permita a operação em outros valores próximos). Um circuito para transmissão de dados PLC pode ser dividido em transmissor (composto de Modulador, Ampli-ficador e Circuitos de Acoplamento) e receptor (Circuitos de Acoplamento, Amplificador e Demodulador).\footnote{http://www.researchgate.net/profile/Waslon\_Lopes/publication/281623198\_Consideraes\_para\_Implementao\_de\_Power\_Line\_Communications\_para\_Aplicaes\_de\_Smart\_Grid/links/55f031c308aef559dc45bac3.pdf}
-	
+
 	\begin{enumerate}
 
 		\item \textbf{Modulador}
-		
-		 O circuito modulador proposto consiste de um modulador BPSK (Binary Phase Shift Keying) com sinalização polar NRZ (Non-Return to Zero). Os componentes necessários para a montagem deste consistem de um oscilador local para gerar o sinal da portadora senoidal, 1 multiplicador (pode ser utilizado o CI AD633 ou célula de Gilbert) e um amplificador operacional na configuração não-inversor. O circuito do modulador pode ser simulado por meio do software ADS (Advanced Design System) versão 2011.05. 
-		
+
+		 O circuito modulador proposto consiste de um modulador BPSK (Binary Phase Shift Keying) com sinalização polar NRZ (Non-Return to Zero). Os componentes necessários para a montagem deste consistem de um oscilador local para gerar o sinal da portadora senoidal, 1 multiplicador (pode ser utilizado o CI AD633 ou célula de Gilbert) e um amplificador operacional na configuração não-inversor. O circuito do modulador pode ser simulado por meio do software ADS (Advanced Design System) versão 2011.05.
+
 		\item \textbf{Amplificadores}
-		
+
 		Os circuitos amplificadores do transmissor e do receptor podem ser implementados utilizando amplificadores operacionais na configuração não-inversor.
-		
+
 		\item \textbf{Circuitos de acoplamento}
 
-		Os circuitos de acoplamento do transmissor e do receptor à rede elétrica são compostos, além dos capacitores de bloqueio, de transformadores para promover isolação galvânica e limitar, através de saturação, os sinais oscilantes oriundos da rede.Modulador BPSK com sinalização polar NRZ Para o projeto dos transformadores de alta frequência é sugerida a utilização de núcleos de ferrite tipo E, pois apresentam menor perda por histerese e consequentemente menor elevação da temperatura se comparado a outros materiais (como as lâminas de ferro-silício). A indutância do transformador depende diretamente do número de espiras e da relutância do circuito magnético. A existência de um entreferro aumenta a relutância total do circuito, além de permitir que o enrolamento opere com maiores correntes sem que ocorra saturação do núcleo. 
-		
+		Os circuitos de acoplamento do transmissor e do receptor à rede elétrica são compostos, além dos capacitores de bloqueio, de transformadores para promover isolação galvânica e limitar, através de saturação, os sinais oscilantes oriundos da rede.Modulador BPSK com sinalização polar NRZ Para o projeto dos transformadores de alta frequência é sugerida a utilização de núcleos de ferrite tipo E, pois apresentam menor perda por histerese e consequentemente menor elevação da temperatura se comparado a outros materiais (como as lâminas de ferro-silício). A indutância do transformador depende diretamente do número de espiras e da relutância do circuito magnético. A existência de um entreferro aumenta a relutância total do circuito, além de permitir que o enrolamento opere com maiores correntes sem que ocorra saturação do núcleo.
+
 		\item \textbf{Demodulador}
 
 	Para o circuito do demodulador BPSK é proposto um circuito PLL com sistema Costas, pois o processo de demodulação BPSK síncrono só funciona quando o sinal modulado está em sincronismo com a portadora original. Assim, multiplicase o sinal recebido pela portadora original, realiza-se uma filtragem para eliminar as harmônicas de alta frequência e o ruído existente fora das bandas de interesse, e então obtém-se o sinal demodulado.
@@ -306,29 +306,29 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 	\end{enumerate}
 
-\section{Custos}	
+\section{Custos}
 
 \subsection{Medidor Inteligente e Sistema de Comunicação}
 
 	Para o projeto iremos considerar dois tipos de Medidores, dados ao qual foram obtidos num estudo do Ministério de Minas e Energia:
 
-	O medidor 1 que tem as seguintes características, Classe de precisão \textit{B}; Medição de energia ativa; Medição de energia reativa indutiva; Tensão instantânea; 4 postos horários, relógio interno; Monitoramento de tensões precária e crítica (DRP, DRC); DIF, FIC, DMIC; Módulo de comunicação bidirecional e interno ao medidor; Protocolo Público; Dispositivo para corte/religa. E o medidor 2 que tem as seguintes características além das presentes no modelo 1: Medição em 4 (quatro) quadrantes; Demanda Ativa programável; Demanda Reativa programável; Perfil de carga; Fator de potência (monofásico ou trifásico), média de um período; Alarmes de eventos. 
+	O medidor 1 que tem as seguintes características, Classe de precisão \textit{B}; Medição de energia ativa; Medição de energia reativa indutiva; Tensão instantânea; 4 postos horários, relógio interno; Monitoramento de tensões precária e crítica (DRP, DRC); DIF, FIC, DMIC; Módulo de comunicação bidirecional e interno ao medidor; Protocolo Público; Dispositivo para corte/religa. E o medidor 2 que tem as seguintes características além das presentes no modelo 1: Medição em 4 (quatro) quadrantes; Demanda Ativa programável; Demanda Reativa programável; Perfil de carga; Fator de potência (monofásico ou trifásico), média de um período; Alarmes de eventos.
 
-	As informações prestadas pelos fabricantes, através da ABINEE, no possibilitaram embasar a estimativa do custo do medidor com as funcionalidades a serem requeridas pela ANEEL e descritas acima. Para efeitos deste trabalho, será considerando que, em média, 70\% dos consumidores na baixa tensão são monofásicos, 20\% bifásicos e 10\% trifásicos, e que o valor médio do medidor é de R$\$ 250,00$. 
+	As informações prestadas pelos fabricantes, através da ABINEE, no possibilitaram embasar a estimativa do custo do medidor com as funcionalidades a serem requeridas pela \cite{2013Aneel} e descritas acima. Para efeitos deste trabalho, será considerando que, em média, 70\% dos consumidores na baixa tensão são monofásicos, 20\% bifásicos e 10\% trifásicos, e que o valor médio do medidor é de R$\$ 250,00$. 
 
-	A este valor, deve-se somar ainda o custo de instalação, que é composto pela mão-de-obra da instalação e componentes menores. Atualmente, a ANEEL considera 12\% do custo do medidor eletromecânico como mão-de-obra e 45\% como componentes menores. Considerando que um medidor eletromecânico custa R$\$ 50,00$, tem-se que a mão-de-obra para instalar o equipamento é de R$\$ 6,00$, enquanto que os componentes menores somam R$\$ 22,50$. Logo, os custos de instalação de cada medidor somam R$\$ 28,50$. Assim, o custo médio de um medidor inteligente instalado é de R$\$ 278,50$, segundo o Ministério de Minas e Energia.
+	A este valor, deve-se somar ainda o custo de instalação, que é composto pela mão-de-obra da instalação e componentes menores. Atualmente, a \cite{2013Aneel} considera 12\% do custo do medidor eletromecânico como mão-de-obra e 45\% como componentes menores. Considerando que um medidor eletromecânico custa R$\$ 50,00$, tem-se que a mão-de-obra para instalar o equipamento é de R$\$ 6,00$, enquanto que os componentes menores somam R$\$ 22,50$. Logo, os custos de instalação de cada medidor somam R$\$ 28,50$. Assim, o custo médio de um medidor inteligente instalado é de R$\$ 278,50$, segundo o Ministério de Minas e Energia.
 
 	Segundo a ABINEE, os custos estimados para os medidores, já citados anteriormente, seriam os seguintes:
-	
+
 \begin{tabular}{|c|c|c|c|c|}
-\hline 
+\hline
  & \multicolumn{2}{c|}{\textbf{Modelo 1}} & \multicolumn{2}{c|}{\textbf{Modelo 2}}\tabularnewline
-\hline 
-\hline 
+\hline
+\hline
 \textbf{Preços sem} & \textbf{Monofásico} & \textbf{Trifásico} & \textbf{Monofásico} & \textbf{Trifásico}\tabularnewline
-\cline{2-5} 
+\cline{2-5}
 \textbf{Impostos} & R\$$ 310,00$ & R\$$ 530,00$ & R\$$ 370,00$ & R\$$ 620,00$\tabularnewline
-\hline 
+\hline
 \end{tabular}
 
 	Os medidores são necessários, mas não suficientes, para as redes inteligentes. Esses equipamentos devem fazer parte de uma rede dotada de infraestrutura de comunicação, processamento, teleinformática e outros. Ou seja, deve-se prover a rede de recursos não totalmente disponíveis nas redes atuais. Levando em consideração as funcionalidades utilizaríamos o modelo 2, mas completo em funcionalidades e abrangentes dentro do que pretendemos na casa.
@@ -336,14 +336,14 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 	Com isso na casa instalaremos um sensor e utilizaremos também o PLC funcionando em conjunto com o software livre ZigBee PRO, para auxiliar nessa comunicação entre a geração e o consumidor final. Com isso observou-se e partir de dados presentes em outros projetos e no mercado que os medidores representam cerca de 70\% a 80\% do custo e o restante de 20\% a 30\% a adaptação de instalação de um sistema de comunicação na Smart Grid.
 
 	E com isso obtemos o custo para a instalação do PLC, com a compra de BPSK (Binary Phase Shift Keying) no valor de R\$$ 71,73$, CI AD633 por R\$$ 311,72$ com 20 peças/lote, Amplificadores operacionais por R\$$ 10,86$ com 100 itens/lote e circuito PLL no valor de R\$$ 30,67$, e com esses equipamentos torna-se capaz a instalação do PLC e o sistema de comunicação da Smart Grid. No ZigBee será comprado Módulo Digi XBee ZB - Antena Wire - Low Power no valor de R\$$ 84,00$ para complementar esse sistema de comunicação.\footnote{http://pt.aliexpress.com/ e http://xbeestore.lojavirtualfc.com.br/listaprodutos.asp?IDLoja=16187\&IDProduto=2490985\&q=modulo-digi-xbee-zb-~-~-antena-wire-~-~-low-power}
-	
-	
-	
+
+
+
 %	Referências:
 %[1]MONTGOMERY, Lisa. A tendência da tecnologia na visão dos maiores experts. Disponível em <http://revistahometheater.uol.com.br/site/tec_artigos_02.php?id_lista_txt=5542>. Acesso em 23 de setembro de 2015;
 %[2] Siqueira, F.  e Fraga J.  Modelo de Programação de Aplicações Tempo-Real em Sistemas Abertos. Disponível em<http://www.inf.ufsc.br/~frank/papers/wasap.pdf>. Acesso em 20 de setembro de 2015;
 %[3] Glenn, Brookshear J. Ciência da Computação - Uma Visão Abrangente, 11ed. Disponível em: <https://books.google.com.br/books?id=Vfw4AgAAQBAJ&pg=PA81&lpg=PA81&dq=processamento+em+tempo+real+e+processamento+interativo&source=bl&ots=iyf1pl0q1g&sig=ptl6i2ao9IcgMSMiVtI3Avkmlqw&hl=pt-BR&sa=X&ved=0CBwQ6AEwAGoVChMIqfaq4YGHyAIVyYqQCh0vcgRK#v=onepage&q=processamento%20em%20tempo%20real%20e%20processamento%20interativo&f=false>. Acesso em 20 de setembro de 2015
-%[4] Siqueira, F.  e Fraga J. Programação de Aplicações Tempo-Real em Sistemas Abertos: O Modelo Reflexivo Tempo-Real Distribuído. Laboratório de Controle e Microinformática – LCMI. 
+%[4] Siqueira, F.  e Fraga J. Programação de Aplicações Tempo-Real em Sistemas Abertos: O Modelo Reflexivo Tempo-Real Distribuído. Laboratório de Controle e Microinformática – LCMI.
 %Disponível em: <http://www.inf.ufsc.br/~frank/papers/wasap2.pdf>. Acesso em 22 de setembro de 2015.
 %[5]CAGNA, Thiago. Como funcionam e quanto custam os sensores de movimento e de luz.< http://ecohospedagem.com/como-funcionam-e-quanto-custam-os-sensores-de-movimento-e-de-luz />. Acesso em 23 de setembro de 2015;
 %[6]Texas Instruments. Datasheet LM35. Disponível em <http://www.ti.com/lit/ds/symlink/lm35.pdf>. Acesso em 23 de setembro de 2015
@@ -355,6 +355,3 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 %[11]Manual do usuário. Disponível em: <http://store.homeseer.com/store/First-Alert-ZCOMBO-G-Z-Wave-Smoke-and-Carbon-Monoxide-Detector-P1990.aspx>.  Acesso em: 14 de outubro de 2015.
 %[12]Manual do usuário. Disponível em: <http://store.homeseer.com/store/Aeon-Labs-Aeotec-DSB28-ZWUS-Z-Wave-Home-Energy-Meter-2nd-Edition-P1643.aspx>. Acesso em: 14 de outubro de 2015.
 %[13]Guia de instalação. Disponível em: <http://store.homeseer.com/store/Foscam-FI8905W-Outdoor-Wireless-IP-Camera-4mm-lens-60-LED-P1100.aspx> . Acesso em: 14 de outubro de 2015.
-
-
-
