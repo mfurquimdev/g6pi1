@@ -53,6 +53,8 @@
 	\hline \textbf{Uma boa solução seria} & Desenvolvimento de um sistema de automação capaz de controlar o consumo
 	da energia elétrica de acordo com o requisitos.\\
 	\hline
+\caption{Descrição do problema}
+\label{Descrição_do_problema}
 \end{longtable}
 
 \subsubsubsection{Sentença de Posição do Sistema}
@@ -67,6 +69,8 @@
 	\hline \textbf{Nosso Sistema} & Integra sensores de forma inteligente para controle do consumo de energia elétrica,
 	armazenamento e reuso de água não potável\\
 	\hline
+\caption{Sentença de Posição do Sistema}
+\label{Sentenca_de_Posicao_do_Sistema}
 \end{longtable}
 
 \subsubsection{Descrições dos Envolvidos e Usuários}
@@ -89,6 +93,8 @@
 	\hline Moradores da “Casa Sustentável” & Usuário das funcionalidades da “Casa Sustentável” & Possuir fundo
 	financeiro necessário para investir no projeto da “casa sustentável”\\
 	\hline
+\caption{Resumo dos Envolvidos}
+\label{Resumo_dos_Envolvidos}
 \end{longtable}
 
 \subsubsubsection{Resumo dos Usuários}
@@ -98,6 +104,8 @@
 	\hline Moradores da “Casa Sustentável” & Pessoa Física que adquiriu o produto “Casa Sustentável”, especificado no
 	projeto da disciplina de PI1.\\
 	\hline
+\caption{Resumo dos Usuários}
+\label{Resumo_dos_Usuarios}
 \end{longtable}
 
 \subsubsubsection{Perfis dos Envolvidos}
@@ -118,6 +126,8 @@
 	adequando ao tema do projeto, custo e prazo definido pela matéria.\\
 	\hline \textbf{Envolvimento} & Alto.\\
 	\hline
+\caption{Perfis dos Envolvidos}
+\label{Perfis_dos_Envolvidos}
 \end{longtable}
 
 \textit{Gerente de automação do projeto “Casa Sustentável”}
@@ -132,6 +142,8 @@
 	podem atrasar a entrega.\\
 	\hline \textbf{Envolvimento} & Alto.\\
 	\hline
+\caption{Gerente de automação do projeto}
+\label{Gerente_de_automacao_do_projeto}
 \end{longtable}
 
 \textit{Gerente de software do projeto “Casa Sustentável”}
@@ -148,6 +160,8 @@
 	podem atrasar a entrega.\\
 	\hline \textbf{Envolvimento} & Alto.\\
 	\hline
+\caption{Gerente de software do projeto}
+\label{Gerente_de_software_do_projeto}
 \end{longtable}
 
 \textit{Principais necessidades dos Usuários ou dos Envolvidos}
@@ -193,6 +207,8 @@ Busca de técnicas de programação e criação de interface simples.
 Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protótipos com usuários reais.
 \\
 	\hline
+%\caption{Principais necessidades dos Usuários ou dos Envolvidos}
+%\label{Principais_necessidades_dos_Usuarios_ou_dos_Envolvidos}
 \end{longtable}
 
 \subsubsection{Ambiente do Usuário}
@@ -224,6 +240,7 @@ Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protót
 
 	Esta seção tem a função de informar de forma resumida todas as características e funcionalidades do sistema.
 
+\begin{table}[!h]
 \begin{tabular}{|l|l|c|c|}
 	\hline
 	\textbf{Requisito} & \textbf{Descrição} & \textbf{Prioridade} & \textbf{Dependência}\tabularnewline
@@ -250,11 +267,15 @@ Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protót
 	RF10 & Monitoramento de humidade & Baixa & -\tabularnewline
 	\hline
 \end{tabular}
+\caption{Requisitos Funcionais do Sistema}
+\label{Requisitos_Funcionais_do_Sistema}
+\end{table}
 
 \subsubsection{Requisitos Não Funcionais do Sistema}
 
 	Resumo em alto nível de outras características do sistema, tipicamente não funcionais.
 
+\begin{table}[!h]
 \begin{tabular}{|l|l|}
 	\hline
 	\textbf{Identificador} & \textbf{Recurso}\tabularnewline
@@ -277,9 +298,13 @@ Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protót
 	RNF8 & Monitoramento em tempo real\tabularnewline
 	\hline
 \end{tabular}
+\caption{Requisitos Não Funcionais do Sistema}
+\label{Requisitos_nao_Funcionais_do_Sistema}
+\end{table}
 
 \subsubsection{Procedência e Prioridades}
 
+\begin{table}[!h]
 \begin{tabular}{|l|l|}
 	\hline
 	\textbf{Prioridades} & \textbf{Descrição}\tabularnewline
@@ -294,6 +319,9 @@ Analisar softwares presentes no mercado e fazer trabalho de pesquisa com protót
 	4 & Deve mostrar quando algum componente estiver defeituoso. \tabularnewline
 	\hline
 \end{tabular}
+\caption{Procedência e Prioridades}
+\label{Procedencia_e_Prioridades}
+\end{table}
 
 %----------------------------------------------------%
 %-------------------- Requisitos --------------------%
@@ -766,6 +794,7 @@ armazenado.
 \section{Seleção do Pacote}
 
 \subsection{Pesquisa realizada sobre pacotes de automação}
+\begin{table}[!h]
 \begin{tabular}{|c|c|c|c|c|}
 	\hline
 	\textbf{Nome} & \textbf{Segurança} & \textbf{Iluminação} & \textbf{Irrigação} & \textbf{Multimídia}\tabularnewline
@@ -802,7 +831,11 @@ armazenado.
 	AutomaticHouse & x & x & x & x\tabularnewline
 	\hline
 \end{tabular}
+\caption{Pesquisa realizada sobre pacotes de automação}
+\label{Pesquisa_realizada_sobre_pacotes_de_automacao}
+\end{table}
 
+\begin{table}[!h]
 \begin{tabular}{|c|c|c|}
 	\hline
 	\textbf{Nome} & \textbf{Climatização} & \textbf{Câmera}\tabularnewline
@@ -839,6 +872,9 @@ armazenado.
 	AutomaticHouse & x & x\tabularnewline
 	\hline
 \end{tabular}
+\caption{Pesquisa realizada sobre pacotes de automação (Continuação)}
+\label{Pesquisa_realizada_sobre_pacotes_de_automacao_continuacao}
+\end{table}
 
 %------------------------------------------------------------%
 %-------------------- Termos Contratuais --------------------%
@@ -857,6 +893,7 @@ armazenado.
 %--------------------------------------------------------------------------%
 \section{Lista de Software a ser Entregue}
 
+\begin{table}[!h]
 \begin{tabular}{|l|l|}
 	\hline
 	\textbf{Software} & \textbf{Descrição}\tabularnewline
@@ -891,6 +928,9 @@ armazenado.
 	HomeSeer HSTouch Server & Interface de Usuário (Android|IOS|Windows|Linux)\tabularnewline
 	\hline
 \end{tabular}
+\caption{Lista de Software a ser Entregue}
+\label{Lista_de_Software_a_ser_Entregue}
+\end{table}
 
 %----------------------------------------------------------------------------%
 %-------------------- Critérios de Aceitação do Software --------------------%
