@@ -34,35 +34,35 @@
 
 \subsection{Sensores}
 
-\subsubsection{Iluminação}
+\subsubsection**{Iluminação}
 
 	Sensor de movimento – De teto, 360°. O sensor de teto tem um custo um pouco mais elevado, porém, o sensor embutido no soquete tem que ficar exposto e não permite usar lampadas com entradas sem soquete. Assim, é mais prático e mais eficaz usar o sensor de teto por ele ser discreto e ter a saída aplicável em qualquer componente\cite{2014Thiago}. Sensor analógico, necessita conversão.
 
-\subsubsection{Cortinas}
+\subsubsection*{Cortinas}
 
 	Na persiana, o mais prático seria utilizar um motor de passo para definir a posição e o angulo de inclinação, porém, para diminuir o uso de portas do microcontrolador, será utilizado um sensor encoder. Já na cortina, será utilizado apenas um sensor de fim de curso. Os dois sensores das janelas serão digitais e não precisarão de conversão.
 
-\subsubsection{Clima}
+\subsubsection*{Clima}
 
 	É necessário utilizar um sensor de umidade do ambiente para ativar os umidificadores.
 
-\subsubsection{Banho}
+\subsubsection*{Banho}
 
 	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será  medida com o CI LM35\cite{SNIS159E}, que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
 
-\subsubsection{Regador}
+\subsubsection*{Regador}
 
 	Para o sistema do regador serão utilizados vários sensores de umidade de solo. Analógico, necessita conversão.
 
-\subsubsection{Sensores de entrada}
+\subsubsection*{Sensores de entrada}
 
 	O sensor será do tipo infra-vermelho, ou seja, passivos de movimento que operam na faixa ótica da radiação térmica e respondem ao calor irradiado entre o elemento sensor e o objeto em movimento. O princípio de detecção de movimento por calor é baseado na teoria da emissão de radiação eletromagnética de qualquer objeto cuja temperatura seja superior a zero absoluto.
 
-\subsubsection{Sensor de fumaça}
+\subsubsection*{Sensor de fumaça}
 
 	 Deverá detectar fumaça proveniente de principio de incendio, mandando este sinal para a central de segurança, que deverá alertar o morador e o corpo de bombeiros. Será distribuído um sensor para cada comodo. O sensor será um detector Iônico é mais comum em casas e edifícios, porque, além de mais barato, é também mais sensível à fumaça do que o detector fotoelétrico.
 
-\subsubsection{Câmera}
+\subsubsection*{Câmera}
 
 	Para monitoramento remoto.
 
@@ -77,7 +77,7 @@
 
 	O equipamento principal é um PC com configuração mediana, com uso dedicado ao sistema. A ele podem ser ligados diretamente monitores e equipamentos periféricos, porém, os sensores são ativados à distância, através de uma rede wireless utilizando o protocolo Z-Wave. É definida uma rede e os sensores podem ser conectados a ela de forma simples e rápida: Basta informar á máquina principal que algum dispositivo será pareado. Em seguida, aperta-se um botáo no dispositivo que se deseja conectar à rede e, então, eles já estarão interagindo.  A partir daí o dono da casa já pode escolher as ações tanto de leitura quanto de atuação, precisando apenas ir nas condifurações da rede, que tem uma interface bastante prática.
 
-\subsubsection{Lista dos sensores necessários}
+\subsubsection*{Lista dos sensores necessários}
 
 \begin{enumerate}
 	\begin{figure}[H]
@@ -202,7 +202,7 @@
 
 \end{enumerate}
 
-\subsubsection{Posição dos Sensores}
+\subsubsection*{Posição dos Sensores}
 	A posição dos sensores será estabelecida de acordo com a necessidade da casa e obedecendo às características exigidas pelo manual. Dessa forma, deve-se lembrar que os sensores de movimento não podem ser instalados em áreas externas, as câmeras tem ângulo de alcance de $30{^o}$ e uma distância máximo de $30m$, isso deve ser levado em conta na hora de fazer a cobertura de monitoramento da casa. Como os equipamentos tem alcance de $30m$ não será necessário o uso de repetidores, já que o lote tem justamente esse tamanho. O mapa de sensores ficou da seguinte maneira:
 
 \begin{figure}[H]
