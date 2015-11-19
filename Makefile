@@ -26,7 +26,7 @@ CONTEUDO_SOURCES = introducao.tex estrutura_materiais.tex \
 CONTEUDO_FILES = $(addprefix $(CONTEUDO_DIR)/, $(CONTEUDO_SOURCES))
 
 APENDICES_DIR = $(addprefix $(EDITAVEIS_DIR)/, apendices)
-APENDICES_SOURCES = software.tex
+APENDICES_SOURCES = software.tex prototipo_tela.tex
 APENDICES_FILES = $(addprefix $(APENDICES_DIR)/, $(APENDICES_SOURCES))
 
 MAIN_FILE = relatorio.tex
