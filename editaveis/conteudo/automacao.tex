@@ -2,13 +2,13 @@
 
 \section{Definição dos itens da automação}
 
-	Automação pode ser definida como um conjunto de técnicas que podem ser aplicadas sobre um processo objetivando torná-lo mais eficiente, ou seja, maximizando a produção com menor consumo, menor emissão de resíduos e melhores condições de segurança [1].
+	Automação pode ser definida como um conjunto de técnicas que podem ser aplicadas sobre um processo objetivando torná-lo mais eficiente, ou seja, maximizando a produção com menor consumo, menor emissão de resíduos e melhores condições de segurança \cite{2009AutomacaoMarilia}.
 
 	Com a finalidade de lançar no mercado um produto competitivo, as subrotinas e cômodos a serem automatizados foram definidos de acordo com os atuais sistemas empregados, de modo a criar uma instalação completa, mas sem exageros. Seguindo essa vertente, nota-se que alguns itens são indispensáveis, tais como multimídia, iluminação, cortinas, climatização, banho e jardim.
 
 \section{Implementação do sistema}
 
-	Previamente foram estabelecidos sensores cujos sinais necessitariam ser filtrados, convertidos e processados, operando em um sistema desenvolvido do zero pela equipe. Isso acarretaria o uso de microcontroladores e uma grande demanda de fios. Um dos maiores problemas nesse modelo foi a dificuldade em expandir o sistema, já que um sistema de automação carece da possibilidade de anexar novos sensores e atuadores [16]. Há também a preocupação em criar uma interface prática e amigável para o software de operação do produto, o que demandaria um projeto a mais para a equipe. 
+	Previamente foram estabelecidos sensores cujos sinais necessitariam ser filtrados, convertidos e processados, operando em um sistema desenvolvido do zero pela equipe. Isso acarretaria o uso de microcontroladores e uma grande demanda de fios. Um dos maiores problemas nesse modelo foi a dificuldade em expandir o sistema, já que um sistema de automação carece da possibilidade de anexar novos sensores e atuadores \cite{2009Montgomery}. Há também a preocupação em criar uma interface prática e amigável para o software de operação do produto, o que demandaria um projeto a mais para a equipe. 
 
 	Com o problema da interface e da capacidade de expansão do sistema, veio à tona a possibilidade de comprar um hardware com essa finalidade juntamente com seu software. Isso traria uma série de vantagens como, por exemplo: A diminuição dos fios, fácil instalação dos sensores e o software específico, que foram as que mais chamaram atenção. No processo de escolha houve uma dúvida sobre qual sistema comprar. Antes de tudo era necessário definir o protocolo de comunicação mais viável comercialmente entre o ZigBee e o Z-Wave, já que foram os que se destacaram em relação aos demais.
 
@@ -79,16 +79,16 @@ Baixa taxa de transferência & Fácil integração\tabularnewline
 \caption{Características dos sensores de movimento e temperatura.}
 \end{table}
 
-	Nota-se, de acordo com a tabela, que a única diferença considerável, além da temperatura de funcionamento, é o alcance de detecção. Como a diferença de preço é bem pequena, o sensor escolhido foi o Zipato[20], que tem alcance de 8m, 1m a mais que o concorrente.
+	Nota-se, de acordo com a tabela, que a única diferença considerável, além da temperatura de funcionamento, é o alcance de detecção. Como a diferença de preço é bem pequena, o sensor escolhido foi o Zipato\cite{MovimentoZWave}, que tem alcance de 8m, 1m a mais que o concorrente.
 
-	O sensor PH-PSM02 da Zipato, é projetado para atender à exigência de integrar 4 sensores em um único componente.  Que são eles: Temperatura, Iluminação, Sensor de movimento por calor e Detecção de abertura ou fechamento de portas e janelas.
+	O sensor PH-PSM02 da Zipato, é projetado para atender à exigência de integrar 4 sensores em um único componente. Que são eles: Temperatura, Iluminação, Sensor de movimento por calor e Detecção de abertura ou fechamento de portas e janelas.
 
-	Além disso este sensor é alimentado por bateria do tipo CR123A, que possui um custo aproximado de $R\$ 11,00$[2], e duração de 2 anos, ou seja, não interfere no consumo energético da casa.
+	Além disso este sensor é alimentado por bateria do tipo CR123A, que possui um custo aproximado de $R\$ 11,00$\cite{BateriaPanasonic}, e duração de 2 anos, ou seja, não interfere no consumo energético da casa.
 
 \begin{itemize}
 \item Custo total : $3\times$ \texteuro$59,00 =\ $\texteuro$177,00$
 
-\item Quantidade: 1 (Sala de estar/jantar), 1 (Garagem);  1(Cozinha).
+\item Quantidade: 1 (Sala de estar/jantar), 1 (Garagem); 1(Cozinha).
 
 Notar que a quantidade de sensores está ligada à quantidade de acessos (entradas) da casa. Total de 3 sensores.
 
@@ -140,7 +140,7 @@ Notar que a quantidade de sensores está ligada à quantidade de acessos (entrad
 \caption{Características das duchas selecionadas.}
 \end{table}
 
-Dentre as opções, as desvantagens do SmartShower[21] estão no valor e na necessidade de um aquecedor externo. Por outro lado, o MyShower[22] tem um custo acessível e aquecimento próprio, além de prezar pela economia de água, com sistema de redução de desperdício e nota ao fim do banho. Tem-se então uma disputa entre a economia de energia por parte do SmartShower e a economia de água por parte do MyShower. Como a energia é uma das prioridades do escopo do projeto foi escolhido o SmartShower em função de sua economia de 1250 vezes menos energia que o MyShower. Sendo assim, o sistema de banho da casa, um sistema quase que com consumo nulo ao final do mês.
+Dentre as opções, as desvantagens do SmartShower\cite{SmartShoweriHouse} estão no valor e na necessidade de um aquecedor externo. Por outro lado, o MyShower\cite{MyShowertaQi} tem um custo acessível e aquecimento próprio, além de prezar pela economia de água, com sistema de redução de desperdício e nota ao fim do banho. Tem-se então uma disputa entre a economia de energia por parte do SmartShower e a economia de água por parte do MyShower. Como a energia é uma das prioridades do escopo do projeto foi escolhido o SmartShower em função de sua economia de 1250 vezes menos energia que o MyShower. Sendo assim, o sistema de banho da casa, um sistema quase que com consumo nulo ao final do mês.
 
 \begin{itemize}
 \item Custo: $3\times R\$ 9.818,19\ =\ R\$ 29.454,57.$
@@ -160,9 +160,9 @@ Dentre as opções, as desvantagens do SmartShower[21] estão no valor e na nece
 
 \subsection{Sensor de fumaça}
 
-	Dentre as opções do mercado, os detectores de fumaça eram todos muito próximos, em todas as características, se distinguindo apenas em temperatura de operação e custo. Dessa forma escolheu-se o sensor que possuía o menor custo. O sensor escolhido foi o da marca Vision Security[19].
+	Dentre as opções do mercado, os detectores de fumaça eram todos muito próximos, em todas as características, se distinguindo apenas em temperatura de operação e custo. Dessa forma escolheu-se o sensor que possuía o menor custo. O sensor escolhido foi o da marca Vision Security\cite{FumacaZWave}.
 
-	 Este detector usa a rede Z-Wave para comunicação e é projetado para detectar a fumaça que vem para a sua  câmara de detecção, uma vez detectada, o alarme do detector de fumaça soará. Esse sensor possui uma sensibilidade de fumaça de $\tfrac{0.5\%}{ft}$ e uma faixa de operação de temperatura de $-10^oC$ à $60^oC$.
+	 Este detector usa a rede Z-Wave para comunicação e é projetado para detectar a fumaça que vem para a sua câmara de detecção, uma vez detectada, o alarme do detector de fumaça soará. Esse sensor possui uma sensibilidade de fumaça de $\tfrac{0.5\%}{ft}$ e uma faixa de operação de temperatura de $-10^oC$ à $60^oC$.
 
 \begin{figure}[H]
 \centering
@@ -232,9 +232,9 @@ Dentre as opções, as desvantagens do SmartShower[21] estão no valor e na nece
 
 \subsection{Iluminação}
 
-	Para definir a iluminação foi necessário, antes de tudo, entender quais os parâmetros de luz no ambiente. A medida de fluxo luminoso presente na maioria das lâmpadas é o Lúmen. Isso dá um padrão a ser seguido em critérios de luminescência. Por outro lado, para de definir a iluminação é determinado ambiente se utiliza o Lux, que é dado por Lúmem/m². Segundo a NBR 5412, que entrou em desuso em 2013 para ser substituída pela NBR 8995-1[13]* existe um padrão específico para lâmpadas residenciais, conforme a tabela da página a seguir.
+	Para definir a iluminação foi necessário, antes de tudo, entender quais os parâmetros de luz no ambiente. A medida de fluxo luminoso presente na maioria das lâmpadas é o Lúmen. Isso dá um padrão a ser seguido em critérios de luminescência. Por outro lado, para de definir a iluminação é determinado ambiente se utiliza o Lux, que é dado por Lúmem/m². Segundo a NBR 5412, que entrou em desuso em 2013 para ser substituída pela NBR 8995-1\cite{DisciplinasUTFPR}* existe um padrão específico para lâmpadas residenciais, conforme a tabela da página a seguir.
 
-	Para escolher as lâmpadas, os parâmetros de influência em comportamento foram levados em conta. Ou seja, o projeto se importa em dar cores específicas para determinados cômodos de acordo com a sua função na casa. De maneira geral, cada cor remete a emoções e sensações diferentes [17]. O amarelo, por exemplo, estimula o apetite e aumenta a concentração. Por outro lado, o azul aumenta a sensação de amplitude e o verde traz a sensação de bem-estar por estar em uma freqüência nem muito longa e nem muito curta. 
+	Para escolher as lâmpadas, os parâmetros de influência em comportamento foram levados em conta. Ou seja, o projeto se importa em dar cores específicas para determinados cômodos de acordo com a sua função na casa. De maneira geral, cada cor remete a emoções e sensações diferentes \cite{InfluenciaGoi}. O amarelo, por exemplo, estimula o apetite e aumenta a concentração. Por outro lado, o azul aumenta a sensação de amplitude e o verde traz a sensação de bem-estar por estar em uma freqüência nem muito longa e nem muito curta. 
 
 \begin{table}[H]
 \centering
@@ -295,7 +295,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \caption{Lâmpadas RBG encontradas no mercado.}
 \end{table}
 
-	Foi escolhida a lâmpada da empresa Zipato pela proporção de lúmen/potência. Ou seja, com um gasto menor de energia, tem-se uma capacidade de iluminação quase dobrada. O contra seria a capacidade de operação em temperaturas de no máximo 40\textsuperscript{o}C, porém, como a temperatura máxima registrada no DF foi de 35,8\textsuperscript{o}C, registrada em 2008 [12] desde o início das medições em 1961, ainda existe uma margem segura para o seu funcionamento.
+	Foi escolhida a lâmpada da empresa Zipato pela proporção de lúmen/potência. Ou seja, com um gasto menor de energia, tem-se uma capacidade de iluminação quase dobrada. O contra seria a capacidade de operação em temperaturas de no máximo 40\textsuperscript{o}C, porém, como a temperatura máxima registrada no DF foi de 35,8\textsuperscript{o}C, registrada em 2008 \cite{2015ComG1} desde o início das medições em 1961, ainda existe uma margem segura para o seu funcionamento.
 
 	Com a área de aproximadamente 76$\si{\meter}^2$, a sala precisará de 9 lâmpadas para luz geral e, sobre a área central, haverá mais um conjunto de mais 5 lâmpadas, já que a área é de 31,5$\si{\meter}^2$. 
 
@@ -325,9 +325,9 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 
 \subsubsection{Descrição}
 
-	HomeTroller Série 6 é um controlador de automação residencial que combina a confiabilidade e a simplicidade de um controlador do tipo painel com o poder e a flexibilidade de um controlador baseado em software. Oferece reconhecimento de voz, integração com telefone permitindo gerenciar remotamente o aparelho, texto para processamento de voz, e-mail e acesso remoto protegido [4].
+	HomeTroller Série 6 é um controlador de automação residencial que combina a confiabilidade e a simplicidade de um controlador do tipo painel com o poder e a flexibilidade de um controlador baseado em software. Oferece reconhecimento de voz, integração com telefone permitindo gerenciar remotamente o aparelho, texto para processamento de voz, e-mail e acesso remoto protegido \cite{HomeSeerHomeTroller}.
 
-	O sistema é gerido através de qualquer navegador web, permitindo facilmente adicionar/alterar horários, ou solucionar problemas [1]. HomeTroller S6 PRO consome apenas 15 watts de potência em operação normal e inclui o software HS3Touch Designer para que o usuário possa criar seus próprios projetos de acordo com as suas preferências [4].
+	O sistema é gerido através de qualquer navegador web, permitindo facilmente adicionar/alterar horários, ou solucionar problemas \cite{2009AutomacaoMarilia}. HomeTroller S6 PRO consome apenas 15 watts de potência em operação normal e inclui o software HS3Touch Designer para que o usuário possa criar seus próprios projetos de acordo com as suas preferências \cite{HomeSeerHomeTroller}.
 
 \subsubsection{Especificações}
 \begin{itemize}
@@ -346,7 +346,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 
 \subsubsection{O que está incluído}
 \begin{itemize}
-\item HomeTroller  S6 W / incorporado HS3PRO
+\item HomeTroller S6 W / incorporado HS3PRO
 \item HS3Touch Designer
 \item Todos os Drivers HomeSeer Branded Software (plug-ins)
 \item Pés de fixação
@@ -363,14 +363,14 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \begin{itemize}
 \item \textbf{Empresa : Zensys}
 \item Tecnologia totalmente sem fio
-\item Não tem largura da banda suficiente para transmissão de áudio ou vídeo [6].
+\item Não tem largura da banda suficiente para transmissão de áudio ou vídeo \cite{PrincipaisTeruelFilho}.
 \item Comunicação de mão dupla – envio e recebimento de sinal.
 \item Pouco consumo de energia
 \item Pode-se adquirir novos dispositivos com chip Z-Wave e conectá-los sem qualquer complicação.
-\item Permite 232 dispositivos colocados a uma distância máxima de 30m [6].
+\item Permite 232 dispositivos colocados a uma distância máxima de 30m \cite{PrincipaisTeruelFilho}.
 \item O chip Z-Wave é responsável pela escolha da melhor rota para o transporte de dados para outros dispositivos.
 \item Solução interessante principalmente para residências já construídas por não precisar alterar a parte da construção.
-\item Inviável para sistemas com mais de 30 dispositivos, se tratando de recursos financeiros [6].
+\item Inviável para sistemas com mais de 30 dispositivos, se tratando de recursos financeiros \cite{PrincipaisTeruelFilho}.
 \end{itemize}
 
 \subsubsubsection{Insteon}
@@ -379,12 +379,12 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \item Empresa: SmartHome
 \item Usa a rede elétrica para o transporte de dados entre os dispositivos.
 \item Cada equipamento tem um endereço para o qual o sinal é direcionado.
-\item Protocolo de comunicação não permite desvio ou perda de sinal por oscilações na rede elétrica [6].
+\item Protocolo de comunicação não permite desvio ou perda de sinal por oscilações na rede elétrica \cite{PrincipaisTeruelFilho}.
 \item Usa protocolo de comunicação plug-and-play de mão dupla (envio e recebimento de sinal).
 \item Transporte de dados pode se dar por cabeamento ou radiofrequência.
-\item Radiofrequência da tecnologia Insteon trabalha em uma frequência entre 902-924 MHz, atinge uma distância de 150 pés [5].
+\item Radiofrequência da tecnologia Insteon trabalha em uma frequência entre 902-924 MHz, atinge uma distância de 150 pés \cite{2005BeyondDritsas}.
 \item Não é tão segura, interferências podem não permitir que o sinal atinja seu destino com eficiência (como de um aparelho de micro-ondas).
-\item Pode ser transmitido por rede elétrica com capacidade de funcionar com 110 ou 220 volts [5].
+\item Pode ser transmitido por rede elétrica com capacidade de funcionar com 110 ou 220 volts \cite{2005BeyondDritsas}.
 \end{itemize}
 
 \subsubsubsection{X10}
@@ -393,7 +393,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \item Desenvolvida nos anos 70 pela Pico Eletronics..
 \item Umas das primeiras tecnologias da área.
 \item Limitada a operar apenas com funções simples(liga/desliga e dimerização de luzes).
-\item Comunicação entre transmissores e receptores por meio da rede elétrica[7].
+\item Comunicação entre transmissores e receptores por meio da rede elétrica\cite{2004ResidenciasBolzani}.
 \item Protocolo de comunicação de mão única - apenas envia.
 \item Produtos relativamente baratos.
 \item Fácil instalação e aplicação.
@@ -403,9 +403,9 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \textbf{Características:}
 \begin{itemize}
 \item Comunicação via rede Elétrica.
-\item Não necessita de novos cabeamentos, pois usa a rede elétrica existente.  
-\item Possui transmissão de até quase 2 km [8].
-\item Pulsos de 40 Volts. Frequências de 4 a 40 KHz( Baixa frequência não afetar outros dispositivos) [8].
+\item Não necessita de novos cabeamentos, pois usa a rede elétrica existente. 
+\item Possui transmissão de até quase 2 km \cite{TecnologiaConverge}.
+\item Pulsos de 40 Volts. Frequências de 4 a 40 KHz( Baixa frequência não afetar outros dispositivos) \cite{TecnologiaConverge}.
 \item Comunicação bidirecional.
 \item Pode ser utilizada na presença de outras tecnologias.
 \end{itemize}
@@ -414,9 +414,9 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \textbf{Características:}
 \begin{itemize}
 \item Usa a rede elétrica existente.
-\item Principais características: Comunicação digital totalmente encriptada e a bidirecionalidade [9].
+\item Principais características: Comunicação digital totalmente encriptada e a bidirecionalidade \cite{PLCMKTI}.
 \item Pode utilizar a radiofrequência para distribuição na rede eléctrica sob a forma de código PLC-BUS transformados para atuarem sobre os diversos componentes do sistema.
-\item A encriptação do sinal permite a utilização de até um máximo de 64.000 endereços numa mesma instalação[9]. 
+\item A encriptação do sinal permite a utilização de até um máximo de 64.000 endereços numa mesma instalação\cite{PLCMKTI}. 
 \item Após a observação das tecnologias utilizadas pelo HomeTroller S6, foi escolhida a tecnologia Z-Wave por apresentar comunicação sem fio o que melhor possibilita a implementação numa residência já construída
 \end{itemize}
 
@@ -442,7 +442,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 \end{tabular}\caption{Comparação entre os controladores de janela.}
 \end{table}
 
-	A casa terá um total de 7 janelas que precisarão de cortinas controladas. Dessa forma, quando se calcula o custo de se utilizar o sistema Fibaro [14] o prejuízo sai em torno de 450 – (6 x 74,59) = US\$ 2,46 Entretanto, por falta de informações técnicas e de instalação por parte do sistema da Somfy [15], o modelo Fibaro será escolhido. 
+	A casa terá um total de 7 janelas que precisarão de cortinas controladas. Dessa forma, quando se calcula o custo de se utilizar o sistema Fibaro\cite{Manualaitesas}\cite{Valoraitesas} o prejuízo sai em torno de 450 – (6 x 74,59) = US\$ 2,46 Entretanto, por falta de informações técnicas e de instalação por parte do sistema da Somfy \cite{Caracteristicasaitesas}, o modelo Fibaro será escolhido. 
 
 	Para abrir torneiras, no caso da irrigação, existe o controlador GR-105 da Smart Home, que alcança ¼ de de giro pode ser conectado diretamente na válvula da torneira. Apenas a smart home faz esse tipo de atuador, então ele será escolhido pela facilidade de manuseio, sem precisar interferir no sistema hidráulico da casa. Consome apenas 12W por hora de funcionamento.
 
@@ -469,7 +469,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 
 \subsection{Comunicação IR}
 
-	Alguns produtos não tem comunicação direta com a central Z-Wave, dessa forma se faz necessária a integração a partir de extensores infra-vermelho. Estes extensores recebem ordens de dispositivos Z-Wave e as enviam em IV, podendo controlar desde os condicionadores de ar até o equipamento de som. Só um extensor foi encontrado: o Modelo ZXT-120 [18]. 
+	Alguns produtos não tem comunicação direta com a central Z-Wave, dessa forma se faz necessária a integração a partir de extensores infra-vermelho. Estes extensores recebem ordens de dispositivos Z-Wave e as enviam em IV, podendo controlar desde os condicionadores de ar até o equipamento de som. Só um extensor foi encontrado: o Modelo ZXT-120 \cite{ExtensorZWave}. 
 
 \begin{figure}[H]
 \centering
@@ -493,14 +493,14 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	Como decidido e justificado, a compra dos softwares para gerenciamento da Green Home se dará por meio da empresa Home Seer, onde iremos usar a plataforma de comunicação Z-Wave, de forma que para que não aja percas na comunicação e para que a interação software –hardware aconteça com qualidade, o principal pré-requisito para a compra dos equipamentos e sensores é que utilizem a tecnologia de comunicação Z-Wave.
 
 
-*Foram adotados os valores de 4,14 para o dólar e 4,70 para o euro, pois de acordo com o site UOL Economias [3], esses foram as maiores cotações em 1 ano para as respectivas moedas em relação ao real. 
+*Foram adotados os valores de 4,14 para o dólar e 4,70 para o euro, pois de acordo com o site UOL Economias \cite{UolDolar}\cite{UolEuro}, esses foram as maiores cotações em 1 ano para as respectivas moedas em relação ao real. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Falta  Tabela %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Falta Tabela %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-	Assim como foi previamente estabelecido, o controlador escolhido foi o HomeTroller S6 PRO, sua compra se dará pela Homeseer com valor de 1.199,95 dólares [4], a compra do sensor de movimento e temperatura se dará na Zipato, uma empresa localizada na Croácia e do detector de fumaça da empresa Vision Security será efetuada por meio de uma loja online de produtos Z-Wave localizada em Portugal [10]. As câmeras serão da fabricante Foscam, e sua compra se dará por meio da loja virtual do fabricante [11].
+	Assim como foi previamente estabelecido, o controlador escolhido foi o HomeTroller S6 PRO, sua compra se dará pela Homeseer com valor de 1.199,95 dólares \cite{HomeSeerHomeTroller}, a compra do sensor de movimento e temperatura se dará na Zipato, uma empresa localizada na Croácia e do detector de fumaça da empresa Vision Security será efetuada por meio de uma loja online de produtos Z-Wave localizada em Portugal \cite{ProdutosZwave}. As câmeras serão da fabricante Foscam, e sua compra se dará por meio da loja virtual do fabricante \cite{LojaFoscam}.
 	Optou-se pelo SmartSHower pertencente a empresa Ihouse, mas que é vendida pela empresa IpSum Smart no Brasil. O pré-orçamento deste item está disponível no anexo 1. 
 
 
@@ -629,7 +629,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 
 	Como a casa exibe equipamentos caros e tem um custo bastante elevado, é muito importante que os moradores contem com um sistema de segurança avançado, que iniba possíveis riscos contra os seus bens e sua saúde.
 
-	Sistemas de segurança domesticos funcionam com uma estação base ou um painel de controle de sistema, que é o cerebro do sistema, onde toda informação é recebida e processada.  Este sistema é normalmente colocado na parede e é controlado via smartphone. Um teclado para armar e desarmar o sistema também faz parte do pacote da base de controle, ou adicionado a uma parte conviniente da casa.
+	Sistemas de segurança domesticos funcionam com uma estação base ou um painel de controle de sistema, que é o cerebro do sistema, onde toda informação é recebida e processada. Este sistema é normalmente colocado na parede e é controlado via smartphone. Um teclado para armar e desarmar o sistema também faz parte do pacote da base de controle, ou adicionado a uma parte conviniente da casa.
 
 \subsection{Sensores}
 
@@ -647,7 +647,7 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 
 \subsubsection*{Banho}
 
-	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será  medida com o CI LM35\cite{SNIS159E}, que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
+	Para o chuveiro é necessário um sensor de fluxo de água e também, assim como a banheira, um termômetro. Como a medição da temperatura nãonecessitará uma precisão tão alta, ela será medida com o CI LM35\cite{SNIS159E}, que é fácil de encontrar e muito fácil de ser alocado em locais pequenos como o canal do chuveiro. Sensor analógico, também precisa ser convertido.
 
 \subsubsection*{Regador}
 
@@ -674,17 +674,17 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 
 \subsection{Funcionamento do sistema}
 
-	O equipamento principal é um PC com configuração mediana, com uso dedicado ao sistema. A ele podem ser ligados diretamente monitores e equipamentos periféricos, porém, os sensores são ativados à distância, através de uma rede wireless utilizando o protocolo Z-Wave. É definida uma rede e os sensores podem ser conectados a ela de forma simples e rápida: Basta informar á máquina principal que algum dispositivo será pareado. Em seguida, aperta-se um botáo no dispositivo que se deseja conectar à rede e, então, eles já estarão interagindo.  A partir daí o dono da casa já pode escolher as ações tanto de leitura quanto de atuação, precisando apenas ir nas condifurações da rede, que tem uma interface bastante prática.
+	O equipamento principal é um PC com configuração mediana, com uso dedicado ao sistema. A ele podem ser ligados diretamente monitores e equipamentos periféricos, porém, os sensores são ativados à distância, através de uma rede wireless utilizando o protocolo Z-Wave. É definida uma rede e os sensores podem ser conectados a ela de forma simples e rápida: Basta informar á máquina principal que algum dispositivo será pareado. Em seguida, aperta-se um botáo no dispositivo que se deseja conectar à rede e, então, eles já estarão interagindo. A partir daí o dono da casa já pode escolher as ações tanto de leitura quanto de atuação, precisando apenas ir nas condifurações da rede, que tem uma interface bastante prática.
 
 \subsubsection*{Lista dos sensores necessários}
 
 \begin{enumerate}
 	\begin{figure}[H]
 	\item Sensor de movimento, iluminação e temperatura\cite{HSM200}
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio,scale=0.5,angle=90]{figuras/sensor_movimento.eps}
 		\caption{Modelo utilizado no projeto}
-	  \end{center}
+	 \end{center}
 	\end{figure}
 
 	Antes da pensar em utilizar os sensores com o sistema pronto, seriam necessários 2 sensores diferente pra medir temperatura e movimento em cada cômodo. Com este equipamento é possível ter acesso a esses dois dados apenas plugando o aparelho numa tomada $120V/60Hz$.
@@ -692,10 +692,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	O fabricante recomenda tomar alguns cuidados na instalação do sensor. Por exemplo, para se ter uma eficiência maior em detectar moimento, o sensor precisa ser instalado perpendicularmente ao eixo em que é determinado o fluxo. Conforme a figura abaixo.
 
 	\begin{figure}[H]
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio]{figuras/sensores_posicao.eps}
 		\caption{Posição dos sensores de movimento}
-	  \end{center}
+	 \end{center}
 	\end{figure}
 
 	Isso permite que grande parte dos feixes sejam cortados e evita que algo passe despercebido\cite{IRPet-500}. Porém, é necessário também que não haja luz solar e nem ventilação incidindo diretamente no sensor, isso pode provocar alarmes indesejados.
@@ -709,10 +709,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	\item Sensor de umidade no ambiente\cite{ST8142}
 
 	\begin{figure}[H]
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/sensor_umidade.eps}
 		\caption{Sensor de umidade do ar utilizado no projeto}
-	  \end{center}
+	 \end{center}
 	\end{figure}
 
 	Este sensor é capaz de disparar funções quando atinge níveis críticos de umidade ou temperatura. Será usado em ambientes comuns para ativar umidificadores em climas secos (Umidade < 30\%).
@@ -730,10 +730,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	Mesmo não sendo conectada à rede inteligente, a ducha inteligente é um grande adianto no que diz respeito a uso de sensores e comunicação homem-sistema.
 
 	\begin{figure}[H]
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/ducha_inteligente.eps}
 		\caption{Ducha inteligente com o painel de controle ao lado}
-	  \end{center}
+	 \end{center}
 	\end{figure}
 
 	A grande vantagem em escolher essa ducha é a capacidade que ela tem de executar as mesmas funções estabelecidas no projeto de um forma bem mais simples. Além de não ser necessário o uso de sensores, ela tem sua própria central de comando e, por ser pressurizada, reduz o consumo de água sem perder a o conforto do banho.
@@ -749,10 +749,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	O detector de fumaça será utilizado apensa na sala de controle, onde ficará a central do sistema. É uma medida de mater o sistema constante, a fim de evitar danos aos equipamentos em caso de incêndio ou superaquecimento.
 
 	\begin{figure}[H]
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/detector_fumaca.eps}
 		\caption{Detector de fumaça utilizado na sala de controle}
-	  \end{center}
+	 \end{center}
 	\end{figure}
 
 	\begin{itemize}
@@ -768,10 +768,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	A parte do smart grid nesse Sistema conta com um medidor de consume em tempo real, e o dado é fornecido para a central. Ou seja, é possível tomar medidas de controle caso a casa esteja gastando muito.
 
 	\begin{figure}[H]
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio,scale=0.60]{figuras/medidor_instantaneo.eps}
 		\caption{Medidor instantâneo do consumo total}
-	  \end{center}
+	 \end{center}
 
 	\begin{itemize}
 		\item Nome: DSB28-ZWUS
@@ -785,10 +785,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	Com as câmeras houve um pequeno problema: A banda de operação do Z-Wave não suporta compartilhamento de áudio e nem de vídeo. A saída mais prática é passar as informações pela internet. O próprio sistema oferece suporte à esse tipo de comunicação.
 
 	\begin{figure}[H]
-	  \begin{center}
+	 \begin{center}
 		\includegraphics[keepaspectratio,scale=0.5]{figuras/camera.eps}
 		\caption{Câmeras de vigilância externa}
-	  \end{center}
+	 \end{center}
 	\end{figure}
 
 	A câmera escolhida tem capacidade de filma em invravemerlho com um alcance de até 30 metros, média resolução (640x480) e ainda conta com suporte à visualização remota tanto em PC’s quanto em smartphones. O sistema oferece um programa em que a câmera só é ativada quando á movimento detectado. Ele pode ser baixado no prórpio site.
@@ -805,10 +805,10 @@ Temp. Funcionamento & -40\textsuperscript{o}C a 50\textsuperscript{o}C & 0\texts
 	A posição dos sensores será estabelecida de acordo com a necessidade da casa e obedecendo às características exigidas pelo manual. Dessa forma, deve-se lembrar que os sensores de movimento não podem ser instalados em áreas externas, as câmeras tem ângulo de alcance de $30{^o}$ e uma distância máximo de $30m$, isso deve ser levado em conta na hora de fazer a cobertura de monitoramento da casa. Como os equipamentos tem alcance de $30m$ não será necessário o uso de repetidores, já que o lote tem justamente esse tamanho. O mapa de sensores ficou da seguinte maneira:
 
 \begin{figure}[H]
-  \begin{center}
+ \begin{center}
 	\includegraphics[keepaspectratio,scale=0.9]{figuras/posicao.eps}
 	\caption{Posição dos sensores na casa}
-  \end{center}
+ \end{center}
 \end{figure}
 
 \chapter{Smart Grid}
@@ -823,10 +823,10 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 
 
 \begin{figure}[H]
-  \begin{center}
+ \begin{center}
 	\includegraphics[keepaspectratio,scale=1.5,angle=0]{figuras/medidor_eletronico.eps}
 	\caption{Medidor eletrônico}
-  \end{center}
+ \end{center}
 \end{figure}
 
 \subsection{Comunicação}
@@ -864,10 +864,10 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 	Inúmeras tecnologias estão disponíveis no mercado para a transmissão de dados entre a unidade consumidora e os centros de operação das concessionárias. A escolha deverá se basear na necessidade de confiabilidade, segurança e disponibilidade de cada serviço oferecido. Podemos observar quatro camadas na área de telecomunicações: HAN –Home Area Network –, LAN – Local Area Network –, RAN – Regional Area Network – e WAN – Wide Area Network.
 
 \begin{figure}[H]
-  \begin{center}
+ \begin{center}
 	\includegraphics[keepaspectratio]{figuras/zigbee.eps}
 	\caption{Zigbee}
-  \end{center}
+ \end{center}
 \end{figure}
 
 	Na casa sustentável iremos utilizar A HAN abrange a residência e não deverá apresentar grandes entraves na questão da comunicação de dados. Podem ser usadas as tecnologias Wireless, como ZibBee, ou mesmo a PLC. É necessário definir soluções que garantam a integridade de dados transmitidos de forma a evitar possíveis fraudes, ou ataques aos sistemas de informação, como por exemplo, medição eletrônica. Também é necessário definir autenticidade de entidades que transmitem e das que recebem dados. Há necessidade de proteções contra violação de informação em medidores eletrônicos, por exemplo, ao atualizar firmware de dispositivos\cite{2013Atmel}\cite{2013RiveraEspositoTeixeira}.
@@ -875,10 +875,10 @@ O conceito de redes inteligentes está ligado ao uso de elementos digitais e de 
 	Um sistema de comunicação é a componente chave para a infraestrutura Smart Grid, e o PLC é uma das principais tecnologias de comunicação disponíveis para este fim. A tecnologia PLC é uma técnica que utiliza a rede elétrica para transmitir, a altas taxas de transmissão, sinais de dados entre dispositivos. Em uma rede PLC, medidores inteligentes podem estar ligados a um concentrador de dados por meio da rede elétrica e transferir as informações para uma central de dados. A infraestrutura da rede elétrica existente diminui os custos de instalação relativos a um sistema de comunicações, sendo bastante adequada em áreas urbanas para diversas aplicações.
 
 \begin{figure}[H]
-  \begin{center}
+ \begin{center}
 	\includegraphics[keepaspectratio]{figuras/exemplo_plc.eps}
 	\caption{Exemplo de aplicação do PLC}
-  \end{center}
+ \end{center}
 \end{figure}
 
 	Neste contexto, é proposto o desenvolvimento de um circuito PLC para operar na faixa de banda estreita. Neste trabalho, foi selecionada a frequência de operação de 100 kHz, com uma largura de banda de 50 kHz (embora o projeto do circuito também permita a operação em outros valores próximos). Um circuito para transmissão de dados PLC pode ser dividido em transmissor (composto de Modulador, Ampli-ficador e Circuitos de Acoplamento) e receptor (Circuitos de Acoplamento, Amplificador e Demodulador)\cite{2015AndradeEtAl}.
