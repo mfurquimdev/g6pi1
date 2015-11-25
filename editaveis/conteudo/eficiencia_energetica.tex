@@ -7,7 +7,7 @@
 
 \subsection{Consumo médio de uma família para 4 pessoas}
 
-	Fazendo um cálculo meramente estatístico, numa estimativa grosseira, supondo um mês com 30 dias e 4 habitantes com a média de consumo idênticas, obtemos que o consumo médio de energia de uma residência com 4 pessoas sendo de 258,384 kWh/mês. Ainda de acordo com esses valores, pode-se supor que essa média não leva em consideração a classe social da família, onde, a grosso modo, sabe-se que quanto maior a renda familiar, maior serão os seus gastos. Como os equipamentos de segurança e outros objetos mais específicos voltados a automação e outros equipamentos que fogem do padrão residencial não foram bem detalhados, faz-se uma estimativa, ainda embasado no consumo médio residencial brasileiro, de que a família consumirá uma média de 500 kWh/mês.
+	Fazendo um cálculo meramente estatístico, numa estimativa grosseira, supondo um mês com 30 dias e 4 habitantes com a média de consumo idênticas, obtemos que o consumo médio de energia de uma residência com 4 pessoas sendo de 258,384 kWh/mês. Ainda de acordo com esses valores, pode-se supor que essa média não leva em consideração a classe social da família, onde, a grosso modo, sabe-se que quanto maior a renda familiar, maior serão os seus gastos. Como os equipamentos de segurança e outros objetos mais específicos voltados a automação e outros equipamentos que fogem do padrão residencial não foram bem detalhados, faz-se uma estimativa, ainda embasado no consumo médio residencial brasileiro, de que a família consumirá uma média de 500 \nicefrac{\si{\kilo\watt\hour}}{mês}.
 
 \subsection{Horários de maior consumo}
 
@@ -77,7 +77,68 @@ Para cálculo do consumo mensal foi utilizado a seguinte expressão:
 	C_m = \sum \dfrac{P * Q_a * U_d * Q_d}{1000}
 \end{equation*}
 
-Onde $P$ é a potência, valor encontrado nas especificações de cada aparelho dado em watts [\si{\watt}]. $Q_a$ é a quantidade de aparelhos, o número referente à quantidade de um mesmo aparelho presente na casa, valor adimensional. $U_d$ é o uso diário, tempo estimado em que o equipamento consome energia elétrica da casa por dia, valor em horas [\si{\hour}]. $Q_d$ é a quantidade de dias, o número de dias em que o equipamento é usado ligado à rede elétrica no período de um mês, sendo considerado um mês com 30 dias, valor adimensional. E por fim, $C_m$ é o consumo mensal, é a soma do consumo de todos os aparelhos durante o mês, valor em quilowatt-hora [\si{\kilo\watt\hour}/mes].
+Onde $P$ é a potência, valor encontrado nas especificações de cada aparelho dado em watts [\si{\watt}]. $Q_a$ é a quantidade de aparelhos, o número referente à quantidade de um mesmo aparelho presente na casa, valor adimensional. $U_d$ é o uso diário, tempo estimado em que o equipamento consome energia elétrica da casa por dia, valor em horas [\si{\hour}]. $Q_d$ é a quantidade de dias, o número de dias em que o equipamento é usado ligado à rede elétrica no período de um mês, sendo considerado um mês com 30 dias, valor adimensional. E por fim, $C_m$ é o consumo mensal, é a soma do consumo de todos os aparelhos durante o mês, valor em quilowatt-hora \nicefrac{\si{\kilo\watt\hour}}{mês}.
+
+\subsection{Valor da tarifa referente à CEB}
+	
+	De acordo com a ANEEL, a CEB homologou uma tarifa de 0,43676 reais por quilowatt-hora (\nicefrac{R\$}{\si{\kilo\watt\hour}}).
+Valores na tabela abaixo, disponibilizada pela ANEEL.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|l|c|}
+\hline 
+\multicolumn{2}{|l|}{Empresa: CEB-DIS - CEB Distribuição S.A.}\tabularnewline
+\hline 
+\multicolumn{2}{|l|}{Vigência da Tarifa de 26/08/2015 a 25/08/2016}\tabularnewline
+\hline 
+\multicolumn{2}{|l|}{Resolução Homologatória N\textsuperscript{o}1937 Publicada em 26/08/2015\cite{2015ResolucaoAneel}}\tabularnewline
+\hline 
+\multicolumn{2}{|l|}{Variação percentual em relação ao período anterior: 18,66\%}\tabularnewline
+\hline 
+\hline 
+Descrição & R\$/kWh\parnote{Os Valores constantes da resolução homologatória referida são expressos
+em \nicefrac{R\$}{\si{\kilo\watt\hour}}}\tabularnewline
+\hline 
+B1 - Residencial & 0,43676\tabularnewline
+\hline 
+B1 - Residencial Baixa Renda & \tabularnewline
+\hline 
+Consumo mensal inferior ou igual a 30 kWh & 0,15060\tabularnewline
+\hline 
+Consumo mensal superior a 30 kWh e inferior ou igual a 100 kWh & 0,25817\tabularnewline
+\hline 
+Consumo mensal superior a 100 kWh e inferior ou igual a 220 kWh & 0,38725\tabularnewline
+\hline 
+Consumo mensal superior a 220 kWh & 0,43028\tabularnewline
+\hline 
+\end{tabular}
+\parnotes
+\caption{Valores das tarifas energéticas disponibilizada pela ANEEL}
+\end{table}
+
+Os valores acima se referem às tarifas homologadas pela ANEEL, expressas na unidade \nicefrac{R\$}{\si{\kilo\watt\hour}} (reais por quilowatt-hora) e não contemplam tributos e outros elementos que fazem parte de sua conta de luz, tais como: ICMS, Taxa de Iluminação Pública e Encargo de Capacidade Emergencial, cuja cobrança foi encerrada em 22 de dezembro de 2005.
+
+\subsection{Valores monetários do consumo família}
+
+	Uma família de 4 pessoas consumirá em média 500 kWh/mês. Caso a casa usasse a energia totalmente da rede elétrica disponibilizada pelo Distrito Federal (energia da concessionária de luz – CEB) o valor pago por mês seria em média R\$ 218,38.
+
+	$V_{alor mensal}\ =\  \nicefrac{R\$}{\si{\kilo\watt\hour}}\times\nicefrac{\si{\kilo\watt\hour}}{mês}\ =\ 0,43676\times500\ =\ R\$ 218,38$
+
+
+\subsection{Valores Reduzidos}
+	
+	A Agência Nacional de Energia Elétrica (Aneel) divulgou a Resolução Normativa no 482, em que estabelece os parâmetros regulatórios para a microgeração (até $100 \si{\kilo\watt}$) e a minigeração (entre $100 \si{\kilo\watt}$ e $1\si{\mega\watt}$) de energia elétrica a partir de sistemas particulares conectados à rede de distribuição. Ela viabiliza a geração distribuída de pequeno porte no Brasil.
+
+	Nessa resolução, diversos parâmetros decisivos para o desenvolvimento desse novo mecanismo de produção energética foram estabelecidos, permitindo a produção de  energia a partir de unidades consumidoras e a disponibilização do excedente energético para a rede pública por meio de um simples sistema de compensação.
+
+	O sistema de compensação, conhecido internacionalmente como net metering, irá adicionar à conta do consumidor toda a energia que ele utilizar do sistema público e irá subtrair dela toda a energia que ele injetar na rede, proveniente da geração a partir de sistemas fotovoltaicos e eólicos, como é o caso da casa sustentável.
+
+	Caso a residência utilize mais energia do que produziu, irá pagar o equivalente de quilowatt-hora utilizado referente às tarifas às quais o estabelecimento corresponde. Por outro lado, caso a residência produza mais energia elétrica do que consuma, pagará apenas uma taxa fixa estabelecida pela concessionária e usufruirá de créditos válidos por 36 meses, que poderão ser abatidos as próximas faturas do próprio imóvel ou de outro imóvel definido pelo proprietário.
+
+	De acordo com essa legislação por ser usado um sistema trifásico uma taxa mínima de $100 \si{\kilo\watt}$ deve ser paga mensalmente, o que acarretará em um custo mensal de R\$43,67.
+
+	As informações estarão na fatura do consumidor, a fim de que ele saiba o saldo de energia e tenha o controle sobre a sua fatura.
 
 \section{Fontes de Energia}
 
@@ -90,6 +151,144 @@ Onde $P$ é a potência, valor encontrado nas especificações de cada aparelho 
 	As energias renováveis não poluem o ambiente e tem caráter inteiramente sustentável. No geral, causam um pequeno impacto (poluição, desmatamento) ao meio ambiente. Portanto, são excelentes alternativas ao sistema energético tradicional, principalmente numa situação de luta contra a poluição atmosférica e o aquecimento global.
 
 \subsection{Fontes utilizadas -- Justificativa}
+\subsubsection{Solar}
+
+	A Alemanha teve em 2014, cerca de 6,8\% da energia elétrica consumida produzida por placas fotovoltaicas (WIRTH, 2015). E este país possui um potencial solar inferior ao brasileiro. Contudo, o Governo investiu de forma eficaz para que ela competisse com as outras fontes presentes no país como a energia nuclear. Isso ocorreu, principalmente, devido ao acidente nuclear em Fukushima no Japão em 2011. Os países que dependiam da energia nuclear, como a Alemanha, viram nas fontes renováveis uma possível solução.
+
+	A tabela \ref{irradiacao_media_anual} compara o potencial solar entre Brasil e Alemanha. Como pode ser observado na tabela, o potencial brasileiro é consideravelmente superior ao alemão, mas a participação da energia solar na matriz elétrica nacional é bem inferior à alemã. França e Espanha também possuem menor potencial mas também possuem uma maior porcentagem da matriz elétrica composta pela energia fotovoltaica. Isso se deve, pelo falta subsídio por parte do Governo para reduzir o custos que são altos para o consumidor.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+\textbf{Tópicos} & \textbf{Alemanha} & \textbf{Brasil} & \textbf{França} & \textbf{Espanha}\tabularnewline
+\hline
+\hline 
+\textbf{Irradiação Global} & \multirow{2}{*}{900 e 1.250} & \multirow{2}{*}{1.200 e 2.400} & \multirow{2}{*}{900 e 1.650} & \multirow{2}{*}{1.200 e 1850}\tabularnewline
+\textbf{Horizontal\nicefrac{\nicefrac{\si{\kilo\watt\hour}}{\si{\meter}$^2$}}{ano}} &  &  &  & \tabularnewline
+\hline 
+\end{tabular}
+\caption{Irradiação média anual, EPE - Análise da Inserção da Geração Solar na Matriz Elétrica Brasileira}
+\label{irradiacao_media_anual}
+\end{table}
+
+Mesmos com os custos altos, o investimento é pago com um certo período de tempo. A energia solar foi escolhida para o projeto em Brasília devido aos estudos feitos em relação a radiação global anual na região. A figura 1 mostra que a média anual de radiação incidente nesta área é de aproximadamente 20\nicefrac{\si{\mega\joule}}{\si{\meter$^2$}} dia.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth,keepaspectratio,angle=0]{figuras/radiacao_solar.eps}
+\caption{Radiação solar global diária, média anual.}
+\end{figure}
+
+	A irradiação aproveitada pela fonte fotovoltaica é Irradiação Global Horizontal (GHI), onde quantifica em uma superfície plana a quantidade de radiação recebida. Esta radiação é divida em Irradiação Difusa Horizontal (DIF) e Irradiação Normal Direta (DNI). A DIF é uma quantidade dispersa por reflexões em elementos na atmosfera como poeira e as nuvens. A DNI é a irradiação que não sofre reflexões, atingindo o solo diretamente. (2)
+
+	A determinação da posição dos painéis solares depende da variação da posição da Terra em relação ao Sol ao longo do ano, ao norte (azimute) e ao plano horizontal. Esta orientação otimiza aproveitamento solar de painéis fixos. Brasília está localizada no hemisfério Sul, logo os painéis deverão estar voltados para o norte “verdadeiro” e a inclinação de acordo com o plano horizontal. Esta inclinação pode ser de acordo com as estações do ano ou com a produção media durante o ano. A escolha deverá ser feita a fim de maximizar a produção.(2)
+
+	Os elementos semicondutores fotossensíveis das placas fotovoltaicas fazem a conversão da  radiação solar em diferença de potencial nos terminais de junção P-N2, que é a junção metalúrgica de dois cristais de natureza P e N, de acordo com sua composição atômica. A corrente contínua é resultante da ligação elétrica desses terminais. (2)
+
+	Segundo Fadigas\cite{14}, a luz solar irá excitar a junção P-N e os fótons da luz irão se chocar com os elétrons da estrutura do silício. Desta forma, eles irão fornecer energia e transformara-os em condutores, criando um campo elétrico, no qual os elétrons fluem da camada P para a N, através de um condutor externo, gerando corrente elétrica (figura \ref{celula_fotovoltaica}).
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth,keepaspectratio,angle=0]{figuras/celula_fotovoltaica.eps}
+\caption{Célula fotovoltaica (corte transversal)\cite{1999CRESESBCEPEL}.}
+\label{celula_fotovoltaica}
+\end{figure}
+
+	A condição de referência de eficiência do painel é a Standard Test Conditions – STC, que estabelece a relação da potência máxima de saída pela área da célula em $\si{\meter}^{2}$ e o padrão é $1000\nicefrac{\si{\watt}}{\si{\meter}^{2}}$, a $25^{o}C$. (2)
+
+	A temperature ambiente de operação e a intensidade da irradiação solar incidente sobre a célula são os principais fatores que interferem na eficiência da conversão. 
+
+	De acordo com a Resolução Normativa 482/2012 da ANEEL, o sistema fotovoltaico da casa será uma minigeração distribuída pois a potência instalada será superior a 100 kW e inferior a 1 MW e estará conectada à rede de distribuição. O consumidor não poderá vender sua energia para a distribuidora, ela entrará no sistema de compensação de energia elétrica. A compensação de energia  funcionará da seguinte forma: o sistema de distribuição receberá a energia ativa da unidade consumidora e essa energia será cedida a título de empréstimo gratuito para a distribuidora. A unidade consumidora terá 36 meses para consumir esse crédito em quantidade de energia ativa. (4)
+
+\subsubsection{Eólica}
+
+	O vento é o movimento horizontal e paralelo à superfície do planeta de parcelas de ar nas atmosferas planetárias. O vento é responsável pelo transporte de umidade e de energia na atmosfera como agente meteorológico. Já sua energia provoca grande destruição como furações e tornados. Porém, ele pode ser aplicado como uma fonte alternativa de energia, transformando energia cinética em eletricidade. (5)
+
+	A energia cinética que está contida no vento é convertida em energia mecânica pelo giro das pás do rotor das turbinas eólicas. E depois é transformada em energia elétrica pelo gerador. A potência $p$ do vento e a velocidade u através de uma área A (área das hélices que interceptam o vento) é dada por:
+
+$p\ =\ \cfrac{1}{2}\rho A u^{3}$
+
+no qual $\rho$ é a densidade do ar. A máxima potência de uma turbina eólica é 59\%, mas ao  somar as perdas mecânicas, a potência total do vento utilizável reduz para 42\%.(5)
+
+	O potencial eólico brasileiro também consideravelmente grande em comparação com vários outros países. Como pode ser visto na figura \ref{potencial_eolico}, o Brasil é capaz de produzir $272,2 \si{\tera\watt\hour}$ por ano. Contudo, o potencial da região Centro-Oeste é o menor dentre as 5 regiões brasileiras, com $5,4\si{\tera\watt\hour}$ por ano. O segundo menor que é a região Norte tem a capacidade produzir $26,4\si{\tera\watt\hour}$ por ano. 
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.7\linewidth,keepaspectratio,angle=0]{figuras/potencial_eolico.eps}
+\caption{Potencial eólico para vento médio anual igual ou superior a $7\nicefrac{\si{\meter}}{\si{\second}}$\parnote.}
+\label{potencial_eolico}
+\end{figure}
+
+	A velocidade média anual do vento no Distrito Federal é 3,5m/s (Figura 4). Essa velocidade é suficiente para produzir uma pequena quantidade de energia. A fim de aproveitar essa energia e de solucionar outro problema, a energia eólica também será utilizada no projeto da casa. De acordo com Cormane (2015, por questão de segurança, quando houver falta de energia elétrica por parte da distribuidora, o sistema da casa também deverá ser desligado. Isso deverá ocorrer porque, caso haja necessidade de reparo da rede de alta tensão, não poderá haver energia passando pela rede porque operários poderão estar trabalhando nela o que causará um acidente fatal. 
+
+	Desta forma, a energia eólica será responsável por abastecer um banco de baterias. Estas ficariam responsáveis por abastecer a casa em casos de falta de energia. Para que esse processo ocorra, será necessário fazer um sistema em que no momento que a energia elétrica acabasse, a casa ficaria ilhada da rede. Em outras palavras, a casa funcionaria em dois sistemas, grid-tie e off-grid, mas não ao mesmo tempo. Grid-tie quando houvesse energia na rede de distribuição e off-grid quando acabasse. A casa ficaria isolada do sistema, e as baterias iriam alimentar os principais pontos e eletrodomésticos da casa como geladeira e sistema de segurança.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.65\linewidth,keepaspectratio,angle=0]{figuras/potencial_centro_oeste.eps}
+\caption{Potencial eólico na região Centro-Oeste.}
+\label{potencial_centro_oeste}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+\multirow{2}{*}{\textbf{Fontes}} & \textbf{Custo de implantação} & \multirow{2}{*}{\textbf{Eficiência}} & \textbf{Emissão de poluentes} & \multirow{2}{*}{\textbf{Manutenção}}\tabularnewline
+ & \textbf{CESP/IMT {[}U\$/W{]}} &  & \textbf{{[}gCO2/kWh{]}} & \tabularnewline
+\hline 
+\hline 
+Eólica & 1,00 & 42\% & 9,5 & Baixo custo\tabularnewline
+\hline 
+Solar & 5 à 10 & 15,4\% & 32 & Baixo custo\tabularnewline
+\hline 
+\end{tabular}
+\caption{Comparativo entre solar e eólica}
+\label{comparativo_solar_eolica}
+\end{table}
+
+A tabela \ref{comparativo_solar_eolica} mostra uma comparação entre as duas fontes que serão usadas no projeto da casa sustentável. A energia solar, a princípio, será mais cara, mas com o tempo o seu custo será pago. E depois o consumidor irá receber lucros com a sua implantação. A energia eólica já está com um preço de mercado para concorrer com as outras fontes. Desta forma, a utilização destas fontes é vantajosa para o empreendimento pois o consumidor não terá prejuízo com sua implantação.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
 
 	As fontes utilizadas na casa serão solar e eólica. Por serem de produção independente, privando a residência da dependência do uso da energia elétrica fornecida pela concessionária de abastecimento. Em análise aos fatores ambientais, essas fontes se tornam bastante produtivas e de ótima escolha, pois não geram transtornos para os habitantes da casa e minimizam custos com manutenção quando comparadas às outras fontes renováveis.
 

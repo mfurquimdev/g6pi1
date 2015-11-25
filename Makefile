@@ -26,7 +26,7 @@ CONTEUDO_SOURCES = introducao.tex estrutura_materiais.tex \
 CONTEUDO_FILES = $(addprefix $(CONTEUDO_DIR)/, $(CONTEUDO_SOURCES))
 
 APENDICES_DIR = $(addprefix $(EDITAVEIS_DIR)/, apendices)
-APENDICES_SOURCES = software.tex prototipo_tela.tex
+APENDICES_SOURCES = software.tex smart_grid.tex prototipo_tela.tex
 APENDICES_FILES = $(addprefix $(APENDICES_DIR)/, $(APENDICES_SOURCES))
 
 MAIN_FILE = relatorio.tex
@@ -45,20 +45,10 @@ all:
 $(TARGET): $(MAIN_FILE) $(SOURCES) bibliografia.bib
 	$(LATEX) $(MAIN_FILE) $(SOURCES)
 	$(BIBTEX) $(AUX_FILE)
-#$(LATEX) $(MAIN_FILE) $(SOURCES)
-#$(LATEX) $(MAIN_FILE) $(SOURCES)
-	$(DVIPS) $(DVI_FILE)
-	$(PS2PDF) $(PS_FILE)
-
+	$(LATEX) $(MAIN_FILE) $(SOURCES)
 	$(LATEX) $(MAIN_FILE) $(SOURCES)
 	$(DVIPS) $(DVI_FILE)
 	$(PS2PDF) $(PS_FILE)
-
-	$(LATEX) $(MAIN_FILE) $(SOURCES)
-	$(DVIPS) $(DVI_FILE)
-	$(PS2PDF) $(PS_FILE)
-
-#	$(DVIPDF) $(DVI_FILE)
 	@cp $(PDF_FILE) $(TARGET)
 
 clean:
