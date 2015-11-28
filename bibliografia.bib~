@@ -1,10 +1,3 @@
-@book{design3ed,
-  title={Design de Interação},
-  author={Yvonne Rogers, Helen Sharp, Jennifer Preece},
-  year={2013},
-  publisher={Bookman Editora}
-}
-
 @manual{inmetro2003,
 	Author = {INMETRO},
 	Title = {Vocabulário internacional de termos fundamentais e gerais de
@@ -667,7 +660,7 @@ Ministério de Minas e Energia},
 }
 
 @manual{precoCeramica,
-	Title = {Leroy Merlin},
+	Title = {Preços de cerâmica na Leroy Merlin},
 	howpublished = {\url{http://www.leroymerlin.com.br/pisos-ceramicos-internos/tamanho/48x48}},
 	Year = {2015},
 }
