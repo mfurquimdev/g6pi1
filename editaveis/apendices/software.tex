@@ -2,7 +2,7 @@
 
 \begin{center}
 	Este documento visa orientar a aquisição de software para automatização do projeto de Casa Sustentável e Automatizada
-	\end{center}
+\end{center}
 
 %---------------------------------------------------------------%
 %-------------------- Objetivo da Aquisição --------------------%
@@ -11,25 +11,13 @@
 
 \subsection{Justificativa}
 
-	Para o amplo conhecimento das possíveis soluções é necessário uma pesquisa de todas as soluções já feitas e analizar
-	 o custo do desenvolvimento de uma nova solução. Após esta pesquisa é necessário uma comparação.
+	O projeto “casa sustêntável” é um projeto  que tem como premiça a automatização da mesma, esta automatização tem componentes de software e hardware. Ambos são interdependente, já que o sinal captado por sensores e enviados devem ser executados por um software presente nesta central. Tal comunicação tem variáveis a serem analisadas, como o tipo de dado, o tipo de protocolo e etc. O desenvolvimento dessas tecnologias deve compreender todas essas variáveis, podendo assim atender a demanda dos requisitos. A criação do software e hardware levará muito tempo pois, os devem atender uma longa lista de requisitos minimos funcionais e não funcionais, que podem ser encontrados na seção~\ref{sec:requisitos} que tem como intuito descrever quais as necessidades deveriam ser atendidas por esse pacote (Software e Hardware).
 
-	A princípio foram feitos os requisitos da solução que se encontra na seção~\ref{sec:requisitos} e o objetivo que
-	detalha o pacote onde se encontra na sub-seção~\ref{subsec:objetivo}, que para generalização foi chamado de SACS (Sistema de Automação Para Casa Sustentável). A
-	partir dessa análise de requisitos várias soluções deveriam ser apresentadas, tendo em mente que o desenvolvimento
-	a partir do zero do conjunto de software e hardware seria uma opção inviável, dado o conjunto de gastos envolvento
-	todo o projeto. Após ter sido feita uma busca pela internet por soluções de software existentes no
-	mercado, uma tabela foi feita comparando quais destas soluções encontradas atendiam os requisitos especificados.
-	Destes pacotes de software foi escolhido um que atendia todos os requisitos necessários do problema.
+	Também foi feito um documento de visão~\ref{subsec:objetivo}, que resume a ideia e o projeto de automação. A partir desses documentos (visão e requisitos) é necessário uma vasta busca no mercado para garantir a unicidade do projeto, ou seja, se vale a pena projetar e desenvolver essa solução. Com essa pesquisa chegou-se assim à inúmeras soluções e produtos no mercado, dado o quão amplamente o tema ”casa sustentável” já foi abordada.
 
-	Dado essas condições, é necessário justificar o porquê deste pacote escolhido teria um melhor custo-benefício
-	comparado a uma solução de software desenvolvida do zero. Observando os requisitos, seria necessário um conjunto
-	de softwares, muitos deles sendo críticos, como o sistema de seguraça, levando assim a um desenvolvimento
-	 que seria muito longo e caro, o que tornaria o projeto inviável, além de não ser justificado pelo fato que as
-	 soluções separadas para uma casa sustentável são áreas do conhecimento brandamente exploradas anteriormente por
-	 outros indivíduos e instituições. Portanto foi concluido que desenvolver a solução ocasionaria um certo uso de
-	 tempo e recursos que o projeto não prevê, além de estar ignorando o fato que já existem soluções amplamente
-	 testadas e aprovadas pela comunidade.
+	O vasto acervo de soluções disponíveis no mercado demandou que o projeto escolhesse um  software e hardware presente no mercado, evitando assim, redundância. Das vários pacotes possiveis foi feita uma tabela, que apresentava todas as opções pesquisadas e se atendiam ou não os requisitos. Entretanto dois pacotes atende aos requisitos, culminando  assim numa discursão acerto de suas diferenças. Ao final, o pacote escolhido foi o serviço do HomeSeer, que diferente do seu concorrente é totalmente expansível, ou seja, a proprietária da “casa sustentável pode aumentar seu acervo de sensores, cameras, etc.
+
+	Concluindo, o serviço provido pelo HomeSeer é de excepcional qualidade e clareza, tendo em seu arsenal muitos sensores e equipamentos que serão escolhidos e especificados de acordo com sua função ao decorrer deste documento de aquisição.
 
 
 \subsection{Objetivo}
@@ -837,15 +825,18 @@ Automatic House & x & x & x & x & x & x\tabularnewline
 \end{tabular}
 \end{sideways}
 \caption{Pesquisa realizada sobre pacotes de automação}
+\label{Pesquisa_realizada_sobre_pacotes}
 \end{table}
+
+Tabela~\ref{Pesquisa_realizada_sobre_pacotes}: Entre todos os pacotes e softwares pesquisados, podemos ver que o HomeSeer é o pacote que mais nos oferece serviços que melhor automatizem a Casa em questão. Além de ser o pacote que melhor atende nossas necessidades, ele oferece um protocolo de comunicação chamado Z-wave, que oferece uma grande segurança para os dados principalmente os dados que estão na rede. O Smart Home, trabalha com o mesmo protocolo, porém ele não atende todos os requisitos necessários para a Casa.
+
 %------------------------------------------------------------%
 %-------------------- Termos Contratuais --------------------%
 %------------------------------------------------------------%
 \section{Termos Contratuais}
 
 \subsection{Tipo de Contrato a ser Empregado}
-	O contrato é estabelecido atráves da compra do pacote, onde o software está sendo disponibilizado,
-	tendo seus termos de assinatura.
+	O contrato é estabelecido atráves da compra do pacote, pela HomeSeer, onde o produto está sendo disponibilizade pelo valor de \$ 599.95 (quinhetos e noventa e nove dolares e oitenta e nove centavos de dolares) ou convertido para a cotação do dolar de hoje 18/11/2015 R\$ 2259,89 (dois mil, duzentos e cinquenta e nove reais e oitenta e nove centavos). O software após a compra, a empresa HomeSeer irá disponibilizar para download pela internet todo o pacote de software adquiridos na compra, incluindo o software de interfaces para mobile.
 
 \subsection{Direitos de Distribuição, Uso e Propriedade do Software}
 	Na realização da compra do pacote de software vem garantido toda licença de uso dos software em que ali estão.
@@ -894,9 +885,15 @@ Automatic House & x & x & x & x & x & x\tabularnewline
 \label{Lista_de_Software_a_ser_Entregue}
 \end{table}
 
+Tabela~\ref{Lista_de_Software_a_ser_Entregue}:  Na tabela acima podemos notar a descrição de cada funcionalidade do software explicando onde cada um irá atuar. O Z-wave é um protocolo de comunicação completamente sem fios que usa uma largura de banda estreita para enviar comandos de controle.
+
+
 %----------------------------------------------------------------------------%
 %-------------------- Critérios de Aceitação do Software --------------------%
 %----------------------------------------------------------------------------%
 \section{Critérios de Aceitação do Software}
-	Dentre os críterios de aceitação do HomeSeer estão as licenças e todos os softwares que satisfaçam os requisitos
-	exigidos para a automação da casa descritos na seção Objetivos.
+Ao se escolher o HomeSeer foram feitos diversos levantamentos de requisitos que deveriam estar presentes na automação da casa, trabalhando um melhor funcionamento do conjunto de hardwares e softwares desejados. 
+
+Entre os softwares, tem se uma lista dos principais software que deverão está contidos nesse pacote que satisfaçam nosso requisitos de automação, onde essa lista servirá como um check-list após a compra.
+
+A lista dos software encontra-se na tabela ~\ref{Lista_de_Software_a_ser_Entregue} da sessão anterior.
