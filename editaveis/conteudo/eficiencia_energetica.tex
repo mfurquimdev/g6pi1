@@ -254,59 +254,46 @@ A tabela \ref{comparativo_solar_eolica} mostra uma comparação entre as duas fo
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-\newpage
-
-	As fontes utilizadas na casa serão solar e eólica. Por serem de produção independente, privando a residência da dependência do uso da energia elétrica fornecida pela concessionária de abastecimento. Em análise aos fatores ambientais, essas fontes se tornam bastante produtivas e de ótima escolha, pois não geram transtornos para os habitantes da casa e minimizam custos com manutenção quando comparadas às outras fontes renováveis.
-
-	Segundo dados encontrados no site da \cite{2013Aneel} (Agência Nacional de Energia Elétrica), no que diz respeito à Energia Eólica, a região centro-oeste tem o potencial eólico entre as classes 2 e 3, ou seja, está num setor onde a velocidade média do vento está entre 3,0 à 11,0 m/s. Sendo mais específico o Distrito Federal, e de acordo com o Atlas Eólico Brasileiro, possui uma velocidade média eólica cerca de 3,5 m/s. Já sob a análise dos dados informados pelo \cite{INMET} (Instituto Nacional de Meteorologia), a velocidade eólica permanece quase que constante por todos os períodos do ano. Com essas informações, torna-se importante a sua consideração da energia eólica como uma das fontes de energia que abastecerá a residência.
-
-	Em termos de energia solar, a região central do Brasil recebe maior incidência de radiação solar durante as estações secas, particularmente entre os meses de julho a setembro, quando a precipitação é baixa e o número de dias com o céu claro é maior. Segundo dados retirados do ATLAS Solarimétrico do Brasil \cite{2000UFPE}, a localização onde se encontra o DF possui uma média anual de insolação diária entre 6-7h. Outro fator considerável são as variações de temperatura e mudanças de clima durante os períodos no decorrer do ano, que não ocorrem por longas temporadas, tornando o clima quente, ensolarado e seco predominante ao longo do ano.
-
 \subsection{Dimensionamento}
 
-	Para o dimensionamento e justificativa das fontes de energia, atribuiu-se que o consumo da residência seja de 500kWh/mês por motivos de segurança, já que o valor estimado na tabela \ref{consumo_eletrodomesticos} refere-se apenas ao consumo médio de equipamentos comuns.
+	Para o dimensionamento e justificativa das fontes de energia, atribuiu-se que o consumo da residência seja de 500kWh/mês por motivos de segurança, já que o valor estimado na Tabela referente ao consumo mensal dos eletrodomésticos.
 
-\subsection{Energia Eólica -- Especificações técnicas}
+\subsection{Conexão dos painéis solares}
 
-	A média, de acordo com o Atlas Eólico Brasileiro, de Brasília é 3,5 m/s. Logo, a potência gerada por essa velocidade será baixa. A energia produzida pelo vento será destinada para abastecimento das baterias de reserva, que funcionarão caso acabe a energia devolvida pela concessionária da rede elétrica.
+	As placas fotovoltaicas serão on-grid, ou seja, conectadas à rede elétrica da concessionária. O consumo mensal estipulado é de 500\si{\kilo\watt\hour} por mês. Logo, se trata de um sistema trifásico. Para que o sistema on-grid seja efetuado, é necessário a adesão obrigatória de uma taxa de disponibilidade da companhia energética, no qual de 100\si{\kilo\watt\hour} por mês. Portanto, o sistema será dimensionado para 400\si{\kilo\watt\hour} mensal [ANEEL -  Resolução Normativa ANEEL n$^o$ 482/2012].
+
+\subsection{Quantidade de placas solares}
+
+	Para determinar o número de placas solares, primeiro necessita-se conhecer a quantidade de energia consumida diariamente. Para isso basta fazer um cálculo simples onde se divide a energia mensal pelo número de dias. Sendo: energia consumida = 400 \nicefrac{\si{\kilo\watt\hour}}{mês} = 13,33 \nicefrac{\si{\kilo\watt\hour}}{dia}. Em seguida, precisa-se conhecer o índice solarimétrico médio por dia em Brasília (UFPE, 2000). Esse índice determina a quantidade de irradiação solar o local recebe por dia.
+
+	Índice solarimétrico local de Brasília: $I_s = 5,13 \nicefrac{\si{\hour}}{dia}$
+
+	Por fim, a potência das placas é definida a partir da razão entre a energia consumida pelo índice solarimétrico:
+
+	$P_p\ =\ \dfrac{13333,33}{I_s}\ =\ 2600 \si{\watt}$
+
+	Considerando uma eficiência de 0,85\%, devido a perdas de geração e transmissão,
+
+	$P_t\ =\ \dfrac{2600}{0,85}\ =\ 3060 \si{\watt}$
+
+	Com a placa de potência de 255 W, pode-se obter a quantidade de painéis solares a partir da seguinte expressão:
+
+	$N_{placas}\ =\ \dfrac{3060}{255}\ =\ 12$ placas no total
+
+	Logo, serão necessárias \textbf{12 placas de 255 \si{\watt}}.
+
+
+\subsection{Direção de instalação das placas para melhor geração de energia}
+
+	A melhor direção para a instalação dos painéis é virada para a linha do Equador, no caso de Brasília está voltada para a direção Norte. Contudo, se houver um elevado nível de sombreamento nesta direção, sugere-se que os painéis então sejam colocados na face leste ou oeste do telhado da residência. Sabendo que, essa escolha poderá influenciar na quantidade de energia gerada. Vale enfatizar que, essas especificações visam a grosso modo o melhor aproveitamento da incidência solar na hora de instalar os módulos, pois há outras condições e variáveis que devem ser analisadas com mais cautela. 
+
+	No que se diz respeito à inclinação dos painéis, é importante que eles estejam a maior parte do período de insolação perpendiculares à direção de radiação solar, ou seja, igual ou o quão próximo possível à latitude da região. No caso, a melhor angulação para as placas deverá ser igual à 15,4$^o$.
+
+\subsection{Especificações do aerogerador}
+
+	A média, de acordo com o Atlas Eólico Brasileiro, de Brasília é 3,5 \nicefrac{\si{\meter}}{\si{\second}}. Logo, a potência gerada por essa velocidade será baixa. A energia produzida pelo vento será destinada para abastecimento das baterias de reserva, que funcionarão caso acabe a energia devolvida pela concessionária da rede elétrica.
 
 	No mercado mundial de aerogeradores são produzidos diversos modelos e com diferentes especificações técnicas que se adaptam melhor às necessidades de cada um. Os modelos são separados em duas categorias, sendo eles: aerogerador de eixo horizontal e de eixo vertical. Como a energia eólica será uma fonte secundária, escolheu-se dois exemplares (um de cada modelo) de potência baixa.
-
-\newpage
 
 \begin{table}[H]
 \begin{tabular}{|c|c|c|}
@@ -334,13 +321,64 @@ Vida útil & 20 anos & 20+ anos\tabularnewline
 \hline
 Local da compra & Reino Unido & Brasil\tabularnewline
 \hline
-Preço & R\$ 3.600,00\parnote{Preço diretamente convertido em reais com a cotação do dolar à R\$ 4,07 referente ao dia 01/11/2015}\parnote{Valor em tólar U\$ 849,00} & R\$ 5.499,00\tabularnewline
+Preço & R\$ 3.600,00 \parnote{Preço diretamente convertido em reais com a cotação do dolar à R\$ 4,07 referente ao dia 01/11/2015}$\ $ \parnote{Valor em tólar U\$ 849,00} & R\$ 5.499,00\tabularnewline
 \hline
 \end{tabular}
 \parnotes
 \caption{Quadro comparativo entre os modelos de aerogeradores}
 \label{aerogeradores_modelos}
 \end{table}
+
+A escolha do aerogerador de eixo horizontal se deve ao fato deste estar mais presente no mercado, com mais opções. Além do mais, a garantia é brasileira. Já o aerogerador de eixo vertical seria importado, aumentando os custos devido à alta do dólar e os impostos.
+
+	O aerogerador a ser utilizado é o Air 40.
+
+
+\subsection{Localização e altura de instalação do aerogerador para otimização do potencial eólico}
+
+	Quanto mais alto e direcionado para uma longa região livre de obstáculos aéreos, melhor. Pela sugestão do fabricante, e informações fornecidas pelo Profº Drº Jorge Cormane –  – Universidade de Brasília/FGA, a melhor eficiência estará no aerogerador instalado acima de 10 metros do chão. Por ser pequeno, quando comparado aos aerogeradores de grande geração, o Air 40 pode ser instalado no teto da casa, com o suporte de uma haste para prolongar sua altura referente ao solo.
+
+\subsection{Períodos de manutenção}
+
+	O período de manutenção dos painéis não necessita de ser feita com uma determinada periodicidade, porém é preciso estar sempre atento aos sistemas de monitoramento e controle da energia produzida pelos painéis, sendo necessária a vistoria e limpeza em caso de queda na quantidade da potência.
+
+	Já a limpeza dos módulos fotovoltaicos deve ser realizada na parte frontal, para que a eficiência não seja interferida, com o uso de um pano de microfibras e etanol sobre o vidro. Sendo esta realizada num período de 6 meses.
+
+\subsection{Fazer um quadro comparativo entre os modelos de placas solares}
+
+	De acordo com o material escolhido para a placa, silício cristalino, devido às suas propriedades e melhor eficiência dentre os painéis de outros materiais. Comparou-se duas placas de 255\si{\watt} de silício monocristalino.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+\textbf{Modelo} & \textbf{Vida útil} & \textbf{Máx. [\si{\volt}]} & \textbf{Temp. [\si{\celsius}]} & \textbf{Peso} & \textbf{Dimensão} & \textbf{Preço}\tabularnewline
+\hline 
+\hline 
+ISOFOTON & \multirow{2}{*}{30 anos} & \multirow{2}{*}{1000\si{\volt}} & \multirow{2}{*}{$-40\si{\celsius}$ até $+85\si{\celsius}$} & \multirow{2}{*}{19} & \multirow{2}{*}{$1667\times994\times45$} & \multirow{2}{*}{$R\$\ 1.453,15$}\tabularnewline
+ISF-255 &  &  &  &  &  & \tabularnewline
+\hline 
+MITSUBISH & \multirow{2}{*}{35 anos} & \multirow{2}{*}{600\si{\volt}} & \multirow{2}{*}{-} & \multirow{2}{*}{20} & \multirow{2}{*}{$1625\times1019\times46$} & \multirow{2}{*}{$R\$\ 1.4000,00$}\tabularnewline
+I 255 &  &  &  &  &  & \tabularnewline
+\hline 
+\end{tabular}\caption{Comparação entre as placas fotovoltaicas}
+\label{comparacao_fotovoltaicas}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\newpage
+
 
 %http://www.windturbinestar.com/5kwv-v-aeolos-wind-turbine.html
 %http://www.solar.coppe.ufrj.br/eolica/eol_txt.htm
