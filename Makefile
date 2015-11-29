@@ -22,7 +22,8 @@ EDITAVEIS_FILES = $(addprefix $(EDITAVEIS_DIR)/, $(EDITAVEIS_SOURCES))
 
 CONTEUDO_DIR = $(addprefix $(EDITAVEIS_DIR)/, conteudo)
 CONTEUDO_SOURCES = introducao.tex estrutura_materiais.tex \
-					eficiencia_energetica.tex automacao.tex
+					eficiencia_energetica.tex automacao.tex comparativo.tex
+
 CONTEUDO_FILES = $(addprefix $(CONTEUDO_DIR)/, $(CONTEUDO_SOURCES))
 
 APENDICES_DIR = $(addprefix $(EDITAVEIS_DIR)/, apendices)
